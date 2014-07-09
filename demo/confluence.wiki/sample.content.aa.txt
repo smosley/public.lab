@@ -16,6 +16,8 @@ wiki.markup.cheatsheet:
         The source markup that generated this content is available for review on github.com
         
         * https://github.com/dreftymac/dreftymac.public.lab/blob/master/demo/confluence.wiki/sample.content.aa.txt
+        
+        Note: 
 
         h2. Context
 
