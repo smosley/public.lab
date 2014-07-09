@@ -141,6 +141,6 @@ wiki.markup.cheatsheet:
 
         h2. Content by user macro
 
-        {content-by-user:smosley}
+        {content-by-user:dreftymac}
 
 
