@@ -1,0 +1,147 @@
+
+wiki.markup.cheatsheet:
+    title:  00 Confluence Wiki Markup Cheatsheet
+    date: created="Tue Jul 08 08:12:31 2014"
+    access.level: public
+    tymacid: clara.nike.numb.lend
+    body: |
+        {toc:outline=true|type=list|style=disc|maxLevel=2}
+
+        h1. Confluence Wiki Markup Cheatsheet
+
+        h2. Overview
+
+        This is a general purpose cheatsheet for confluence wiki markup (confluence-flavored markdown syntax).
+        
+        The source markup that generated this content is available for review at 
+
+
+        h2. Context
+
+        This markup was tested against a confluence wiki install with the following properties:
+
+        {code:title=Codeblock TXT|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}
+        Powered by Atlassian Confluence 4.3.7, the Enterprise Wiki
+        {code}
+
+        h1. Demonstration markup
+
+        h2. Test with formatting
+
+        We will probably use lots of *bold* with _italics_ with +underline+.
+
+        We will probably use very little ^superscript^ or ~subscript~.
+
+        h2. Test blockquotes
+
+        bq. This is a blockquote.
+            One question is how to get a blockquote to span multiple lines without having to prefix each line with the bq sigil.
+            Someone might be able to tell me, but then they would probably have to me.
+
+        h2. Test a table with markdown
+
+        || alpha || bravo || charlie ||
+        || delta | echo  | foxtrot |
+        || golf | hotel | india |
+
+
+        h2. Test with bulleted list
+
+        We will probably use lots of lists:
+        * this
+        * is
+        * a
+        * bulleted
+            * nesting
+            * does not seem
+            * to work
+        * list
+
+        h2. Fun macros
+
+        {expand:ShowHide}
+        This text is _hidden_ until you expand it.
+        {expand}
+
+        {info:title=This is my title|icon=true}
+        This is _important_ information.
+        {info}
+
+        h2. Test a section
+
+        {section:border=true}
+          {column:width=100px}
+          This is the content of *column 1*.
+          {column}
+
+          {column}
+          This is the content of *column 2*.
+          {column}
+        {section}
+
+        h2. Test a chart
+
+        {chart:type=|title=Languages by user count}
+        || Language || 2004 || 2005 ||
+        || PHP | 70 | 140 |
+        || Ruby | 1 | 1 |
+        || Javascript | 12 | 150 |
+        {chart}
+
+        h2. Test macro markup for code blocks
+
+        {code:title=Codeblock JS|theme=FadeToGrey|linenumbers=true|language=javascript|firstline=001|collapse=false}
+        <script>
+        var vssgreeting = 'hello';
+        var vsstarget   = 'world';
+        console.log([vssgreeting,vsstarget].join(" "));
+        </script>
+        {code}
+
+        {code:title=Codeblock PHP|theme=FadeToGrey|linenumbers=true|language=php|firstline=001|collapse=false}
+        <?php
+        $vssgreeting = 'hello';
+        $vsstarget   = 'world';
+        print( vssgreeting +' '+ vsstarget);
+        ?>
+        {code}
+
+        {code:title=Codeblock RB|theme=FadeToGrey|linenumbers=true|language=ruby|firstline=001|collapse=false}
+        vssgreeting = 'hello'
+        vsstarget   = 'world'
+        puts( [vssgreeting, vsstarget].join(' '))
+        {code}
+
+        {code:title=Codeblock XML|theme=FadeToGrey|linenumbers=true|language=xml|firstline=001|collapse=false}
+        <tagg>
+          <hello>World</hello>
+        </tagg>
+        {code}
+
+        {info:title=JSON syntax not supported|icon=true}
+        The folloing block attempts to use language=json and produces an error
+        {info}
+
+        {code:title=Codeblock JSON|theme=FadeToGrey|linenumbers=true|language=json|firstline=001|collapse=false}
+          {"hello":"world"}
+        {code}
+
+        {info:title=YAML syntax not supported|icon=true}
+        The folloing block attempts to use language=yaml and produces an error
+        {info}
+
+        {code:title=Codeblock YAML|theme=FadeToGrey|linenumbers=true|language=yaml|firstline=001|collapse=false}
+        ## WHOOPS!
+        ## looks like confluence does not know anything about YAML
+        ---
+        greeting:
+          hello: "world"
+        {code}
+        
+        h1. See also
+
+        h2. Content by user macro
+
+        {content-by-user:smosley}
+
+
