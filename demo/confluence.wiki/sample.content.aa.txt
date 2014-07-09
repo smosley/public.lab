@@ -13,8 +13,9 @@ wiki.markup.cheatsheet:
 
         This is a general purpose cheatsheet for confluence wiki markup (confluence-flavored markdown syntax).
         
-        The source markup that generated this content is available for review at 
-
+        The source markup that generated this content is available for review on github.com
+        
+        * https://github.com/dreftymac/dreftymac.public.lab/blob/master/demo/confluence.wiki/sample.content.aa.txt
 
         h2. Context
 
