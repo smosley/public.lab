@@ -131,8 +131,6 @@ wiki.markup.cheatsheet:
         {info}
 
         {code:title=Codeblock YAML|theme=FadeToGrey|linenumbers=true|language=yaml|firstline=001|collapse=false}
-        ## WHOOPS!
-        ## looks like confluence does not know anything about YAML
         ---
         greeting:
           hello: "world"
