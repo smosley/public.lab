@@ -49,14 +49,27 @@ wiki.markup.cheatsheet:
         h2. Test with bulleted list
 
         We will probably use lots of lists:
+        {code:title=Inline Example|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}
         * this
         * is
         * a
         * bulleted
-            * nesting
-            * does not seem
-            * to work
         * list
+        ** with
+        ** nested
+        ** elements
+        * included
+        {code}          
+          
+        * this
+        * is
+        * a
+        * bulleted
+        * list
+        ** with
+        ** nested
+        ** elements
+        * included
 
         h2. Fun macros
 
