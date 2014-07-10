@@ -19,8 +19,12 @@ wiki.markup.cheatsheet:
         
         Additional wiki markup help is available here:
           
-        * wiki markup for macros (multiple versions) ;; https://confluence.atlassian.com/display/DOC/Confluence+Wiki+Markup+for+Macros#ConfluenceWikiMarkupforMacros-code
-        * wiki markup for macros (version 4.3) ;; https://confluence.atlassian.com/display/CONF43/Confluence+Wiki+Markup+for+Macros
+        * wiki markup for macros (multiple versions)
+        ** https://confluence.atlassian.com/display/DOC/Confluence+Wiki+Markup+for+Macros#ConfluenceWikiMarkupforMacros-code
+        * wiki markup for macros (version 4.3)
+        ** https://confluence.atlassian.com/display/CONF43/Confluence+Wiki+Markup+for+Macros
+        * wiki markup for macros (version 3.5)
+        ** https://confluence.atlassian.com/display/CONF35/Working+with+Macros
         
         h2. Context
         
@@ -97,6 +101,24 @@ wiki.markup.cheatsheet:
         ** elements
         * included
 
+        h2. Macros from the version 3.5 documentation
+        
+        {loremipsum}
+        
+        {rss:url=http://www.example.com/rss/}
+        
+        {tasklist:Sample task list}
+        
+        {livesearch}
+        
+        {tip}Ask a question at Atlassian Answers!{tip}
+
+        {tip:title=TipTitle|icon:true}
+        This is another useful tip.
+        {tip}
+        
+        {welcome-message} 
+        
         h2. Callout macros
 
         {code:title=Inline Markup|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}
