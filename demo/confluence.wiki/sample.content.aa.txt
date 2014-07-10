@@ -101,7 +101,7 @@ wiki.markup.cheatsheet:
         ** elements
         * included
 
-        h2. Macros from the version 3.5 documentation
+        h1. Macros from the version 3.5 documentation
         
         {loremipsum}
         
