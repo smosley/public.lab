@@ -101,23 +101,41 @@ wiki.markup.cheatsheet:
         ** elements
         * included
 
-        h1. Macros from the version 3.5 documentation
+        h1. Macros documented exclusively in version 3.5
         
-        {loremipsum}
+        h2. loremipsum
+        
+        * https://confluence.atlassian.com/display/CONF35/Loremipsum+Macro
+        
+        {loremipsum:1}
+        
+        h2. rss
+        
+        * https://confluence.atlassian.com/display/CONF35/RSS+Feed+Macro
         
         {rss:url=http://www.example.com/rss/}
+
+        h2. tasklist
         
         {tasklist:Sample task list}
         
+        h2. livesearch
+        
         {livesearch}
+
+        h2. tip
         
         {tip}Ask a question at Atlassian Answers!{tip}
 
         {tip:title=TipTitle|icon:true}
-        This is another useful tip.
+        This is8 another useful tip.
         {tip}
         
+        h2. welcome-message
+
         {welcome-message} 
+        
+        h1. Other macros
         
         h2. Callout macros
 
