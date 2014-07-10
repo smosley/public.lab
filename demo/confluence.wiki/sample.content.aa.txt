@@ -83,6 +83,14 @@ wiki.markup.cheatsheet:
         This is _important_ information.
         {info}
 
+        {note:title=This is my title|icon=true}
+        This is _important_ information.
+        {note}
+
+        {warning:title=This is my title|icon=true}
+        This is _important_ information.
+        {warning}
+
         h2. Test a section
 
         {section:border=true}
