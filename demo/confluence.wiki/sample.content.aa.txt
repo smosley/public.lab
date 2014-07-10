@@ -205,6 +205,19 @@ wiki.markup.cheatsheet:
         
         h1. See also
 
+        h2. Change history
+        
+        {change-history}
+        
+        h2. Children
+
+        {children:reverse=true|sort=creation|style=h4|page=Home|excerpt=true|first=99|depth=2|all=true}
+        
+        h2. Content By Label
+
+        {contentbylabel:spaces=@personal,@self|author=admin,smaddox|title=My labelled pages|showLabels=false|reverse=true|sort=creation|max=10|excerpt=true|labels=chocolate,cake|showSpace=false|type=page|operator=AND}
+        
+
         h2. Content by user macro
 
         {content-by-user:dreftymac}
