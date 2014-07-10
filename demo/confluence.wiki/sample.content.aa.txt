@@ -117,13 +117,19 @@ wiki.markup.cheatsheet:
 
         h2. tasklist
         
+        * https://confluence.atlassian.com/display/CONF35/Tasklist+Macro        
+        
         {tasklist:Sample task list}
         
         h2. livesearch
+
+        * https://confluence.atlassian.com/display/CONF35/Livesearch+Macro        
         
         {livesearch}
 
         h2. tip
+        
+        * https://confluence.atlassian.com/display/CONF35/Tuip+Macro
         
         {tip}Ask a question at Atlassian Answers!{tip}
 
