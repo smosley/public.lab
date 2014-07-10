@@ -107,6 +107,13 @@ wiki.markup.cheatsheet:
 
         {chart:type=|title=Languages by user count}
         || Language || 2004 || 2005 ||
+        | PHP | 70 | 140 |
+        | Ruby | 1 | 1 |
+        | Javascript | 12 | 150 |
+        {chart}
+
+        {chart:type=|title=Same table different column format}
+        || Language || 2004 || 2005 ||
         || PHP | 70 | 140 |
         || Ruby | 1 | 1 |
         || Javascript | 12 | 150 |
