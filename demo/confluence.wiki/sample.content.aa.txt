@@ -17,12 +17,15 @@ wiki.markup.cheatsheet:
         
         * https://github.com/dreftymac/dreftymac.public.lab/blob/master/demo/confluence.wiki/sample.content.aa.txt
         
-        Note: 
-
+        Additional wiki markup help is available here:
+          
+        * wiki markup for macros (multiple versions) ;; https://confluence.atlassian.com/display/DOC/Confluence+Wiki+Markup+for+Macros#ConfluenceWikiMarkupforMacros-code
+        * wiki markup for macros (version 4.3) ;; https://confluence.atlassian.com/display/CONF43/Confluence+Wiki+Markup+for+Macros
+        
         h2. Context
-
+        
         This markup was tested against a confluence wiki install with the following properties:
-
+          
         {code:title=Codeblock TXT|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}
         Powered by Atlassian Confluence 4.3.7, the Enterprise Wiki
         {code}
