@@ -54,7 +54,7 @@ wiki.markup.cheatsheet:
         h2. Test with bulleted list
 
         We will probably use lots of lists:
-        {code:title=Inline Example|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}
+        {code:title=Inline Markup|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}
         * this
         * is
         * a
@@ -76,7 +76,26 @@ wiki.markup.cheatsheet:
         ** elements
         * included
 
-        h2. Fun macros
+        h2. Callout macros
+
+        {code:title=Inline Markup|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}
+        {expand:ShowHide}
+        This text is _hidden_ until you expand it.
+        {expand}
+
+        {info:title=This is my title|icon=true}
+        This is _important_ information.
+        {info}
+
+        {note:title=This is my title|icon=true}
+        This is _important_ information.
+        {note}
+
+        {warning:title=This is my title|icon=true}
+        This is _important_ information.
+        {warning}
+        {code}          
+
 
         {expand:ShowHide}
         This text is _hidden_ until you expand it.
