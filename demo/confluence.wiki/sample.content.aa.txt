@@ -32,7 +32,15 @@ wiki.markup.cheatsheet:
 
         h1. Demonstration markup
 
-        h2. Test with formatting
+        h2. Test formatting
+        
+        {code:title=Inline Markup|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}        
+
+        We will probably use lots of *bold* with _italics_ with +underline+.
+
+        We will probably use very little ^superscript^ or ~subscript~.
+
+        {code}         
 
         We will probably use lots of *bold* with _italics_ with +underline+.
 
@@ -44,12 +52,25 @@ wiki.markup.cheatsheet:
             One question is how to get a blockquote to span multiple lines without having to prefix each line with the bq sigil.
             Someone might be able to tell me, but then they would probably have to me.
 
-        h2. Test a table with markdown
+        h2. Markdown-based tables
+
+        {code:title=Inline Markup|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}        
+        || alpha || bravo || charlie ||
+        || delta | echo  | foxtrot |
+        || golf | hotel | india |
+
+        || alpha || bravo || charlie ||
+        | delta | echo  | foxtrot |
+        | golf | hotel | india |
+        {code}   
 
         || alpha || bravo || charlie ||
         || delta | echo  | foxtrot |
         || golf | hotel | india |
 
+        || alpha || bravo || charlie ||
+        | delta | echo  | foxtrot |
+        | golf | hotel | india |
 
         h2. Test with bulleted list
 
@@ -127,18 +148,11 @@ wiki.markup.cheatsheet:
 
         h2. Test a chart
 
-        {chart:type=|title=Languages by user count}
+        {chart:type=|title=Simple pie chart}
         || Language || 2004 || 2005 ||
         | PHP | 70 | 140 |
         | Ruby | 1 | 1 |
         | Javascript | 12 | 150 |
-        {chart}
-
-        {chart:type=|title=Same table different column format}
-        || Language || 2004 || 2005 ||
-        || PHP | 70 | 140 |
-        || Ruby | 1 | 1 |
-        || Javascript | 12 | 150 |
         {chart}
 
         h2. Test macro markup for code blocks
