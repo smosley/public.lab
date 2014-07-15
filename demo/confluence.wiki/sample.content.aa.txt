@@ -290,6 +290,7 @@ wiki.markup.cheatsheet:
 
         {contentbylabel:spaces=@personal,@self|author=admin,smaddox|title=My labelled pages|showLabels=false|reverse=true|sort=creation|max=10|excerpt=true|labels=chocolate,cake|showSpace=false|type=page|operator=AND}
         
+        {contentbylabel:label=demonstration}
 
         h2. Content by user macro
 
