@@ -43,6 +43,9 @@ wiki.markup.cheatsheet:
         We will probably use lots of *bold* with _italics_ with +underline+.
 
         We will probably use very little ^superscript^ or ~subscript~.
+        
+        !https://www.atlassian.com/docroot/wac/resources/wac/img/atlassian_logo_topnav.svg!
+        !http://upload.wikimedia.org/wikipedia/commons/7/79/Wiki-commons.png!
 
         {code}         
 
