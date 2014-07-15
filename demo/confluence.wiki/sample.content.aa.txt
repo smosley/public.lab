@@ -36,16 +36,38 @@ wiki.markup.cheatsheet:
 
         h1. Demonstration markup
 
-        h2. Test formatting
-        
+        h2. Demo images
+
         {code:title=Inline Markup|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}        
-
-        We will probably use lots of *bold* with _italics_ with +underline+.
-
-        We will probably use very little ^superscript^ or ~subscript~.
         
         !https://www.atlassian.com/docroot/wac/resources/wac/img/atlassian_logo_topnav.svg!
         !http://upload.wikimedia.org/wikipedia/commons/7/79/Wiki-commons.png!
+        !http://upload.wikimedia.org/wikipedia/commons/7/79/Wiki-commons.png|align=right,border=0,bordercolor=black!
+        
+        For any image, you can also specify attributes of the HTML image tag as a comma-separated list of name=value pairs. Available image tags include:
+
+        * align — available values are 'left', 'right', 'center'.
+        * border — specify the width of the border (in pixels).
+        * bordercolor — use this with the above 'border' tag to specify the colour of the image border. Specify the colours by name or by hex value. See more information about web colours. (Available with Confluence 2.6.2 and later.)
+        * hspace — specify the amount of whitespace to be inserted to the left and right of the image (in pixels).
+        * vspace — specify the amount of whitespace to be inserted above and below the image (in pixels).
+        * width — specify the width of the image (in pixels). This will override the natural width of the image.
+        * height — specify the height of the image (in pixels). This will override the natural height of the image.
+        * title — specify alternative text for the image, which is displayed when the pointer hovers over the image
+        * alt — specify alternative text, which is included in the HTML code. This text is retrievable via search, and contributes to accessibility of the page for text-only viewing.                
+        {code}
+
+        !http://upload.wikimedia.org/wikipedia/commons/7/79/Wiki-commons.png!
+        !http://upload.wikimedia.org/wikipedia/commons/7/79/Wiki-commons.png|align=right,border=0,bordercolor=black,title=Demo Logo!
+        !https://www.atlassian.com/docroot/wac/resources/wac/img/atlassian_logo_topnav.svg|height=32,width=32,align=right,border=0,bordercolor=black,title=Demo Logo!
+
+        h2. Demo formatting
+        
+        {code:title=Inline Markup|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}        
+
+        Emphasis *bold* with _italics_ with +underline+.
+
+        Format ^superscript^ or ~subscript~.
         {code}
         
         We will probably use lots of *bold* with _italics_ with +underline+.
@@ -55,7 +77,7 @@ wiki.markup.cheatsheet:
         !https://www.atlassian.com/docroot/wac/resources/wac/img/atlassian_logo_topnav.svg!
         !http://upload.wikimedia.org/wikipedia/commons/7/79/Wiki-commons.png!
         
-        h2. Test blockquotes
+        h2. Demo blockquotes
 
         bq. This is a blockquote.
             One question is how to get a blockquote to span multiple lines without having to prefix each line with the bq sigil.
@@ -81,7 +103,7 @@ wiki.markup.cheatsheet:
         | delta | echo  | foxtrot |
         | golf | hotel | india |
 
-        h2. Test with bulleted list
+        h2. Demo with bulleted list
 
         We will probably use lots of lists:
         {code:title=Inline Markup|theme=FadeToGrey|linenumbers=true|language=text|firstline=001|collapse=false}
@@ -185,7 +207,7 @@ wiki.markup.cheatsheet:
         This is _important_ information.
         {warning}
 
-        h2. Test a section
+        h2. Demo a section
 
         {section:border=true}
           {column:width=100px}
@@ -197,7 +219,7 @@ wiki.markup.cheatsheet:
           {column}
         {section}
 
-        h2. Test a chart
+        h2. Demo a chart
 
         {chart:type=|title=Simple pie chart}
         || Language || 2004 || 2005 ||
@@ -206,7 +228,7 @@ wiki.markup.cheatsheet:
         | Javascript | 12 | 150 |
         {chart}
 
-        h2. Test macro markup for code blocks
+        h2. Demo macro markup for code blocks
 
         {code:title=Codeblock JS|theme=FadeToGrey|linenumbers=true|language=javascript|firstline=001|collapse=false}
         <script>
