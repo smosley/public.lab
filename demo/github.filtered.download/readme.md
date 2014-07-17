@@ -22,4 +22,4 @@ You want to provide a user with a github.com URL (or an alternate URL that refer
 ### See also
 
 * http://rawgit.com/
-* 
+* https://developer.github.com/changes/2014-02-21-gist-raw-file-url-change/
