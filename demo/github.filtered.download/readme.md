@@ -22,6 +22,7 @@ You want to provide a user with a github.com URL (or an alternate URL that refer
 ### See also
 
 * http://rawgit.com/
+* http://stackoverflow.com/questions/23873630/how-to-get-github-raw-file-contents-with-php
 * https://developer.github.com/changes/2014-02-21-gist-raw-file-url-change/
 * http://code.lancepollard.com/github-as-a-cdn/
 * http://paulhammant.com/blog/github-as-a-cms-to-end-cmses.html
