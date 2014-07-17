@@ -26,3 +26,4 @@ You want to provide a user with a github.com URL (or an alternate URL that refer
 * http://code.lancepollard.com/github-as-a-cdn/
 * http://paulhammant.com/blog/github-as-a-cms-to-end-cmses.html
 * https://github.com/blog/1327-creating-files-on-github
+* http://stackoverflow.com/questions/8446218/how-to-see-an-html-page-on-github-as-a-normal-rendered-html-page-to-see-preview
