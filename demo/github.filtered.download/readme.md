@@ -25,3 +25,4 @@ You want to provide a user with a github.com URL (or an alternate URL that refer
 * https://developer.github.com/changes/2014-02-21-gist-raw-file-url-change/
 * http://code.lancepollard.com/github-as-a-cdn/
 * http://paulhammant.com/blog/github-as-a-cms-to-end-cmses.html
+* https://github.com/blog/1327-creating-files-on-github
