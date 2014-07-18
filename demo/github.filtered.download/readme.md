@@ -2,7 +2,11 @@
 
 ## Overview
 
-This is an idea inspired by XML + XSLT and github.
+This is an idea inspired by:
+
+* github
+* Perl Filter::simple
+* XML + XSLT 
 
 The goal of this lab is to produce a general-purpose solution for downloading a single output file from github.com, where that output file is auto-generated in the same or similar way that XML + XSLT generates transformations.
 
@@ -22,6 +26,7 @@ You want to provide a user with a github.com URL (or an alternate URL that refer
 ### See also
 
 * http://rawgit.com/
+* https://metacpan.org/pod/Filter::Simple
 * http://stackoverflow.com/questions/23873630/how-to-get-github-raw-file-contents-with-php
 * https://developer.github.com/changes/2014-02-21-gist-raw-file-url-change/
 * http://code.lancepollard.com/github-as-a-cdn/
