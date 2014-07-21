@@ -27,6 +27,7 @@ You want to provide a user with a github.com URL (or an alternate URL that refer
 
 * http://rawgit.com/
 * http://docs.puppetlabs.com/hiera/1/index.html#hiera-1
+* https://github.com/daltonmatos/codepad
 * https://metacpan.org/pod/Filter::Simple
 * http://stackoverflow.com/questions/23873630/how-to-get-github-raw-file-contents-with-php
 * https://developer.github.com/changes/2014-02-21-gist-raw-file-url-change/
