@@ -5,7 +5,9 @@
 
 Context: Drupal7
 
-Sometimes it may be necessary to populate a Drupal node with HTML markup that in a way that was not originally anticipated by the theme originator. This scenario is described in more detail in the following blog post "Make a custom HTML page in Drupal without file access or custom templates"[fn01].
+Sometimes it may be necessary to populate a Drupal node with HTML markup that works in a way that was not originally anticipated by the theme originator. 
+
+This scenario is described in more detail in the following blog post  ["Make a custom HTML page in Drupal without file access or custom templates"](https://duckduckgo.com/?q=%22Make+a+custom+HTML+page+in+Drupal+without+file+access+or+custom+templates%22) **Hereinafter [fn01]**.
 
 For example:
 
