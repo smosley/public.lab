@@ -3,7 +3,10 @@
 
 ## Overview
 
-Context: Drupal7
+**Context:** Drupal7
+**Audience:** Themer, Developer, Site-builder
+**Difficulty:** medium
+**Time:** Less than an hour
 
 Sometimes it may be necessary to populate a Drupal node with HTML markup that works in a way that was not originally anticipated by the theme originator. 
 
