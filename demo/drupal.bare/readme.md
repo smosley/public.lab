@@ -14,10 +14,25 @@ For example:
 * you may have content that depends on a front-end MVC library not yet supported by your theme or modules
  
 
+## Step by step
 
-https://cloud.githubusercontent.com/assets/4074354/3652568/33317582-113e-11e4-9352-505eb796874e.png
+The following is a step-by-step walkthrough to augment the content at [fn01]. 
+
+### Install and enable the devel module
 
 ![drupal devel module aa](https://cloud.githubusercontent.com/assets/4074354/3652568/33317582-113e-11e4-9352-505eb796874e.png)
+
+
+### Create the bare tpl.php file with the following content
+
+* If your new content type
+```
+<?php
+   dpm($node);
+```
+
+
+### Use the devel module
 
 ![drupal devel module](https://cloud.githubusercontent.com/assets/4074354/3652567/30507c1e-113e-11e4-94dd-7c55961fd002.png)
 
