@@ -22,13 +22,19 @@ The following is a step-by-step walkthrough to augment the content at **[fn01]**
 
 ### Install and enable the devel module
 
+Install and enable thd devel module. We will use it to locate the appropriate PHP variable path to the output value of the node body. This is what we want to capture, and it may change depending on the Drupal release, which is why we use the devel module.
+
 ![drupal devel module aa](https://cloud.githubusercontent.com/assets/4074354/3652568/33317582-113e-11e4-9352-505eb796874e.png)
 
 
-### Create the bare tpl.php file with the following content
+### Create the bare tpl.php file with the content necessary to activate per content type and locate the body
 
-* If your new content type has the drupal machine_name `bare_page` then you will want to create a *.tpl.php file called `node--bare-page.tpl.php` 
-* If your new content type has the drupal machine_name `barepage` then you will want to create a *.tpl.php filed called `node--barepage.tpl.php`
+* If your new content type has the drupal machine_name 
+    * `bare_page` then you will want to create a *.tpl.php file called 
+    * `node--bare-page.tpl.php` 
+* If your new content type has the drupal machine_name 
+    * `barepage` then you will want to create a *.tpl.php filed called 
+    * `node--barepage.tpl.php`
 
 The file should have the following content:
 
