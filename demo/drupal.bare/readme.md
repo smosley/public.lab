@@ -2,5 +2,6 @@
 
 ## See also
 
-|| caption || link ||
+| caption | link |
+|---------|------|
 | theme-independent landing pages | http://www.csdesignco.com/comment/990#comment-990 |
