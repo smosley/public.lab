@@ -72,7 +72,7 @@ In this example, the file should have the following content:
 
 ```
 <?php
-   print($node->body[ $node->language ][0]['value'];
+   print($node->body[ $node->language ][0]['value']);
 ```
 
 * **NOTE:** The PHP variable path we are after in this case is `$node->body['und'][0]['value']` but there is a gotcha.
