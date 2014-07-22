@@ -27,7 +27,9 @@ Install and enable thd devel module. We will use it to locate the appropriate PH
 ![drupal devel module aa](https://cloud.githubusercontent.com/assets/4074354/3652568/33317582-113e-11e4-9352-505eb796874e.png)
 
 
-### Create the bare tpl.php file with the content necessary to activate per content type and locate the body
+### Create the bare tpl.php file with the necessary content necessary 
+
+We want a tpl file that will help us to find the relevant PHP variable path, and we want it to be active whenever viewing "Bare Page" content type.
 
 * If your new content type has the drupal machine_name 
     * `bare_page` then you will want to create a *.tpl.php file called 
