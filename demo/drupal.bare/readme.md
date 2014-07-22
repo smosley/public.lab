@@ -22,7 +22,11 @@ The following is a step-by-step walkthrough to augment the content at **[fn01]**
 
 ### Install and enable the devel module
 
-Install and enable thd devel module. We will use it to locate the appropriate PHP variable path to the output value of the node body. This is what we want to capture, and it may change depending on the Drupal release, which is why we use the devel module.
+Install and enable thd devel module. 
+
+The devel module is extremely useful in finding the internals of critical variables on your Drupal site. It is recommended for use only on development sites, and should only be used if you are skilled enough to comfortably work with and understand PHP internals.
+
+We will use it to locate the appropriate PHP variable path to the output value of the node body. This is what we want to capture, and it may change depending on the Drupal release, which is why we use the devel module.
 
 ![drupal devel module aa](https://cloud.githubusercontent.com/assets/4074354/3652568/33317582-113e-11e4-9352-505eb796874e.png)
 
