@@ -25,7 +25,11 @@ The following is a step-by-step walkthrough to augment the content at [fn01].
 
 ### Create the bare tpl.php file with the following content
 
-* If your new content type
+* If your new content type has the drupal machine_name `bare_page` then you will want to create a *.tpl.php file called `node--bare-page.tpl.php` 
+* If your new content type has the drupal machine_name `barepage` then you will want to create a *.tpl.php filed called `node--barepage.tpl.php`
+
+The file should have the following content:
+
 ```
 <?php
    dpm($node);
