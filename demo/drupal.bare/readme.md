@@ -4,4 +4,4 @@
 
 | caption | link |
 |---------|------|
-| theme-independent landing pages | http://www.csdesignco.com/comment/990#comment-990 |
+| theme-independent landing pages | http://www.csdesignco.com/comment/990 |
