@@ -21,4 +21,4 @@ For example:
 |reference| caption | link |
 |:--------|:---------|:------|
 |fn01     | theme-independent landing pages | http://www.csdesignco.com/comment/990 |
-|fn02     | ddg search with | [ddg search for fn01](https://duckduckgo.com/?q=%22Make+a+custom+HTML+page+in+Drupal+without+file+access+or+custom+templates%22) |
+|fn02     | ddg search per fn01 | [ddg search for fn01](https://duckduckgo.com/?q=%22Make+a+custom+HTML+page+in+Drupal+without+file+access+or+custom+templates%22) |
