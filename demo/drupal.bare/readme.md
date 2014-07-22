@@ -1,4 +1,4 @@
-# Drupal Bare page content 
+# Drupal bare page content 
 
 
 ## Overview
