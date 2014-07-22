@@ -18,7 +18,7 @@ For example:
 
 ## Step by step
 
-The following is a step-by-step walkthrough to augment the content at [fn01]. 
+The following is a step-by-step walkthrough to augment the content at **[fn01]**. 
 
 ### Install and enable the devel module
 
@@ -37,6 +37,11 @@ The file should have the following content:
    dpm($node);
 ```
 
+Save the file to the appropriate location on your drupal site:
+
+```
+/var/www/html/mysite/sites/all/themes/foobartheme/node--bare-page.tpl.php
+```
 
 ### Use the devel module
 
