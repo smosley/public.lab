@@ -18,6 +18,11 @@ For example:
 * you may need to quickly construct a custom landing page on one or more sections of the site
 * you may have content that depends on a front-end MVC library not yet supported by your theme or modules
  
+### Motivation
+
+For those who are familiar with operating systems or any electronic device that uses a "files and folders" metaphor, one might liken the recommended use of the Devel module as the equivalent of a "finder window" or "explorer window" of the old-time operating systems, wherein such tools were critical for finding components necessary to make the engine work the way it works; including favorable participation and interaction with those entrusted with its working.
+
+(see e.g., http://en.wikipedia.org/wiki/Windows_Explorer, further illuminating the analogy)
 
 ## Step by step
 
