@@ -51,9 +51,23 @@ Save the file to the appropriate location on your drupal site:
 /var/www/html/mysite/sites/all/themes/foobartheme/node--bare-page.tpl.php
 ```
 
-### Use the devel module
+### Use the devel module to locate the relevant PHP variable path
+
+Drupal uses densely reticulated and nested PHP variable paths that can be somewhat irregular and change depending on the version of Drupal you are using. Because of this, we use the Devel module to drill down to the specific branch of the nested PHP variable that contains the data that we want.
+
+When you find the relevant path, make a note of it and re-edit your tpl file.
 
 ![drupal devel module](https://cloud.githubusercontent.com/assets/4074354/3652567/30507c1e-113e-11e4-94dd-7c55961fd002.png)
+
+### Re-edit the tpl file to point to the PHP variable path that we found
+
+In this example, the file should have the following content:
+
+```
+<?php
+   print($node->body[ $node->language ][0]['value'];
+```
+
 
 ## See also
 
