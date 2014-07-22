@@ -34,7 +34,7 @@ We will use it to locate the appropriate PHP variable path to the output value o
 ![drupal devel module aa](https://cloud.githubusercontent.com/assets/4074354/3652568/33317582-113e-11e4-9352-505eb796874e.png)
 
 
-### Create the bare tpl.php file with the necessary content necessary 
+### Create the bare tpl.php file with the initial barebones content
 
 We want a tpl file that will help us to find the relevant PHP variable path, and we want it to be active whenever viewing "Bare Page" content type.
 
