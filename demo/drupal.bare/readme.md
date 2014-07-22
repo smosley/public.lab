@@ -1,4 +1,11 @@
-## Drupal Bare page content (for use with angularjs)
+# Drupal Bare page content 
+
+
+## Overview
+
+Context: Drupal7
+
+Sometimes it may be necessary to populate a Drupal 
 
 ## See also
 
