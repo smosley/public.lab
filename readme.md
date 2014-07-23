@@ -4,10 +4,15 @@ This is the general-purpose publically-accessible github lab space for dreftymac
 
 ### Lab: confluence wiki
 
+* https://github.com/dreftymac/dreftymac.public.lab/blob/master/demo/confluence.wiki/readme.md
+
 ### Lab: github filtered download
+
+* https://github.com/dreftymac/dreftymac.public.lab/blob/master/demo/github.filtered.download/readme.md
 
 ### Lab: ableton live
 
+* https://github.com/dreftymac/dreftymac.public.lab/blob/master/demo/ableton.live/readme.md
 
 ### Lab: drupal bare page content
 
