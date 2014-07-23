@@ -20,6 +20,8 @@ For example:
  
 ### Motivation
 
+The basic motivation for this write-up is to demonstrate a basic developer mindset: *PHP variable paths in Drupal can be likened to file and directory paths in a computer file system*. Understanding and applying this mindset can help enhance problem-solving skills for PHP developers in general, and Drupal developers in specific.
+
 For those who are familiar with operating systems or any electronic device that uses a "files and folders" metaphor, one might liken the recommended use of the Devel module as the equivalent of a "finder window" or "explorer window" of the old-time operating systems, wherein such tools were critical for finding components necessary to make the engine work the way it works; including favorable participation and interaction with those entrusted with its working.
 
 (see e.g., http://en.wikipedia.org/wiki/Windows_Explorer, further illuminating the analogy; critical PHP values necessary for excercising certain elements of your site are stored in a nested irregular "tree structure" not unlike those invoked by this analogy)
