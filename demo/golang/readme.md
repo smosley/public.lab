@@ -9,3 +9,7 @@ What is the golang equivalent of:
 * python __repr__
 * ruby inspect
 
+## Trybits
+
+* http://tip.golang.org/pkg/os/#Environ
+* 
