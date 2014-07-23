@@ -17,3 +17,7 @@ This is the general-purpose publically-accessible github lab space for dreftymac
 ### Lab: drupal bare page content
 
 * https://github.com/dreftymac/dreftymac.public.lab/tree/master/demo/drupal.bare#drupal-bare-page-content
+
+### Lab: golang
+
+* https://github.com/dreftymac/dreftymac.public.lab/tree/master/demo/golang/readme.md
