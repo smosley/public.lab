@@ -38,6 +38,8 @@ We will use it to locate the appropriate PHP variable path to the output value o
 
 ![drupal devel module aa](https://cloud.githubusercontent.com/assets/4074354/3652568/33317582-113e-11e4-9352-505eb796874e.png)
 
+* **NOTE:**
+  * The Devel module is very powerful, and consequently capable of momentarily disabling access to your site. Ideally, it is best to maintain two versions of your site, one for development (internal-developer access only) and one for production (customer and end-user access). It is assumed for the purposes of this writeup that you have such a setup and will be using Devel on the development version of your site. See below for important tips if you are using Devel on a production site.
 
 ### Create the bare tpl.php file with the initial barebones content
 
