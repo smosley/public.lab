@@ -56,6 +56,8 @@ The file should have the following content:
 <?php
    dpm($node);
 ```
+Note: _dpm()_ is a [devel shortcut](https://api.drupal.org/api/devel/devel.module/function/dpm/7) for _drupal_set_message()_. If you leave _dpm()_ in your custom code and disable the devel module you may experience the [WSOD](https://www.drupal.org/node/158043) due to the critcal PHP error.
+It is recommended that you use _drupal_set_message()_ or be sure to comment out / remove dpm() calls prior to using this code in a production state.
 
 Save the file to the appropriate location on your drupal site:
 
