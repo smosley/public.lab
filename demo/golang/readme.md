@@ -12,4 +12,4 @@ What is the golang equivalent of:
 ## Trybits
 
 * http://tip.golang.org/pkg/os/#Environ
-* 
+* http://golang.org/pkg/reflect/
