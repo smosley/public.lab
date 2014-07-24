@@ -1,3 +1,4 @@
+SECTION, KEYWORD, DESCRIPTION
 code.blocks                                   ,   block.case_if                  ,    conditional case statement                                                                                                    
 code.blocks                                   ,   block.catch                    ,    catch block                                                                                                                   
 code.blocks                                   ,   block.die                      ,    how to terminate a process with error message                                                                                 
