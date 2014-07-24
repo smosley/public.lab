@@ -21,3 +21,7 @@ This is the general-purpose publically-accessible github lab space for dreftymac
 ### Lab: golang
 
 * https://github.com/dreftymac/dreftymac.public.lab/tree/master/demo/golang/readme.md
+
+## Wiki
+
+* https://github.com/dreftymac/dreftymac.public.lab/wiki
