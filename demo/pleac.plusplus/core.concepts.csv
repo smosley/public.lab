@@ -178,14 +178,14 @@ OOP.methods                                   ,   oopmeth.static                
 OOP.methods                                   ,   oopmeth.symbolic               ,    call an oop method using a scalar for the methodname                                                                          
 OOP.objects                                   ,   oopobj.new_instance            ,    A new OOP plain object. Create an object (aka instance of a class).                                                           
 OOP.references                                ,   oopref.symbolic                ,    instantiate an object from an oop class using a scalar for the classname (without using string eval)                          
-regular.expressions.and.related.concepts      ,   regex.22_notation              ,    specify notation for individual characters char                                                                               
-regular.expressions.and.related.concepts      ,   regex.backref                  ,    RegEx memorizing capture register inside match-region or substitute-region                                                    
-regular.expressions.and.related.concepts      ,   regex.basic_syntax             ,    RegEx basic syntax basic_ops                                                                                                  
-regular.expressions.and.related.concepts      ,   regex.capture                  ,    specify a capturing match register                                                                                            
-regular.expressions.and.related.concepts      ,   regex.match                    ,    RegEx match operation                                                                                                         
-regular.expressions.and.related.concepts      ,   regex.noncapture               ,    specify a non-capturing grouping match register                                                                               
-regular.expressions.and.related.concepts      ,   regex.replace                  ,    RegEx replace operation                                                                                                       
-SQL.and.related.concepts                      ,   sqldata.bulk_insert            ,    populate a sql table using a text file as the raw data                                                                        
+regular.expressions      ,   regex.22_notation              ,    specify notation for individual characters char                                                                               
+regular.expressions      ,   regex.backref                  ,    RegEx memorizing capture register inside match-region or substitute-region                                                    
+regular.expressions      ,   regex.basic_syntax             ,    RegEx basic syntax basic_ops                                                                                                  
+regular.expressions      ,   regex.capture                  ,    specify a capturing match register                                                                                            
+regular.expressions      ,   regex.match                    ,    RegEx match operation                                                                                                         
+regular.expressions      ,   regex.noncapture               ,    specify a non-capturing grouping match register                                                                               
+regular.expressions      ,   regex.replace                  ,    RegEx replace operation                                                                                                       
+SQL.concepts ,   sqldata.bulk_insert            ,    populate a sql table using a text file as the raw data                                                                        
 formatting.strings.escape   ,   strdsp.esc_bs1                 ,    note regex22 is better                                                                                                        
 formatting.strings.escape   ,   strdsp.esc_bs2                 ,    note regex22 is better                                                                                                        
 formatting.strings.escape   ,   strdsp.esc_qq1                 ,    note regex22 is better                                                                                                        
