@@ -7,6 +7,7 @@ This is an idea inspired by:
 * github
 * Perl Filter::simple
 * XML + XSLT 
+* https://guides.github.com/
 
 The goal of this lab is to produce a general-purpose solution for downloading a single output file from github.com, where that output file is auto-generated in the same or similar way that XML + XSLT generates transformations.
 
