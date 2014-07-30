@@ -2,6 +2,7 @@
   - caption: google analytics
     domain:  webdev
     tags:    google, webdev
+    format:  plaintext
     body: | 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
       <script>
