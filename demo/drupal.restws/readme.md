@@ -1,3 +1,3 @@
 ## source
 
-* http://surplusops.fadev.uoregon.edu/node.json?type=listing&limit=3
+* http://example.com/node.json?type=listing&limit=3
