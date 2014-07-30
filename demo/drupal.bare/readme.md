@@ -96,3 +96,4 @@ In this example, the file should have the following content:
 |:--------|:---------|:------|
 |fn01     | theme-independent landing pages | http://www.csdesignco.com/comment/990 |
 |fn02     | ddg search per fn01 | [ddg search for fn01](https://duckduckgo.com/?q=%22Make+a+custom+HTML+page+in+Drupal+without+file+access+or+custom+templates%22) |
+|fn03  | drupal static_page module | https://github.com/dreftymac/dreftymac.public.lab/blob/master/demo/drupal.bare/drupal.static.page.md|
