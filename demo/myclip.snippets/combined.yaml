@@ -1,5 +1,5 @@
 ## myclip snippets
-  - caption: google analytics
+  - caption: script include google analytics
     domain:  webdev
     tags:    google, webdev
     format:  plaintext
@@ -12,7 +12,7 @@
         s.parentNode.insertBefore(g,s)}(document,'script'));
       </script>    
 
-  - caption: cdn include underscorejs
+  - caption: cdn script include underscorejs
     domain:  webdev
     tags:    underscorejs, script, cdn
     format:  plaintext
