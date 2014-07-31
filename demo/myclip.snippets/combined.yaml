@@ -11,3 +11,11 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
       </script>    
+
+  - caption: cdn include underscorejs
+    domain:  webdev
+    tags:    underscorejs, script, cdn
+    format:  plaintext
+    body: | 
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+      
