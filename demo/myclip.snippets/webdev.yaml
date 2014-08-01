@@ -18,3 +18,41 @@
     format:  plaintext
     body: | 
       <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+      
+  - caption: cdn google webdev
+    domain:  webdev
+    tags:    google, script, cdn, angularjs
+    format:  plaintext
+    body: | 
+      https://developers.google.com/speed/libraries/devguide#jquery-ui
+      
+  - caption: cdn microsoft webdev 
+    domain:  webdev
+    tags:    google, script, cdn, angularjs
+    format:  plaintext
+    body: | 
+        http://www.asp.net/ajaxlibrary/cdn.ashx
+        http://modernizr.com/      
+
+  - caption: cdn for icons
+    domain:  webdev
+    tags:    image, icon, script, cdn
+    format:  plaintext
+    body: | 
+        http://www.iconfinder.com/search/?q=add
+        http://cdn1.iconfinder.com/data/icons/gnomeicontheme/24x24/actions/gtk-edit.png
+        http://cdn1.iconfinder.com/data/icons/gnomeicontheme/24x24/actions/gtk-refresh.png
+        http://cdn1.iconfinder.com/data/icons/gnomeicontheme/24x24/actions/gtk-properties.png
+
+  - caption: cdn for icons
+    domain:  webdev
+    tags:    image, icon, script, cdn
+    format:  plaintext
+    body: | 
+        http://cdn.dustball.com/user.png 
+        http://cdn.dustball.com/application_form.png
+        http://cdn.dustball.com/report.png        
+        
+        <img align="absmiddle" height="16" width="16" alt="user" src="http://cdn.dustball.com/user.png" />
+        
+        
