@@ -1,0 +1,15 @@
+## 
+
+Server Error logs: 
+  - enabled
+  - disabled
+
+Web Access logs retention Keep logs for N days: 
+  - 1 day
+  - 3 days
+  - 5 days
+  - 10 days
+
+Raw log file downloads:
+
+
