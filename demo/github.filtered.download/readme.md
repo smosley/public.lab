@@ -11,6 +11,11 @@ This is an idea inspired by:
 
 The goal of this lab is to produce a general-purpose solution for downloading a single output file from github.com, where that output file is auto-generated in the same or similar way that XML + XSLT generates transformations.
 
+## Discoveries
+
+* https://diecutter.alwaysdata.net/rawgithub/diecutter/python-startproject/index.html
+    * a project that appears to be the same or similar idea
+
 ### Problem
 
 You want to provide a user with a github.com URL (or an alternate URL that references github) that does three things.
