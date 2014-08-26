@@ -1,6 +1,15 @@
-try {
-    adddlert("Welcome guest!");
-}
-catch(err) {
-    document.getElementById("demo").innerHTML = err.message;
-}
+
+## myclip snippets
+
+  - caption: try catch block
+    domain:  javascript
+    tags:    try, catch, throw, exception
+    format:  plaintext
+    body: | 
+        try {
+            adddlert("Welcome guest!");
+        }
+        catch(err) {
+          console.log(err.message);
+        }
+
