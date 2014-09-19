@@ -1,3 +1,3 @@
 ## See also
 
-* http://www.thoughtworks.com/radar/#/a-z
+* thoughtworks tech radar ;; http://www.thoughtworks.com/radar/#/a-z
