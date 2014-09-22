@@ -1,4 +1,12 @@
 ## myclip snippets
+  - caption: python unicode docnew
+    desc: | 
+      blank file template for unicode python file
+      python 2.x
+    body: | 
+      #!/usr/bin/python
+      # -*- coding: utf-8 -*-
+
   - caption: python try catch
     domain:  python
     tags:    try, catch, exception
