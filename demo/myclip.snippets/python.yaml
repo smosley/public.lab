@@ -1,4 +1,13 @@
 ## myclip snippets
+  - caption: python import from sibling dir
+    desc: | 
+      http://stackoverflow.com/questions/4542352/import-from-sibling-directory
+    body: | 
+      import inspect
+      currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+      parentdir = os.path.dirname(currentdir)    
+      os.sys.path.insert(0,parentdir+'/libpy')   
+
   - caption: python unicode docnew
     desc: | 
       blank file template for unicode python file
