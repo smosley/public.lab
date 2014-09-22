@@ -3,6 +3,9 @@
     domain:  bat
     tags:    windows, bat
     format:  plaintext
+    desc: | 
+        * depends on a local text script file named like the following:
+            * bc.kdrive_primary_sync_to_replica.txt
     body: | 
         @echo off
         REM @file
