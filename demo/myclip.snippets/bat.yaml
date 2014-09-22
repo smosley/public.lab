@@ -1,17 +1,21 @@
 ## windows batch file
-
-@echo off
-REM @file
-REM @verbatim
-REM main:
-REM   - date: created="Wed Jun 04 18:00:00 2014"
-REM     last: lastmod="Wed Jun 04 18:00:00 2014"
-REM     desc: |
-REM 
-REM         windows batch file for running a beyond compare script
-REM         whatever drive this batch file is on, consider that the master drive
-REM         
-REM @endverbatim 
-
-REM batch file for running beyond compare plain-text script
-C:\Programs\BeyondCompare\BCompare.exe /closescript @"./bc.%cd:~,1%drive_primary_sync_to_replica.txt"
+  - caption: batch beyondcompare sync with drive-letter context 
+    domain:  bat
+    tags:    windows, bat
+    format:  plaintext
+    body: | 
+        @echo off
+        REM @file
+        REM @verbatim
+        REM main:
+        REM   - date: created="Wed Jun 04 18:00:00 2014"
+        REM     last: lastmod="Wed Jun 04 18:00:00 2014"
+        REM     desc: |
+        REM 
+        REM         windows batch file for running a beyond compare script
+        REM         whatever drive this batch file is on, consider that the master drive
+        REM         
+        REM @endverbatim 
+        
+        REM batch file for running beyond compare plain-text script
+        C:\Programs\BeyondCompare\BCompare.exe /closescript @"./bc.%cd:~,1%drive_primary_sync_to_replica.txt"
