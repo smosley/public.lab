@@ -1,4 +1,8 @@
 ## myclip snippets
+  - caption: windows icon path
+    body: | 
+        %SystemRoot%\system32\SHELL32.dll
+        
   - caption: script include google analytics
     domain:  webdev
     tags:    google, webdev
