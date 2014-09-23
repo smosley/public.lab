@@ -1,4 +1,9 @@
 ## windows batch file
+  - caption: echo current drive letter
+    body: | 
+        echo "%cd:~,1%drive"
+        echo "%cd:~,1%"
+        
   - caption: batch beyondcompare sync with drive-letter context 
     domain:  bat
     tags:    windows, bat
