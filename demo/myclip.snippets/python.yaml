@@ -1,4 +1,8 @@
 ## myclip snippets
+  - caption: python coding
+    body: | 
+      # -*- coding: utf-8 -*-
+      
   - caption: python import from sibling dir
     desc: | 
       http://stackoverflow.com/questions/4542352/import-from-sibling-directory
