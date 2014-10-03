@@ -1,3 +1,11 @@
+---
+context:      Drupal7
+audience:     Themer, Developer, Site-builder
+difficulty:   
+time: 
+---
+
+
 # Drupal bare page content 
 
 
