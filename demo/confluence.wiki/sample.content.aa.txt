@@ -1,5 +1,5 @@
 
-wiki.markup.cheatsheet:
+main:
     title:        00 Confluence Wiki Markup Cheatsheet
     date:         created="Tue Jul 08 08:12:31 2014"
     access.level: public
