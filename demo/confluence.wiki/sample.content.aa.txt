@@ -1,9 +1,10 @@
 
 wiki.markup.cheatsheet:
-    title:  00 Confluence Wiki Markup Cheatsheet
-    date: created="Tue Jul 08 08:12:31 2014"
+    title:        00 Confluence Wiki Markup Cheatsheet
+    date:         created="Tue Jul 08 08:12:31 2014"
     access.level: public
-    tymacid: clara.nike.numb.lend
+    dreftymacid:  clara_nike_numb_lend
+    seealso:      href="../../../../../../../mytrybits/c/tryconfluencewiki/imacros/readme.txt"
     body: |
         {toc:outline=true|type=list|style=disc|maxLevel=2}
 
@@ -177,15 +178,15 @@ wiki.markup.cheatsheet:
         This text is _hidden_ until you expand it.
         {expand}
 
-        {info:title=This is my title|icon=true}
+        {info:title=Infobar title here|icon=true}
         This is _important_ information.
         {info}
 
-        {note:title=This is my title|icon=true}
+        {note:title=Cautionbar title here|icon=true}
         This is _important_ information.
         {note}
 
-        {warning:title=This is my title|icon=true}
+        {warning:title=Warningbar title here|icon=true}
         This is _important_ information.
         {warning}
         {code}          
