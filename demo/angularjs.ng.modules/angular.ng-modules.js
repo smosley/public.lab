@@ -1,5 +1,18 @@
-// By Luis Perez
-// From blog post: http://www.simplygoodcode.com/2014/04/angularjs-getting-around-ngapp-limitations-with-ngmodule/
+// <beg-file_info>
+// main:
+//   - date: created="2014 week30"
+//     last: lastmod="Thu Aug 06 07:03:41 2015"
+//     tags:   tags 
+//     author: created="Luis Perez"
+//     dreftymacid:    "demo_woken_thump"
+//     seealso: |
+//         *
+//     desc: |
+//          ng-modules.js
+//          By Luis Perez
+//          From blog post: http://www.simplygoodcode.com/2014/04/angularjs-getting-around-ngapp-limitations-with-ngmodule/
+//          additional modifications added for firefox by dreftymac
+// <end-file_info>
 
 (function() {
   function initNgModules(element) {
