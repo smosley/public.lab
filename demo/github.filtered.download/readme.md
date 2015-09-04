@@ -15,6 +15,8 @@ The goal of this lab is to produce a general-purpose solution for downloading a 
 
 * https://diecutter.alwaysdata.net/rawgithub/diecutter/python-startproject/index.html
     * a project that appears to be the same or similar idea
+* runnable.io
+   * someone is already making a business model out of this idea
 
 ### Problem
 
