@@ -17,6 +17,7 @@ The goal of this lab is to produce a general-purpose solution for downloading a 
     * a project that appears to be the same or similar idea
 * runnable.io
    * someone is already making a business model out of this idea
+   * https://github.com/dreftymac/public.lab/issues/3
 
 ### Problem
 
