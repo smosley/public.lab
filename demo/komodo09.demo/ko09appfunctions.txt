@@ -89,6 +89,7 @@ ko09Appfunctions:
           getService(Components.interfaces.koIDirs)[keyname];
       }catch(exx){}
       return(vout);
+      
   - date: created="Mon Nov 30 21:44:06 2015"
     last: lastmod="Mon Nov 30 21:44:06 2015"
     funcname:    "App_writeKoLogs"
