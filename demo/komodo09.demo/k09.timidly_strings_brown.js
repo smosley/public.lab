@@ -15,7 +15,6 @@
 koUserScript = function(){  
   this.CurrentBuffer_getFilePath = function(){
     // <beg-function_docs>
-    // main:
     //   - date: created="Mon Nov 30 18:57:01 2015"
     //     last: lastmod="Mon Nov 30 18:57:01 2015"
     //     funcname: "CurrentBuffer_getFilePath"
@@ -28,7 +27,7 @@ koUserScript = function(){
     //     funcdetails: | 
     //          
     //     dreftymacid: alert_pilots_ego
-    //     tags: CurrentBuffer, get, string
+    //     tags: CurrentBuffer, get, string, YES_WORKY
     //     seealso: |
     //         *
     // <end-function_docs>      
@@ -38,7 +37,6 @@ koUserScript = function(){
 
   this.CurrentBuffer_getFileParentDir = function(){
     // <beg-function_docs>
-    // main:
     //   - date: created="Mon Nov 30 18:57:01 2015"
     //     last: lastmod="Mon Nov 30 18:57:01 2015"
     //     funcname: "CurrentBuffer_getFileParentDir"
@@ -51,7 +49,7 @@ koUserScript = function(){
     //     funcdetails: | 
     //          
     //     dreftymacid: flu_robe_reclaim
-    //     tags: CurrentBuffer, get, string
+    //     tags: CurrentBuffer, get, string, YES_WORKY
     //     seealso: |
     //         *
     // <end-function_docs>  
@@ -61,7 +59,7 @@ koUserScript = function(){
 
   this.CurrentBuffer_getLineColumn = function(){
     // <beg-function_docs>
-    // main:
+
     //   - date: created="Mon Nov 30 19:00:48 2015"
     //     last: lastmod="Mon Nov 30 19:00:48 2015"
     //     funcname: "CurrentBuffer_getLineColumn"
@@ -72,19 +70,19 @@ koUserScript = function(){
     //     funcreturns: 
     //          - string ;; current cursor column of the CurrentBuffer
     //     funcdetails: | 
-    //          
+    //          Returns the one-based index instead of zero-based index
     //     dreftymacid: glowing_gotcha_mineral
-    //     tags: CurrentBuffer, get, string
+    //     tags: CurrentBuffer, get, string, YES_WORKY
     //     seealso: |
     //         *
     // <end-function_docs>      
-    return komodo.editor.getColumn(komodo.editor.currentPos);
+    return (komodo.editor.getColumn(komodo.editor.currentPos)+1);
   }
   //endfunction
 
   this.CurrentBuffer_getLineNumber = function(){
     // <beg-function_docs>
-    // main:
+
     //   - date: created="Mon Nov 30 19:04:13 2015"
     //     last: lastmod="Mon Nov 30 19:04:13 2015"
     //     funcname: "CurrentBuffer_getLineNumber"
@@ -97,7 +95,7 @@ koUserScript = function(){
     //     funcdetails: | 
     //          
     //     dreftymacid: axe_celia_flown
-    //     tags: CurrentBuffer, get, string
+    //     tags: CurrentBuffer, get, string, YES_WORKY
     //     seealso: |
     //         *
     // <end-function_docs>
@@ -107,7 +105,7 @@ koUserScript = function(){
 
   this.CurrentBuffer_getLineText = function(){
     // <beg-function_docs>
-    // main:
+
     //   - date: created="Mon Nov 30 19:06:16 2015"
     //     last: lastmod="Mon Nov 30 19:06:16 2015"
     //     funcname: "CurrentBuffer_getLineText"
@@ -135,7 +133,7 @@ koUserScript = function(){
     //        return lineText;
     //
     //     dreftymacid: arian_austria_nasal
-    //     tags: CurrentBuffer, get, string
+    //     tags: CurrentBuffer, get, string, YES_WORKY
     //     seealso: |
     //         *
     // <end-function_docs>
@@ -164,7 +162,7 @@ koUserScript = function(){
 
   this.CurrentBuffer_getSelection = function(bforce){
     // <beg-function_docs>
-    // main:
+
     //   - date: created="Mon Nov 30 19:14:26 2015"
     //     last: lastmod="Mon Nov 30 19:14:26 2015"
     //     funcname: "CurrentBuffer_getSelection"
@@ -176,8 +174,8 @@ koUserScript = function(){
     //          - string ;; currently selected text, if there is any
     //     funcdetails: | 
     //          __funcdetails__
-    //     dreftymacid: __dreftymacid__
-    //     tags: CurrentBuffer, get, string
+    //     dreftymacid: alms_wimpiest_audrey
+    //     tags: CurrentBuffer, get, string, YES_WORKY
     //     seealso: |
     //         *
     // <end-function_docs>
@@ -204,12 +202,12 @@ koUserScript = function(){
   }
   // endfunction
 
-  this.CurrentBuffer_getSubLang = function(){
+  this.CurrentBuffer_getSubLanguage = function(){
     // <beg-function_docs>
-    // main:
+
     //   - date: created="Mon Nov 30 19:16:45 2015"
     //     last: lastmod="Mon Nov 30 19:16:45 2015"
-    //     funcname: "CurrentBuffer_getSubLang"
+    //     funcname: "CurrentBuffer_getSubLanguage"
     //     funcdesc: |
     //           get the current syntax language at the current cursor position 
     //     funcparams: 
@@ -219,7 +217,7 @@ koUserScript = function(){
     //     funcdetails: | 
     //          __funcdetails__
     //     dreftymacid: planing_bengal_niche
-    //     tags: CurrentBuffer, get, string
+    //     tags: CurrentBuffer, get, string, NO_WORKY
     //     seealso: |
     //         *
     // <end-function_docs>    
@@ -227,10 +225,9 @@ koUserScript = function(){
   }
   // endfunction
 
-  //  <reg-fdef ddef=" CurrentBuffer_getLanguage() ;;  ">
   this.CurrentBuffer_getLanguage = function(){
     // <beg-function_docs>
-    // main:
+
     //   - date: created="Mon Nov 30 19:17:52 2015"
     //     last: lastmod="Mon Nov 30 19:17:52 2015"
     //     funcname: "CurrentBuffer_getLanguage"
@@ -243,7 +240,7 @@ koUserScript = function(){
     //     funcdetails: | 
     //          
     //     dreftymacid: tribe_awe_unpin
-    //     tags: CurrentBuffer, get, string
+    //     tags: CurrentBuffer, get, string, NO_WORKY
     //     seealso: |
     //         *
     // <end-function_docs>
@@ -254,3 +251,8 @@ koUserScript = function(){
   // endfunction
 }
 //endclass
+
+if(!! 'test_this_out'){
+  app = new koUserScript();
+  alert( app.CurrentBuffer_getLineNumber() );  
+}
