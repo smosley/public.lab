@@ -6,14 +6,14 @@
 ###     author: created="__author__"
 ###     dreftymacid:    "__dreftymacid__"
 ###     seealso: |
-###         * href="./ko09HelperFunctions.txt"
+###         * href="./ko09Appfunctions.txt"
 ###         * href="./ko09StringFunctions.txt"
 ###     desc: |
 ###         desc  
 ### <end-file_info>
 
 yamltransform01:
-  - caption:  ko09HelperFunctions
+  - caption:  ko09Appfunctions
   - caption:  ko09StringFunctions
 
 ## href="c:/sm/docs/mytrybits/y/tryyaml/dynamicyaml/devlog.txt"
@@ -28,15 +28,21 @@ __yaml__:
     dreftymacid:  argo_gem_windy
     usedataroot:  'workbook'    
     datainclude:
-      - "ko09HelperFunctions.txt"
+      - "ko09Appfunctions.txt"
       - "ko09StringFunctions.txt"
     template: |
       {% for row in workbook.yamltransform01 -%}
-        {{ row.caption }}
-        
-        {% for subrow in workbook[row.caption] -%}
-        {{ subrow.wwbody |jjindent(4) }}
-        {% endfor %}
+        {{-""}}      
+        cls_{{ row.caption }} = function(){
+          {%- for subrow in workbook[row.caption] -%}
+          {{""}}
+          this.{{ subrow.funcname }} = function(){
+            {{"\n"}}{{ subrow.wwbody |jjindent(8) }}            
+          }
+          //endfunction
+          {% endfor %}
+        }
+        //endclass
         
       {% endfor %}  
       
