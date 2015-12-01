@@ -6,8 +6,21 @@
 ###     author: created="dreftymac"
 ###     dreftymacid:    "least_gain_wrap"
 ###     seealso: |
-###         * href="smartpath://mymedia/2014/git/github/public.lab"
-###         * href="smartpath://mymedia/2014/git/github/public.lab/devlog.txt"
+###         * href="smartpath://git/github/public.lab"
+###         * href="smartpath://git/github/public.lab/devlog.txt"
 ###     desc: |
 ###         dreftymac public lab
 ### <end-file_info>
+
+main:
+  - caption:  komodo 09 demo
+    rectype:  rrmini03
+    datebeg:  Mon Nov 30 19:46:08 2015 
+    dateend:  Mon Nov 30 19:46:08 2015 
+    tags:     komodo, ko09, demo
+    seealso: |
+      * href="./demo/komodo09.demo/readme.md"
+    dreftymacid: budgets_fading_must
+    wwbody: |
+        
+        

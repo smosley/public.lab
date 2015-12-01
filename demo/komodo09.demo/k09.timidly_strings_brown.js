@@ -6,7 +6,7 @@
 //     author: created="dreftymac"
 //     dreftymacid: "timidly_strings_brown"
 //     seealso: |
-//         *
+//         * href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/k09.timidly_strings_brown.js"
 //     desc: |
 //          KO CurrentBuffer TextArea Getter Methods
 //          Different ways to get stuff from the currently-active text buffer
@@ -59,7 +59,6 @@ koUserScript = function(){
 
   this.CurrentBuffer_getLineColumn = function(){
     // <beg-function_docs>
-
     //   - date: created="Mon Nov 30 19:00:48 2015"
     //     last: lastmod="Mon Nov 30 19:00:48 2015"
     //     funcname: "CurrentBuffer_getLineColumn"
@@ -82,7 +81,6 @@ koUserScript = function(){
 
   this.CurrentBuffer_getLineNumber = function(){
     // <beg-function_docs>
-
     //   - date: created="Mon Nov 30 19:04:13 2015"
     //     last: lastmod="Mon Nov 30 19:04:13 2015"
     //     funcname: "CurrentBuffer_getLineNumber"
@@ -105,7 +103,6 @@ koUserScript = function(){
 
   this.CurrentBuffer_getLineText = function(){
     // <beg-function_docs>
-
     //   - date: created="Mon Nov 30 19:06:16 2015"
     //     last: lastmod="Mon Nov 30 19:06:16 2015"
     //     funcname: "CurrentBuffer_getLineText"
@@ -162,7 +159,6 @@ koUserScript = function(){
 
   this.CurrentBuffer_getSelection = function(bforce){
     // <beg-function_docs>
-
     //   - date: created="Mon Nov 30 19:14:26 2015"
     //     last: lastmod="Mon Nov 30 19:14:26 2015"
     //     funcname: "CurrentBuffer_getSelection"
@@ -204,7 +200,6 @@ koUserScript = function(){
 
   this.CurrentBuffer_getSubLanguage = function(){
     // <beg-function_docs>
-
     //   - date: created="Mon Nov 30 19:16:45 2015"
     //     last: lastmod="Mon Nov 30 19:16:45 2015"
     //     funcname: "CurrentBuffer_getSubLanguage"
@@ -227,7 +222,6 @@ koUserScript = function(){
 
   this.CurrentBuffer_getLanguage = function(){
     // <beg-function_docs>
-
     //   - date: created="Mon Nov 30 19:17:52 2015"
     //     last: lastmod="Mon Nov 30 19:17:52 2015"
     //     funcname: "CurrentBuffer_getLanguage"
