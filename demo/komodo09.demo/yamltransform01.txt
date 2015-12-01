@@ -1,3 +1,21 @@
+### <beg-file_info>
+### main:
+###   - date: created="Mon Nov 30 22:44:32 2015"
+###     last: lastmod="Mon Nov 30 22:44:32 2015"
+###     tags:   tags 
+###     author: created="__author__"
+###     dreftymacid:    "__dreftymacid__"
+###     seealso: |
+###         * href="./ko09HelperFunctions.txt"
+###         * href="./ko09StringFunctions.txt"
+###     desc: |
+###         desc  
+### <end-file_info>
+
+yamltransform01:
+  - caption:  ko09HelperFunctions
+  - caption:  ko09StringFunctions
+
 ## href="c:/sm/docs/mytrybits/y/tryyaml/dynamicyaml/devlog.txt"
 ## href="c:/sm/docs/mymedia/2014/git/github/dynamic.yaml/py/ddyaml.py"
 __yaml__:
@@ -7,17 +25,20 @@ __yaml__:
     rowkeep: 1
     uuid:         uumate_herds
     desc:         __desc__
-    dreftymacid:  __dreftymacid__
+    dreftymacid:  argo_gem_windy
+    usedataroot:  'workbook'    
     datainclude:
-      - "k09HelperFunctions.txt"
+      - "ko09HelperFunctions.txt"
       - "ko09StringFunctions.txt"
     template: |
-      {% for row in k09HelperFunctions -%}
-      {{ row.dreftymacid }}
-      {% endfor %}
+      {% for row in workbook.yamltransform01 -%}
+        {{ row.caption }}
+        
+        {% for subrow in workbook[row.caption] -%}
+        {{ subrow.wwbody |jjindent(4) }}
+        {% endfor %}
+        
+      {% endfor %}  
       
-      {% for row in ko09StringFunctions -%}
-      {{ row.dreftymacid }}
-      {% endfor %}      
       
 

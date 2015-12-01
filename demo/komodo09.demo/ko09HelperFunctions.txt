@@ -4,14 +4,14 @@
 ###     last: lastmod="Mon Nov 30 21:42:43 2015"
 ###     tags: ko09, komodo, javascript, api, functions
 ###     author: created="dreftymac"
-###     dreftymacid:    "bread_chain_algerian"
+###     dreftymacid: "bread_chain_algerian"
 ###     seealso: |
 ###         *
 ###     desc: |
 ###         ko09 javascript helper functions
 ### <end-file_info>
 
-k09HelperFunctions:
+ko09HelperFunctions:
 
   - date: created="Mon Nov 30 21:44:06 2015"
     last: lastmod="Mon Nov 30 21:44:06 2015"
