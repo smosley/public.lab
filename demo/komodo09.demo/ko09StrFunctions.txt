@@ -4,7 +4,7 @@
 ###     last: lastmod="Mon Nov 30 21:42:43 2015"
 ###     tags: ko09, komodo, javascript, api, functions
 ###     author: created="dreftymac"
-###     dreftymacid:    "dafter_climbing_sway"
+###     dreftymacid: "dafter_climbing_sway"
 ###     seealso: |
 ###         *
 ###     desc: |
