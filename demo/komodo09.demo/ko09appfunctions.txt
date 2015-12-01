@@ -25,6 +25,7 @@ ko09Appfunctions:
          - string ;; system platform
     funcdetails: | 
          funcdetails
+    funcdependencies: "__blank__"
     dreftymacid: risky_icicle_bus
     tags: application, system, os, platform
     seealso: |
@@ -75,6 +76,7 @@ ko09Appfunctions:
             *    supportDir
             *    userCacheDir
             *    userDataDir
+    funcdependencies: "__blank__"
     dreftymacid: chance_vividly_hostage
     tags: application, get
     seealso: |
@@ -87,7 +89,6 @@ ko09Appfunctions:
           getService(Components.interfaces.koIDirs)[keyname];
       }catch(exx){}
       return(vout);
-            
   - date: created="Mon Nov 30 21:44:06 2015"
     last: lastmod="Mon Nov 30 21:44:06 2015"
     funcname:    "App_writeKoLogs"
@@ -100,6 +101,7 @@ ko09Appfunctions:
          -  [ __blank__, ]
     funcdetails: | 
         funcdetails
+    funcdependencies: "__blank__"
     dreftymacid: unseat_weakens_disunite
     tags: application, write
     seealso: |
@@ -123,6 +125,7 @@ ko09Appfunctions:
           - [ __blank__, (__blank__), __blank__, ]
     funcdetails: | 
         funcdetails
+    funcdependencies: "__blank__"
     dreftymacid: retreat_brews_wrecker
     tags: application, write
     seealso: |
@@ -142,6 +145,7 @@ ko09Appfunctions:
          - string ;; directory path
     funcdetails: | 
         funcdetails
+    funcdependencies: "__blank__"
     dreftymacid: bench_burning_impure
     tags: application, get
     seealso: |

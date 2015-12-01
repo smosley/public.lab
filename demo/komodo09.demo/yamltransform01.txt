@@ -2,14 +2,13 @@
 ### main:
 ###   - date: created="Mon Nov 30 22:44:32 2015"
 ###     last: lastmod="Mon Nov 30 22:44:32 2015"
-###     tags:   tags 
-###     author: created="__author__"
-###     dreftymacid:    "__dreftymacid__"
+###     tags: tags
+###     dreftymacid:    "main_curious_cemetery"
 ###     seealso: |
 ###         * href="./ko09Appfunctions.txt"
 ###         * href="./ko09StringFunctions.txt"
 ###     desc: |
-###         desc  
+###         desc
 ### <end-file_info>
 
 yamltransform01:
@@ -26,25 +25,24 @@ __yaml__:
     uuid:         uumate_herds
     desc:         __desc__
     dreftymacid:  argo_gem_windy
-    usedataroot:  'workbook'    
+    usedataroot:  'workbook'
     datainclude:
       - "ko09Appfunctions.txt"
       - "ko09StringFunctions.txt"
     template: |
       {% for row in workbook.yamltransform01 -%}
-        {{-""}}      
-        cls_{{ row.caption }} = function(){
-          {%- for subrow in workbook[row.caption] -%}
-          {{""}}
-          this.{{ subrow.funcname }} = function(){
-            {{"\n"}}{{ subrow.wwbody |jjindent(8) }}            
-          }
-          //endfunction
-          {% endfor %}
+      {{-""}}
+      cls_{{ row.caption }} = function(){
+        {%- for subrow in workbook[row.caption] -%}
+        {{""}}
+        this.{{ subrow.funcname }} = function(){
+          {{"\n"}}{{ subrow.wwbody |jjindent(8) }}
         }
-        //endclass
-        
-      {% endfor %}  
-      
-      
+        //endfunction
+        {% endfor %}
+      }
+      //endclass
+      {% endfor %}
+
+
 
