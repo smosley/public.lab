@@ -2,7 +2,7 @@
 // main:
 //   - date: created="Mon Nov 30 19:12:02 2015"
 //     last: lastmod="Mon Nov 30 19:12:02 2015"
-//     tags: koUserScript, komodo, K09,  
+//     tags: koCurrentBufferString, komodo, K09,  
 //     author: created="dreftymac"
 //     dreftymacid: "timidly_strings_brown"
 //     seealso: |
@@ -12,7 +12,7 @@
 //          Different ways to get stuff from the currently-active text buffer
 // <end-file_info>
 
-koUserScript = function(){  
+koCurrentBufferString = function(){  
   this.CurrentBuffer_getFilePath = function(){
     // <beg-function_docs>
     //   - date: created="Mon Nov 30 18:57:01 2015"
@@ -247,6 +247,6 @@ koUserScript = function(){
 //endclass
 
 if(!! 'test_this_out'){
-  app = new koUserScript();
+  app = new koCurrentBufferString();
   alert( app.CurrentBuffer_getLineNumber() );  
 }
