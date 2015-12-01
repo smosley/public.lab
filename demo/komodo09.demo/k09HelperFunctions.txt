@@ -133,7 +133,7 @@ k09HelperFunctions:
           
   - date: created="Mon Nov 30 21:44:06 2015"
     last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname:    "App_lsgetCurrentBufferPaths"
+    funcname:    "App_lsCurrentBufferPaths"
     funcgroup:    koApp
     funcdesc: |
           return js array of paths of all open CurrentBuffers
@@ -143,7 +143,7 @@ k09HelperFunctions:
          - string ;; directory path
     funcdetails: | 
         funcdetails
-    dreftymacid: chance_vividly_hostage
+    dreftymacid: bench_burning_impure
     tags: application, get
     seealso: |
         *
@@ -165,4 +165,5 @@ k09HelperFunctions:
         return vout;
         //;;
         
+
         

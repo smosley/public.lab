@@ -15,38 +15,148 @@ ko09StringFunctions:
 
   - date: created="Mon Nov 30 21:44:06 2015"
     last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname:    "App_getPlatform"
+    funcname:    "Str_toUcfirst"
     funcgroup:    koString
     funcdesc: |
-          return the system platform this app is running under
+          return string transformation: uppercase first letter of first word
     funcparams: 
           - [ raw, (string), raw input string, ]
     funcreturns: 
          - string ;; uppercase first letter
     funcdetails: | 
          funcdetails
+    funcdependencies:
+          - this.TextArea_getSelection(true);      
     dreftymacid: meatier_losing_segment
     tags: application, system, os, platform
     seealso: |
         *
     wwbody: |
-        // init
-        var vout  =   '';
-        //;;
+        if(!raw){raw = this.TextArea_getSelection(true);}
+        vout    =   raw;
+        vout    =   vout.toLowerCase();
+        vout    =   (vout + '').charAt(0).toUpperCase() + vout.substr(1);
+        return vout;
         
-        // main
-        vout      =   Components.
-          classes["@mozilla.org/xre/app-info;1"].
-          getService(Components.interfaces.nsIXULRuntime).
-          OS.
-          toString()
-          ;
-        //;;
+  - date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcname:    "Str_toLowerCase"
+    funcgroup:    koString
+    funcdesc: |
+          return string transformation: toLowerCase
+    funcparams: 
+          - [ raw, (string), raw input string, ]
+    funcreturns: 
+         - string ;; uppercase first letter
+    funcdetails: | 
+         funcdetails
+    funcdependencies:
+          - this.TextArea_getSelection(true);      
+    dreftymacid: brownest_haziest_zobrist
+    tags: application, system, os, platform
+    seealso: |
+        *
+    wwbody: |
+            if(!raw){raw = this.TextArea_getSelection(true);}
+            vout    =   raw;
+            vout    =   vout.toLowerCase();
+            return vout;
+            
+  - date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcname:    "Str_toUpperCase"
+    funcgroup:    koString
+    funcdesc: |
+          return string transformation: toUpperCase
+    funcparams: 
+          - [ raw, (string), raw input string, ]
+    funcreturns: 
+         - string ;; uppercase first letter
+    funcdetails: | 
+         funcdetails
+    funcdependencies:
+          - this.TextArea_getSelection(true);      
+    dreftymacid: undying_forgave_brow
+    tags: application, system, os, platform
+    seealso: |
+        *
+    wwbody: |
+            if(!raw){raw = this.TextArea_getSelection(true);}
+            vout    =   raw;
+            vout    =   vout.toUpperCase();
+            return vout;              
         
-        // return
-        return(vout);
-        //;;
-        
+  - date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcname:    "Str_wordsUpperCase"
+    funcgroup:    koString
+    funcdesc: |
+          return string transformation: Uppercase upcase first letter of words in string
+    funcparams: 
+          - [ raw, (string), raw input string, ]
+    funcreturns: 
+         - string ;; uppercase first letter
+    funcdetails: | 
+         funcdetails
+    funcdependencies:
+          - this.TextArea_getSelection(true);      
+    dreftymacid: shrimp_vascular_unjam
+    tags: application, system, os, platform
+    seealso: |
+        *
+    wwbody: |
+            if(!raw){raw = this.TextArea_getSelection(true);}
+            vout    =   raw;
+            vout    =   (vout+'').replace(/^(.)|\s(.)/g, function( $1 ){return $1.toUpperCase( );} );
+            return vout;
+            
+  - date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcname:    "Str_spacesToUnderscore"
+    funcgroup:    koString
+    funcdesc: |
+          return string transformation: convert spaces to underscore
+    funcparams: 
+          - [ raw, (string), raw input string, ]
+    funcreturns: 
+         - string ;; string transformation
+    funcdetails: | 
+         funcdetails
+    funcdependencies:
+          - this.TextArea_getSelection(true);      
+    dreftymacid: violins_initial_unlucky
+    tags: application, system, os, platform
+    seealso: |
+        *
+    wwbody: |
+            if(!raw){raw = this.TextArea_getSelection(true);}
+            vout    =   raw;
+            vout    =   vout.toString().split(/[\s\t]+/).join('_');
+            return vout;
+            
+  - date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcname:    "Str_underscoreToSpaces"
+    funcgroup:    koString
+    funcdesc: |
+          return string transformation: convert underscore to spaces
+    funcparams: 
+          - [ raw, (string), raw input string, ]
+    funcreturns: 
+         - string ;; string transformation
+    funcdetails: | 
+         funcdetails
+    funcdependencies:
+          - this.TextArea_getSelection(true);      
+    dreftymacid: satiric_gladys_bodily
+    tags: application, system, os, platform
+    seealso: |
+        *
+    wwbody: |
+            if(!raw){raw = this.TextArea_getSelection(true);}
+            vout    =   raw;
+            vout    =   vout.split(/[_]+/).join(' ');
+            return vout;             
 
         
         
