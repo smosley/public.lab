@@ -1,0 +1,52 @@
+### <beg-file_info>
+### main:
+###   - date: created="Mon Nov 30 21:42:43 2015"
+###     last: lastmod="Mon Nov 30 21:42:43 2015"
+###     tags: ko09, komodo, javascript, api, functions
+###     author: created="dreftymac"
+###     dreftymacid:    "dafter_climbing_sway"
+###     seealso: |
+###         *
+###     desc: |
+###         ko09 functions
+### <end-file_info>
+
+ko09StringFunctions:
+
+  - date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcname:    "App_getPlatform"
+    funcgroup:    koString
+    funcdesc: |
+          return the system platform this app is running under
+    funcparams: 
+          - [ raw, (string), raw input string, ]
+    funcreturns: 
+         - string ;; uppercase first letter
+    funcdetails: | 
+         funcdetails
+    dreftymacid: meatier_losing_segment
+    tags: application, system, os, platform
+    seealso: |
+        *
+    wwbody: |
+        // init
+        var vout  =   '';
+        //;;
+        
+        // main
+        vout      =   Components.
+          classes["@mozilla.org/xre/app-info;1"].
+          getService(Components.interfaces.nsIXULRuntime).
+          OS.
+          toString()
+          ;
+        //;;
+        
+        // return
+        return(vout);
+        //;;
+        
+
+        
+        
