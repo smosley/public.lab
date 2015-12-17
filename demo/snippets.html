@@ -1,0 +1,219 @@
+
+
+<!doctype html>
+<html>
+<head>
+  <title>topic/text-snippets-skeletons-templates</title>
+    <meta name="robots" content="index,nofollow" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <style type="text/css" media=screen>
+    h1 { border-bottom: 3px dotted #007f00; background-color: #DFD; max-width: 640px; }
+h2 { border-bottom: 2px dotted #007f00; background-color: #DFD; max-width: 640px; }
+h3 { border-bottom: 1px dotted #007f00; background-color: #DFD; max-width: 640px; }
+
+span.inline_code {
+background-color:#EEE;
+padding: 2px;
+padding-left: 4px;
+padding-right: 4px;
+}
+pre.code {
+max-width: 600px;
+
+background-color:#EEE; 
+padding: 10px;
+margin-left: 20px;
+
+border-radius: 5px; 
+-moz-border-radius: 5px; 
+-webkit-border-radius: 5px; 
+}
+
+th {
+background-color: #DFD;
+font-weight: bolder;
+}
+td, th {
+border: 1px dotted #03476F;
+}
+td, th {
+padding: .4em;
+color: #222;
+}
+p {
+max-width: 400px;
+}
+
+a {
+	text-decoration: none;
+}
+
+    </style>
+
+    
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47971770-1', 'mawercer.de');
+  ga('send', 'pageview');
+
+</script>
+	
+</head>
+<body>
+<div class="header"><a href="./.././index.html" alt="index">index</a> <a href="http://vim-wiki.mawercer.de/wiki/edit?path=topic%2Ftext-snippets-skeletons-templates" alt="">edit</a> <a href="http://vim-wiki.mawercer.de/wiki/log?path=topic%2Ftext-snippets-skeletons-templates" alt="">log</a>
+	  <form action="http://vim-wiki.mawercer.de/wiki/search" method="get" accept-charset="utf-8" style="display:inline">
+	  <input alt="regular expression on source files" type="text" name="q"/>
+	  <input type="submit" name="action" value="search"/>
+	  </form>
+	  </div>
+<h1>text snippets, skeletons, templates </h1>
+<p>When editing any kind of text often you have to type the same over and over again.
+An example is a footer in an email or a conditional statement in a programming
+language. The most simple way to automate this is using the 
+</p><pre class="code">  :abbrev command.
+</pre>
+<p>The next simple thing is create a mapping such as 
+</p><pre class="code">imap \insert Hello&lt;space&gt;World
+# more advanced example:
+imap \eemail_header &lt;c-r&gt;=&quot;Dear &quot;.input(&quot;name: &quot;).&quot;\n&quot;&lt;cr&gt;
+</pre>
+<p>This is all managable, however for longer texts it becomse tiresome. For that
+reason special "snippet" or "template" plugins have been written. There are
+many different snippet solutions. So let's compare them:
+</p>
+<h1>Features: </h1><strong>XPTemplate, Sander's snipmate, snipmate, UltiSnips, UltiSnipsF, neo snippet, vim-template, lh-suite comparison:</strong><table><tr><th>feature</th><th>XPTemplate</th><th>Sander's snipmate</th><th>snipmate</th><th>UltiSnips</th><th>UltiSnipsF</th><th>neo snippet</th><th>vim-template</th><th>lh-suite</th><th>feature description</th></tr><tr><th>manual-reload</th><td>yes</td><td>yes</td><td></td><td></td><td></td><td></td><td></td><td></td><td>You have to reload snippet files</td></tr><tr><th>automatic-reload</th><td></td><td></td><td>yes</td><td>yes</td><td>yes</td><td>yes</td><td></td><td>yes</td><td>Its enough to write a snippet file, it'll be reloaded automatically</td></tr><tr><th>runtimepath-support</th><td></td><td></td><td>yes</td><td></td><td>yes</td><td></td><td></td><td>yes</td><td>Pick snippets by looking at &amp;runtimepath</td></tr><tr><th>space-abstraction</th><td>yes</td><td></td><td></td><td></td><td></td><td></td><td></td><td>yes</td><td>There is a way to configure whether arguments eg in for(a; b; c) get prefixed/suffixed by spaces</td></tr><tr><th>can-read-snippets-files</th><td></td><td>yes</td><td>yes</td><td>yes</td><td>yes</td><td>yes</td><td></td><td></td><td>snipmate is very popular. Comprehensive snippet collection can be found at <a href="http://github.com/honza/vim-snippets" alt="">vim-snippets</a></td></tr><tr><th>requires-python</th><td></td><td></td><td></td><td>yes</td><td>yes</td><td></td><td></td><td></td><td></td></tr><tr><th>nested placeholders</th><td></td><td></td><td></td><td>yes</td><td>yes</td><td>yes</td><td></td><td></td><td></td></tr><tr><th>info-missing</th><td></td><td></td><td></td><td></td><td></td><td></td><td>yes</td><td></td><td></td></tr><tr><th>completion-menu</th><td></td><td>yes</td><td>yes</td><td></td><td>yes</td><td>yes</td><td></td><td>yes</td><td>When typing only part of a snippet trigger Vim shows a completion menu with all triggers matching. For some snippets this may not make sense, eg if the trigger itself contains input to for the snippet. Eg UltiSnips can use regular expression matching on triggers</td></tr><tr><th>regular-expression-as-trigger</th><td></td><td></td><td></td><td>yes</td><td>yes</td><td>yes</td><td></td><td></td><td></td></tr><tr><th>generated-snippets</th><td></td><td></td><td>yes</td><td></td><td></td><td></td><td></td><td>yes</td><td>Can the snippet engine add snippets on the fly in some way?</td></tr><tr><th>snippet-header</th><td></td><td></td><td></td><td></td><td></td><td>yes</td><td></td><td></td><td>Has a nice (extendable) header which can be used to attach additional (future) information to snippets.</td></tr><tr><th>dynamic-snippets</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>yes</td><td>When expanded, snippets can react to settings (e.g. naming policy for getters), context (name of the current class when defining a new constructor), user choices (&quot;What is the semantics of this new class (value, entity, ...) ?&quot;)</td></tr><tr><th>include-snippets</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>yes</td><td>Snippets can include other snippets to avoid duplicating code (e.g. a `C-swith` snippet can include the `C-case` snippet), or to introduce variation points: e.g. a C header-file template can include a first template that defines file-headers for all files in the current project (copyright statements meant to be overridden in each project), and a second template that generates anti-reinclusion header gates.</td></tr></table>
+<h2>Additional notes </h2>
+<p><strong>XPTemplate</strong>: mature engine, advanced features. Creating snippets takes some effort
+</p>
+<p><strong>Sander's snipmate</strong>: original snipmate version.
+</p>
+<p><strong>snipmate</strong>: adds some features, therefore depends on additional libraries.
+  <strong>generated-snippets</strong> implementation: You can add a new function as source
+returning snippets depending on anything (cursor pos, current line, whatever
+you want)
+</p>
+<p><strong>UltiSnipsF</strong>:
+  forked version of UltiSnips. Its goal is to merge communities of snipmate and
+  UltiSnips by providing most important features to both communities.
+  However the test suite is not up to date and maybe will never be updated,
+  because everything Marc Weber cares about works
+</p>
+<p>  UltiSnips will soon have a new release containing most of these changes
+</p>
+<p>  Update: SirVer has updated Ultisnips so that it can also read snipmate files.
+</p>
+<p><strong>neo snippet</strong>:
+  It uses marker to implement snippet features instead of snipMate and
+  Ultisnips.  It integrates with neocomplcache/neocomplete for completion. The
+  snippet files are compatible with snipMate. And can read snipMate snippet
+  files.
+</p>
+<p><strong>vim-template</strong>:
+  I don't know much about it - help fill in more information. This feature list is incomplete
+</p>
+<p><strong>lh-suite</strong>:
+  <a href="https://github.com/LucHermitte/mu-template/" alt="">lh-suite/mu-template</a> is a forked version of mu-template. It has a few unlisted features:
+</p>
+<ul><li>also provides template like support ;<li> snippets can surround a selection (e.g. in C and C++ `CTRL-space if` will replace the selection with `if(<+cursor+>){selection}`, and `2 CTRL-space if` will replace the selection with `if(selection){<+cursor+>}`<li> Parameters can be injected in snippets (e.g. can be used to generate a switch-case from a C enum) ;<li> project settings (like the exact copyrights file-header) can be set before expanding a template ;<li> <a href="https://github.com/LucHermitte/mu-template/blob/master/License.md#license-exception-for-generated-code" alt="">License compatible with code generation</a>.<li> Does not mess with folded code. Can insert UTF-8 snippets in latin1 files.<li> reindentation can be requested individually for each snippet<li> <a href="https://github.com/LucHermitte/lh-dev#styling-options" alt="">Styling options</a> (e.g. should brackets be on a new line) can be specified independently of the snippet definitions.</ul>
+
+<h2>snippet engine features by examples </h2>
+<p>This section exists to illustrate the different features you may want to have
+which some engines implement, others do not. Thus add future ideas, too.
+</p>
+<p>Let's start with a <strong>typical intermediate snippet</strong> taken from snipmate:
+</p><pre class="code">snippet for
+	for (${2:i} = 0; $2 &lt; ${1:count}; $2${3:++}) {
+		${4:/* code */}
+	}${5}
+</pre>
+<p>When typing <span class="inline_code">for</span> then expanding the snippet[<span class="inline_code"> ${1:count} </span> will be
+selected as "count" only so that you can change the stop condition of the loop.
+</p>
+<p>Then when hitting the "jump to next placeholder" key the <span class="inline_code"> ${2:i} </span> will be
+hit defaulting to value "i". If you edit it the <span class="inline_code"> $2 </span> will change in
+multiple places and so on.
+</p>
+<p><strong>run arbitrary code</strong>:
+</p><pre class="code">snippet git_version
+	`system('git rev-parse HEAD')`
+</pre>
+<p>The <span class="inline_code">`viml code`</span> will be run, and its result will be inserted into the snippet.
+Different engines have slightly different syntax for this eventually.
+</p>
+<p><strong>nested placeholders</strong> (UltiSnips feature):
+</p><pre class="code">snippet input
+&lt;input type=&quot;${1:text}&quot; value=&quot;${2}&quot; name=&quot;${3}&quot;${4: id=&quot;${5:$3}}/&gt;${7}
+endsnippet
+</pre>
+<p>This snippet basically behaves like the first example, however pay attention 
+to <span class="inline_code"> ${4: id=&quot;${5:$3}} </span>. When the 4th placeholder gets selected you can
+remove it by hitting backspace, therefore the 5th placeholder is gone, too.
+This way you can omit blocks of code.
+</p>
+<p><strong>regular expression trigger</strong> (UltiSnips feature):
+</p><pre class="code"></pre>
+<p><strong>modifying snippets on the fly</strong>. Snippet / UltiSnips allows to register your own sources
+of snippets. Therefore you can modify or add snippets before snipmate chooses
+the matching one. One use case is adding folding markers. Example taken from
+snipmate documentation:
+</p><pre class="code">  let g:commentChar = { \ 'vim': '&quot;', \ 'c': '//', \ 'cpp': '//', \ 'sh': '#', \ 'python': '#' \}
+  fun! AddFolding(text)
+          return substitute(a:text,'\n',&quot; &quot;.g:commentChar[&amp;ft].&quot; <span class="inline_code">\n&amp;quot;,1).&amp;quot;\n&amp;quot;.g:commentChar[&amp;amp;ft].&amp;quot; </span>&quot;
+  endf
+
+  fun! SnippetsWithFolding(scopes, trigger, result)
+    &quot; hacky: temporarely remove this function to prevent infinite recursion:
+    call remove(g:snipMateSources, 'with_folding')
+    &quot; get list of snippets:
+    let result = snipMate#GetSnippets(a:scopes, substitute(a:trigger,'_\(\*\)\?$','\1',''))
+    let g:snipMateSources['with_folding'] = funcref#Function('SnippetsWithFolding')
+
+    &quot; add folding:
+    for k in keys(result)
+      let a:result[k.'_'] = map(result[k],'AddFolding(v:val)')
+    endfor
+  endf
+
+  &quot; force setting default:
+  runtime plugin/snipMate.vim
+  &quot; add our own source
+  let g:snipMateSources['with_folding'] = funcref#Function('SnippetsWithFolding')
+</pre>
+<p>The SnippetsWithFolding is of interest: It runs the default source to get a
+list of snippets, then adds folding markers and returns them with '_' suffixed
+to the trigger. This feature can be "abused" to create snippets for functions
+defined in the current file. Then snippets serve a similar purpose as
+completion does - which is why neosnippets integrates well with neocomplcache.
+</p>
+<p><strong>spaces</strong>:
+should empty lines be prefixed by indenting spaces?
+</p>
+<p><strong>tags</strong>:
+Idea.
+You don't want the snippet engine ask you "found this snippet twice, which one"
+- if there is a way to prefer one always. Idea to solve this:
+</p><pre class="code">&quot; snippets file
+snippet n
+tag: for_tag
+	for=&quot;$1&quot;
+</pre><pre class="code">&quot; UltiSnips file
+snipept n
+tag: for_tag
+for=&quot;$1&quot;
+endsnippet
+</pre>
+<p>Now you should be able to say
+</p><pre class="code">prio: [&quot;UltiSnips&quot;, &quot;snipmate&quot;]
+only-first-snippet-for-each-tag?
+</pre>
+<p>Then a "foreach" snippet would still be shown.
+</p>
+</body>
+</html>
