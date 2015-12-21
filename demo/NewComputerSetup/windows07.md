@@ -3,7 +3,11 @@
 * copy CSM programs to c:\programs
 * activate sysinternals csm junction
       * "F:\csm\docs\mytrybits\s\trysysinternals\tryjunction\manage.csm.symlink\create.symlink.bat"
-      * 
+
+### Paid Software
+* C:\sm\docs\mytrybits\p\trypaidsoftware
+     * Komodo IDE
+
 ### Folder options
 * fix annoying folder options
       * Start Menu :: type "folder options" :: 
