@@ -6,31 +6,38 @@
 ###     author: created="dreftymac"
 ###     dreftymacid: "bread_chain_algerian"
 ###     seealso: |
-###         *
+###         * href="./devlog.txt"
+###         * href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo8.demo/tymac_komodo_addon.js"
 ###     desc: |
 ###         ko09 javascript functions
 ### <end-file_info>
 
-ko09Appfunctions:
+### ------------------------------------------------------------------------ 
+ko09AppFunctions:
 
-  - date: created="Mon Nov 30 21:44:06 2015"
-    last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname:    "App_getPlatform"
-    funcgroup:    koApp
-    funcdesc: |
-          return the system platform this app is running under
-    funcparams: 
-          - [ __blank__, (__blank__), __blank__, ]
-    funcreturns: 
-         - string ;; system platform
-    funcdetails: | 
-         funcdetails
-    funcdependencies: "__blank__"
-    dreftymacid: risky_icicle_bus
-    tags: application, system, os, platform
-    seealso: |
+   - date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcname: App_getPlatform
+     funcexample: |
+        otest =   new cls_ko09Appfunctions();
+        console.log( otest.App_getPlatform() );
+                   
+     funcdesc: |
+           return the system platform this app is running under
+
+     funcparams: []
+     funcreturns: 
+          - ['string', 'system platform']
+     tags: application, system, os, platform
+     dreftymacid: risky_icicle_bus
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
         *
-    wwbody: |
+        
+     wwfuncbody: |
         // init
         var vout  =   '';
         //;;
@@ -47,111 +54,129 @@ ko09Appfunctions:
         // return
         return(vout);
         //;;
-        
-  - date: created="Mon Nov 30 21:44:06 2015"
-    last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname:    "App_getKoDirsDirectory"
-    funcgroup:    koApp
-    funcdesc: |
-          Return a koDirs directory path based on the supplied keyname.
-    funcparams: 
-          - keyname  ;; (string) ;; the built-in keyname of the desired koDirs directory path
-    funcreturns: 
-         - string ;; directory path
-    funcdetails: | 
-            * keyname is expected to be one of the following built-in values:
-            *    binDBGPDir
-            *    binDir
-            *    commonDataDir
-            *    docDir
-            *    factoryCommonDataDir
-            *    hostUserDataDir
-            *    installDir
-            *    mozBinDir
-            *    perlDBGPDir
-            *    pythonDBGPDir
-            *    pythonExe
-            *    roamingUserDataDir
-            *    sdkDir
-            *    supportDir
-            *    userCacheDir
-            *    userDataDir
-    funcdependencies: "__blank__"
-    dreftymacid: chance_vividly_hostage
-    tags: application, get
-    seealso: |
-        *
-    wwbody: |
-      var vout  =   '';
-      try{
-        vout = Components.
-          classes['@activestate.com/koDirs;1'].
-          getService(Components.interfaces.koIDirs)[keyname];
-      }catch(exx){}
-      return(vout);
-      
-  - date: created="Mon Nov 30 21:44:06 2015"
-    last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname:    "App_writeKoLogs"
-    funcgroup:    koApp
-    funcdesc: |
-          write a string message to the komodo log
-    funcparams: 
-          - [ message, (string), string message to write to the komodo log, ]
-    funcreturns: 
-         -  [ __blank__, ]
-    funcdetails: | 
-        funcdetails
-    funcdependencies: "__blank__"
-    dreftymacid: unseat_weakens_disunite
-    tags: application, write
-    seealso: |
-        *
-    wwbody: |
-      //TODO: NO_WORKY fix this, it does not seem to work correctly
-      var consoleService = Components.
-            classes['@mozilla.org/consoleservice;1'].
-            getService(Components.interfaces.nsIConsoleService);
-      consoleService.logStringMessage(message);
-      
-  - date: created="Mon Nov 30 21:44:06 2015"
-    last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname:    "App_writeKoStatus"
-    funcgroup:    koApp
-    funcdesc: |
-          write a string message to the status bar
-    funcparams: 
-          - [ message, (string), string message to write to the komodo status bar, ]
-    funcreturns: 
-          - [ __blank__, (__blank__), __blank__, ]
-    funcdetails: | 
-        funcdetails
-    funcdependencies: "__blank__"
-    dreftymacid: retreat_brews_wrecker
-    tags: application, write
-    seealso: |
-        *
-    wwbody: |
-      StatusBar_AddMessage(message, "debugger", 5000, true);     
+  
+   - date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcname: App_getKoDirsDirectory
+     funcexample: |
+                   
+     funcdesc: |
+           Return a koDirs directory path based on the supplied keyname.
 
-  - date: created="Mon Nov 30 21:44:06 2015"
-    last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname:    "App_lsCurrentBufferPaths"
-    funcgroup:    koApp
-    funcdesc: |
-          return js array of paths of all open CurrentBuffers
-    funcparams: 
-          - [ __blank__, (__blank__), __blank__, ]
-    funcreturns: 
-         - string ;; directory path
-    funcdetails: | 
-        funcdetails
-    funcdependencies: "__blank__"
-    dreftymacid: bench_burning_impure
-    tags: application, get
-    seealso: |
+     funcparams: 
+          - ['keyname', 'string',  'the built-in keyname of the desired koDirs directory path']
+     funcreturns: 
+          ['string ;; directory path']
+     tags: application, get
+     dreftymacid: chance_vividly_hostage
+     funcdependencies: "__blank__"
+     funcdetails: |
+        * keyname is expected to be one of the following built-in values:
+        *    binDBGPDir
+        *    binDir
+        *    commonDataDir
+        *    docDir
+        *    factoryCommonDataDir
+        *    hostUserDataDir
+        *    installDir
+        *    mozBinDir
+        *    perlDBGPDir
+        *    pythonDBGPDir
+        *    pythonExe
+        *    roamingUserDataDir
+        *    sdkDir
+        *    supportDir
+        *    userCacheDir
+        *    userDataDir
+        
+     seealso: |
         *
-    wwbody: |
+        
+     wwfuncbody: |
+        var vout  =   '';
+        try{
+          vout = Components.
+            classes['@activestate.com/koDirs;1'].
+            getService(Components.interfaces.koIDirs)[keyname];
+        }catch(exx){}
+        return(vout);
+        
+  
+   - date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcname: App_writeKoLogs
+     funcexample: |
+                   
+     funcdesc: |
+           write a string message to the komodo log
+
+     funcparams: 
+          - ['message', '(string)', 'string message to write to the komodo log']
+     funcreturns: 
+          [['__blank__']]
+     tags: application, write
+     dreftymacid: unseat_weakens_disunite
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        //TODO: NO_WORKY fix this, it does not seem to work correctly
+        var consoleService = Components.
+              classes['@mozilla.org/consoleservice;1'].
+              getService(Components.interfaces.nsIConsoleService);
+        consoleService.logStringMessage(message);
+        
+  
+   - date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcname: App_writeKoStatus
+     funcexample: |
+                   
+     funcdesc: |
+           write a string message to the status bar
+
+     funcparams: 
+          - ['message', '(string)', 'string message to write to the komodo status bar']
+     funcreturns: 
+          [['__blank__', '(__blank__)', '__blank__']]
+     tags: application, write
+     dreftymacid: retreat_brews_wrecker
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        StatusBar_AddMessage(message, "debugger", 5000, true);     
+        
+  
+   - date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcname: App_lsBufPaths
+     funcexample: |
+                   
+     funcdesc: |
+           return js array of paths of all open CurrentBuffers
+
+     funcparams: [] 
+     funcreturns: 
+          ['string ;; directory path']
+     tags: application, get
+     dreftymacid: bench_burning_impure
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
         // init
         var filePaths = [];
         var editorViews = ko.views.manager.getAllViews();
@@ -168,3 +193,8 @@ ko09Appfunctions:
         vout  = filePaths;        
         return vout;
         //;;
+        
+  
+
+
+

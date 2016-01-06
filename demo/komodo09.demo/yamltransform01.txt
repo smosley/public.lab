@@ -7,43 +7,53 @@
 ###     seealso: |
 ###         * href="./ko09Appfunctions.txt"
 ###         * href="./ko09StringFunctions.txt"
+###         * href="./devlog.txt"
+###         * href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo8.demo/tymac_komodo_addon.js"
 ###     desc: |
 ###         desc
 ### <end-file_info>
 
 yamltransform01:
-  - caption:  ko09Appfunctions
+  - caption:  ko09AppFunctions
   - caption:  ko09BufFunctions
   - caption:  ko09StrFunctions
+  - caption:  ko09GuiFunctions
 
 ## href="c:/sm/docs/mytrybits/y/tryyaml/dynamicyaml/devlog.txt"
 ## href="c:/sm/docs/mymedia/2014/git/github/dynamic.yaml/py/ddyaml.py"
 __yaml__:
 
   - &uumate_herds
-    caption:      yaml transformation 001
+    caption:      code generation transform
     rowkeep: 1
     uuid:         uumate_herds
     desc:         __desc__
     dreftymacid:  argo_gem_windy
     usedataroot:  'workbook'
     datainclude:
-      - "ko09AppFunctions.txt"
       - "ko09BufFunctions.txt"
       - "ko09StrFunctions.txt"
-    template: |
+      - "ko09GuiFunctions.txt"
+      - "ko09AppFunctions.txt"
+    offtemplate:  |
+    template: |      
       {% for row in workbook.yamltransform01 -%}
+      {%- set ttoutfile   = './%s.js'%( row.caption )  -%}
+      {%- set ttoutmode   = 'replace'  -%}
+      {%- set ttusebom    = False      -%}
+      {%filter string() |jjtofile(ttoutfile,ttoutmode,ttusebom) |jjdedent() %}
       {{-""}}
       cls_{{ row.caption }} = function(){
         {%- for subrow in workbook[row.caption] -%}
         {{""}}
-        this.{{ subrow.funcname }} = function(){
-          {{"\n"}}{{ subrow.wwbody |jjindent(8) }}
+        this.{{ subrow.funcname }} = function( {%- for item in subrow.funcparams -%}{{ item[0] }}{%- if not loop.last %},{% endif -%}{%- endfor -%} ){
+          {{"\n"}}{{ subrow.wwfuncbody |jjindent(8) }}
         }
         //endfunction
         {% endfor %}
       }
       //endclass
+      {%endfilter%}
       {% endfor %}
 
 

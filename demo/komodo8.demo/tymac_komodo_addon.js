@@ -1644,7 +1644,7 @@ tymac_komodo_addon_library = function() {
             * See Also:
             *    <func_name> <func_name>
             */
-            var vout    = ko.dialogs.prompt(prompt, label, vdefault, title, mruName);
+            var vout = ko.dialogs.prompt(prompt, label, vdefault, title, mruName);
             return vout;
         }
         //  </reg-fdef>

@@ -1,0 +1,177 @@
+### <beg-file_info>
+### main:
+###   - date: created="2015-12-10T07:39:23"
+###     last: lastmod="Thu Dec 10 07:39:33 2015"
+###     tags: ko09, komodo, javascript, api, functions
+###     author: created="dreftymac"
+###     dreftymacid: "jordan_tijuana_revising"
+###     seealso: |
+###         * href="./devlog.txt"
+###         * href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo8.demo/tymac_komodo_addon.js"
+###     desc: |
+###         ko09 javascript functions
+### <end-file_info>
+
+### ------------------------------------------------------------------------ 
+ko09GuiFunctions:
+
+
+   - date: created="2015-12-10T07:40:15"
+     last: lastmod="Thu Dec 10 07:40:18 2015"
+     funcname: Gui_get
+     funcexample: |
+        otest = new cls_ko09GuiFunctions();
+                   
+     funcdesc: |
+           quickly choose an item from a list. Short name. One argument. No fluff.
+
+     funcparams:
+          - [ items    , array , list of items ]  
+     funcreturns: 
+          ['string','user input as a string']
+     tags: gui, 
+     dreftymacid: clever_swang_vicenza
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails        
+     seealso: |
+        *        
+     wwfuncbody: |
+            var vtest;
+            var vtitle = 'Choose one';
+            vtest   =   this.guiQuickList(vtitle,vtitle,items,'one');
+            return vtest;
+
+
+
+   - date: created="2015-12-10T07:40:15"
+     last: lastmod="Thu Dec 10 07:40:18 2015"
+     funcname: Gui_quickList
+     funcexample: |
+        otest = new cls_ko09GuiFunctions();
+        var vitems = '';
+        var vtest;
+        
+        //simple example
+        vitems  =   'alpha bravo charlie delta'.split(/\s+/);
+        vtest   =   otest.Gui_quickList('title', 'prompt', vitems, 'one-or-more');
+        alert(JSON.stringify(vtest));
+        
+        //example using simpletable aoh
+        vitems = [{'text':'alpha','id':1},{'text':'bravo','id':2},{'text':'charlie','id':3}];
+        vtest = otest.Gui_quickList('title', 'prompt', vitems, 'one-or-more');
+        alert(JSON.stringify(vtest));
+                   
+     funcdesc: |
+           Get quick input based on a list of choices.
+
+     funcparams:
+          - [ title    , string , dialog title                                ]  
+          - [ prompt   , string , dialog prompt                               ]  
+          - [ items   , var , input items for populating the list   ]  
+          - [ selectionCondition , string , string option for describing how many items may be selected ]
+          - [ mruName  , string , (optional) history MRU name for this dialog ]            
+     funcreturns: 
+          ['string','user input as a string']
+     tags: gui, 
+     dreftymacid: daringly_wings_inherits
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails        
+     seealso: |
+        *        
+     wwfuncbody: |
+          var selopt  =   selectionCondition || 'one-or-more';
+          var vtest   =   ko.dialogs.selectFromList(title, prompt, items, selectionCondition);
+          return vtest;
+
+
+
+
+   - date: created="2015-12-10T07:40:15"
+     last: lastmod="Thu Dec 10 07:40:18 2015"
+     funcname: Gui_inputBox
+     funcexample: |
+        otest =   new cls_ko09GuiFunctions();
+        vout  =   otest.Gui_inputBox( 'Pick a color','Whats your favorite color?','Choose one or enter by hand:','orange','mru_fave_color' );
+        console.log( vout );
+                   
+     funcdesc: |
+           Get input from a text inputbox.
+
+     funcparams:
+          - [ title    , string , dialog title                                ]  
+          - [ prompt   , string , dialog prompt                               ]  
+          - [ vlabel   , string , (optional) caption for the text inputbox    ]  
+          - [ vdefault , string , (optional) default value                    ]  
+          - [ mruName  , string , (optional) history MRU name for this dialog ]  
+     funcreturns: 
+          ['string','user input as a string']
+     tags: gui, 
+     dreftymacid: wizards_andrew_residue
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails        
+     seealso: |
+        *        
+     wwfuncbody: |
+        var vout = ko.dialogs.prompt(prompt, vlabel, vdefault, title, mruName);
+        return vout;
+
+   - date: created="2015-12-10T07:40:15"
+     last: lastmod="Thu Dec 10 07:40:18 2015"
+     funcname: Gui_statusLog
+     funcexample: |
+          otest =   new cls_ko09GuiFunctions();
+          vout  =   'hello world!';
+          otest.Gui_statusLog( vout );
+                   
+     funcdesc: |
+           log a message to the GUI status bar
+
+     funcparams: 
+          - ['vtext', '(string)', 'text to output']
+          - ['itime', '(integer)', 'number of milliseconds to display']
+     funcreturns: 
+          ['None ;; None']
+     tags: gui, NO_WORKY
+     dreftymacid: mazda_zapotec_timeworn
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails        
+     seealso: |
+        *        
+     wwfuncbody: |
+          ko.statusBar.addMessage(vtext, "alert", itime, true);
+          
+   - date: created="2015-12-10T07:40:15"
+     last: lastmod="Thu Dec 10 07:40:18 2015"
+     funcname: Gui_yesNoCancel
+     funcexample: |
+        otest = new cls_ko09GuiFunctions();
+        //
+        vtitle = 'Would you like to say hello?'
+        vresult = otest.Gui_yesNoCancel(vtitle);
+        //
+        if(false){alert('do nothing');}
+        else if(vresult=='Yes'){alert('Hello There!');  }
+        else if(vresult=='No'){alert('Feeling anti-social?'); }
+        else if(vresult=='Cancel'){alert('Never mind.');  }     
+     
+     funcdesc: |
+           present a yes-no-cancel dialog
+     funcparams: 
+          - ['stitle', '(string)', 'dialog title text']
+     funcreturns: 
+          ['dialogresult ;; None']
+     tags: gui, YES_WORKY
+     dreftymacid: fate_repel_lead
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails        
+     seealso: |
+        *        
+     wwfuncbody: |
+          var vout = ko.dialogs.yesNoCancel(stitle);
+          return(vout);  
+  

@@ -1,0 +1,12 @@
+### <beg-file_info>
+### main:
+###   - date: created="Thu Dec 10 06:48:27 2015"
+###     last: lastmod="Thu Dec 10 06:48:27 2015"
+###     tags:   tags 
+###     dreftymacid:    "alfa_rain_sliver"
+###     seealso: |
+###         * href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo8.demo/tymac_komodo_addon.js"
+###     desc: |
+###         desc
+### <end-file_info>
+
