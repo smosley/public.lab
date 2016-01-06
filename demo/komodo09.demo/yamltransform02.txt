@@ -17,6 +17,7 @@ yamltransform01:
   - caption:  ko09BufFunctions
   - caption:  ko09StrFunctions
   - caption:  ko09AppFunctions
+  - caption:  ko09GuiFunctions
 
 ## href="c:/sm/docs/mytrybits/y/tryyaml/dynamicyaml/devlog.txt"
 ## href="c:/sm/docs/mymedia/2014/git/github/dynamic.yaml/py/ddyaml.py"
@@ -33,15 +34,16 @@ __yaml__:
       - "ko09BufFunctions.txt"
       - "ko09StrFunctions.txt"
       - "ko09AppFunctions.txt"
+      - "ko09GuiFunctions.txt"
     template: |
       {% for row in workbook.yamltransform01 -%}
         ### ------------------------------------------------------------------------ 
         {{ row.caption }}:
         {% for sheet in workbook[row.caption] -%}
         {{""}}
-         - date: {{ sheet.date }}
+         - funcname: {{ sheet.funcname |replace('CurrentBuffer','Buf') }}
+           date: {{ sheet.date }}
            last: {{ sheet.last }}
-           funcname: {{ sheet.funcname |replace('CurrentBuffer','Buf') }}
            funcexample: | {{-"\n"-}}{{ (sheet.funcexample |jjindent(8)) or ("//" |jjindent(8)) }}           
            funcdesc: |
                  {{ sheet.funcdesc }}
@@ -56,8 +58,6 @@ __yaml__:
            seealso: |       {{-"\n"-}}{{ sheet.seealso |jjindent(8) }}
            wwfuncbody: |    {{-"\n"-}}{{ sheet.wwfuncbody |jjindent(8) }}
         {% endfor %}
-        
-
       {% endfor %}
 
 

@@ -14,17 +14,13 @@
 
 ### ------------------------------------------------------------------------ 
 ko09GuiFunctions:
-
-
    - date: created="2015-12-10T07:40:15"
      last: lastmod="Thu Dec 10 07:40:18 2015"
      funcname: Gui_get
      funcexample: |
-        otest = new cls_ko09GuiFunctions();
-                   
+        otest = new cls_ko09GuiFunctions();                   
      funcdesc: |
            quickly choose an item from a list. Short name. One argument. No fluff.
-
      funcparams:
           - [ items    , array , list of items ]  
      funcreturns: 
@@ -41,8 +37,6 @@ ko09GuiFunctions:
             var vtitle = 'Choose one';
             vtest   =   this.guiQuickList(vtitle,vtitle,items,'one');
             return vtest;
-
-
 
    - date: created="2015-12-10T07:40:15"
      last: lastmod="Thu Dec 10 07:40:18 2015"
@@ -84,9 +78,6 @@ ko09GuiFunctions:
           var selopt  =   selectionCondition || 'one-or-more';
           var vtest   =   ko.dialogs.selectFromList(title, prompt, items, selectionCondition);
           return vtest;
-
-
-
 
    - date: created="2015-12-10T07:40:15"
      last: lastmod="Thu Dec 10 07:40:18 2015"
@@ -157,7 +148,6 @@ ko09GuiFunctions:
         else if(vresult=='Yes'){alert('Hello There!');  }
         else if(vresult=='No'){alert('Feeling anti-social?'); }
         else if(vresult=='Cancel'){alert('Never mind.');  }     
-     
      funcdesc: |
            present a yes-no-cancel dialog
      funcparams: 
