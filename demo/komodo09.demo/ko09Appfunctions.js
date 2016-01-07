@@ -1,5 +1,13 @@
-
 cls_ko09AppFunctions = function(){
+  /// <beg-class_info>
+  /// main:
+  ///   - name: cls_ko09AppFunctions
+  ///     tags: komodo, userscript, class,  
+  ///     desc: |
+  ///         ko09AppFunctions
+  /// <end-class_info>
+
+
   this.App_getRegister = function(arg1){
     
         // init
@@ -118,5 +126,6 @@ cls_ko09AppFunctions = function(){
   }
   //endfunction
   
+
 }
 //endclass

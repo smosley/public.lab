@@ -1,5 +1,13 @@
-
 cls_ko09StrFunctions = function(){
+  /// <beg-class_info>
+  /// main:
+  ///   - name: cls_ko09StrFunctions
+  ///     tags: komodo, userscript, class,  
+  ///     desc: |
+  ///         ko09StrFunctions
+  /// <end-class_info>
+
+
   this.Str_toUcfirst = function(raw){
     
         if(!raw){raw = this.TextArea_getSelection(true);}
@@ -61,5 +69,6 @@ cls_ko09StrFunctions = function(){
   }
   //endfunction
   
+
 }
 //endclass

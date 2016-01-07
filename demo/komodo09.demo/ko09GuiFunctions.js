@@ -1,5 +1,13 @@
-
 cls_ko09GuiFunctions = function(){
+  /// <beg-class_info>
+  /// main:
+  ///   - name: cls_ko09GuiFunctions
+  ///     tags: komodo, userscript, class,  
+  ///     desc: |
+  ///         ko09GuiFunctions
+  /// <end-class_info>
+
+
   this.Gui_get = function(items){
     
         var vtest;
@@ -42,5 +50,6 @@ cls_ko09GuiFunctions = function(){
   }
   //endfunction
   
+
 }
 //endclass

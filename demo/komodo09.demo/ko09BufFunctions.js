@@ -1,5 +1,13 @@
-
 cls_ko09BufFunctions = function(){
+  /// <beg-class_info>
+  /// main:
+  ///   - name: cls_ko09BufFunctions
+  ///     tags: komodo, userscript, class,  
+  ///     desc: |
+  ///         ko09BufFunctions
+  /// <end-class_info>
+
+
   this.Buf_focus = function(){
     
         //
@@ -107,5 +115,6 @@ cls_ko09BufFunctions = function(){
   }
   //endfunction
   
+
 }
 //endclass
