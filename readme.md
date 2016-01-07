@@ -24,6 +24,7 @@ This is the general-purpose publically-accessible github lab space for dreftymac
 
 ## See also
 
-### Wiki
-
 * https://github.com/dreftymac/dreftymac.public.lab/wiki
+* thoughtworks tech radar ;; http://www.thoughtworks.com/radar/#/a-z
+* site migration  ;;  https://businessgrp1-stage.uoregon.edu/siteactivity01/unfiled
+* site migration  ;;  https://businessgrp1-stage.uoregon.edu/views/dsp-taxonomy-values
