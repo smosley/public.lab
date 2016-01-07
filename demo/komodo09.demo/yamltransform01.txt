@@ -27,7 +27,7 @@ __yaml__:
     caption:      code generation transform
     rowkeep: 1
     uuid:         uumate_herds
-    desc:         __desc__
+    desc:         output function definitions to js code files
     dreftymacid:  argo_gem_windy
     usedataroot:  'workbook'
     datainclude:
@@ -36,11 +36,14 @@ __yaml__:
       - "ko09GuiFunctions.txt"
       - "ko09AppFunctions.txt"
     offtemplate:  |
-    template: |      
+    template: |
+      {#- ------------------------------------------------------------------------ -#}
       {% for row in workbook.yamltransform01 -%}
+      {#- ------------------------------------------------------------------------ -#}
       {%- set ttoutfile   = './%s.js'%( row.caption )  -%}
       {%- set ttoutmode   = 'replace'  -%}
       {%- set ttusebom    = False      -%}
+      {#- ------------------------------------------------------------------------ -#}
       {%filter string() |jjtofile(ttoutfile,ttoutmode,ttusebom) |jjdedent() %}
       {{-""}}
       cls_{{ row.caption }} = function(){
@@ -54,7 +57,7 @@ __yaml__:
       }
       //endclass
       {%endfilter%}
+      {#- ------------------------------------------------------------------------ -#}          
       {% endfor %}
-
-
+      {#- ------------------------------------------------------------------------ -#}
 

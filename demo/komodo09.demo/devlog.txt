@@ -10,3 +10,57 @@
 ###         desc
 ### <end-file_info>
 
+main:
+  
+  - caption:  recordtemplate
+    rectype:  rrmini03
+    datebeg:  Wed Jan 06 16:00:57 2016 
+    dateend:  Wed Jan 06 16:00:57 2016 
+    tags:     tags
+    desc:     desc
+    seealso:  seealso
+    dreftymacid: positive_remain_steaming
+    wwbody: |
+      - funcname: App_getRegister
+        date: created="__date__"
+        last: lastmod="__date__"
+        tags: __tags__
+        dreftymacid: __dreftymacid__
+        funcexample: |
+            otest = new cls_ko09Appfunctions();
+            console.log( otest.App_getRegister(1) );
+        funcdesc: |
+            return the value of a komodo register
+            this uses a komodo component to simulate vim-style registers
+            
+            Components.classes['@activestate.com/koPrefService;1']
+                  .getService(Components.interfaces.koIPrefService)
+                  .prefs
+                  ;
+        funcparams:
+            - ['arg1', 'string', 'single-digit 0-9 representing the register we want to use']
+        funcreturns: 
+            - ['string', 'output value of the register or empty string if none']
+        funcdependencies: "__blank__"
+        funcdetails: |
+           funcdetails           
+        seealso: |
+           * href="__link__"
+        wwfuncbody: |
+          // init
+          var vout;
+          var regis = Components.classes['@activestate.com/koPrefService;1'].getService(Components.interfaces.koIPrefService).prefs;
+          pref_name = 'koTmpReg0'+arg1.toString();
+          //;;
+                    
+          // getRegister
+          if (regis.hasStringPref(pref_name)) {
+            vout = regis.getStringPref(pref_name);
+          } else {
+            vout = '';
+          }
+          //;;
+          
+          // return
+          return vout;
+          //;;

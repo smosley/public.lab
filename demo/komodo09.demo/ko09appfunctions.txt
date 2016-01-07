@@ -15,186 +15,225 @@
 ### ------------------------------------------------------------------------ 
 ko09AppFunctions:
 
-   - date: created="Mon Nov 30 21:44:06 2015"
-     last: lastmod="Mon Nov 30 21:44:06 2015"
-     funcname: App_getPlatform
-     funcexample: |
-        otest =   new cls_ko09Appfunctions();
-        console.log( otest.App_getPlatform() );
-                   
-     funcdesc: |
-           return the system platform this app is running under
+  - funcname: App_getRegister
+    date: created="2016-01-06T16:16:40"
+    last: lastmod="2016-01-06T16:16:43"
+    tags: register, prefs, clipboard, 
+    dreftymacid: orangy_mare_heartier
+    funcexample: |
+        otest = new cls_ko09Appfunctions();
+        console.log( otest.App_getRegister(1) );
+    funcdesc: |
+        return the value of a komodo register
+        this uses a komodo component to simulate vim-style registers
+        
+        Components.classes['@activestate.com/koPrefService;1']
+              .getService(Components.interfaces.koIPrefService)
+              .prefs
+              ;
+    funcparams:
+        - ['arg1', 'string', 'single-digit 0-9 representing the register we want to use']
+    funcreturns: 
+        - ['string', 'output value of the register or empty string if none']
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails           
+    seealso: |
+       * href="__link__"
+    wwfuncbody: |
+      // init
+      var vout;
+      var regis = Components.classes['@activestate.com/koPrefService;1'].getService(Components.interfaces.koIPrefService).prefs;
+      pref_name = 'koTmpReg0'+arg1.toString();
+      //;;
+                
+      // getRegister
+      if (regis.hasStringPref(pref_name)) {
+        vout = regis.getStringPref(pref_name);
+      } else {
+        vout = '';
+      }
+      //;;
+      
+      // return
+      return vout;
+      //;;
 
-     funcparams: []
-     funcreturns: 
-          - ['string', 'system platform']
-     tags: application, system, os, platform
-     dreftymacid: risky_icicle_bus
-     funcdependencies: "__blank__"
-     funcdetails: |
-        funcdetails
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        // init
-        var vout  =   '';
-        //;;
-        
-        // main
-        vout      =   Components.
-          classes["@mozilla.org/xre/app-info;1"].
-          getService(Components.interfaces.nsIXULRuntime).
-          OS.
-          toString()
-          ;
-        //;;
-        
-        // return
-        return(vout);
-        //;;
-  
-   - date: created="Mon Nov 30 21:44:06 2015"
-     last: lastmod="Mon Nov 30 21:44:06 2015"
-     funcname: App_getKoDirsDirectory
-     funcexample: |
-                   
-     funcdesc: |
-           Return a koDirs directory path based on the supplied keyname.
+  - date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcname: App_getPlatform
+    funcexample: |
+       otest =   new cls_ko09Appfunctions();
+       console.log( otest.App_getPlatform() );
+    funcdesc: |
+          return the system platform this app is running under
+    funcparams: []
+    funcreturns: 
+         - ['string', 'system platform']
+    tags: application, system, os, platform
+    dreftymacid: risky_icicle_bus
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       // init
+       var vout  =   '';
+       //;;
+       
+       // main
+       vout      =   Components.
+         classes["@mozilla.org/xre/app-info;1"].
+         getService(Components.interfaces.nsIXULRuntime).
+         OS.
+         toString()
+         ;
+       //;;
+       
+       // return
+       return(vout);
+       //;;
+ 
+  - date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcname: App_getKoDirsDirectory
+    funcexample: |
+                  
+    funcdesc: |
+          Return a koDirs directory path based on the supplied keyname.
 
-     funcparams: 
-          - ['keyname', 'string',  'the built-in keyname of the desired koDirs directory path']
-     funcreturns: 
-          ['string ;; directory path']
-     tags: application, get
-     dreftymacid: chance_vividly_hostage
-     funcdependencies: "__blank__"
-     funcdetails: |
-        * keyname is expected to be one of the following built-in values:
-        *    binDBGPDir
-        *    binDir
-        *    commonDataDir
-        *    docDir
-        *    factoryCommonDataDir
-        *    hostUserDataDir
-        *    installDir
-        *    mozBinDir
-        *    perlDBGPDir
-        *    pythonDBGPDir
-        *    pythonExe
-        *    roamingUserDataDir
-        *    sdkDir
-        *    supportDir
-        *    userCacheDir
-        *    userDataDir
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        var vout  =   '';
-        try{
-          vout = Components.
-            classes['@activestate.com/koDirs;1'].
-            getService(Components.interfaces.koIDirs)[keyname];
-        }catch(exx){}
-        return(vout);
-        
-  
-   - date: created="Mon Nov 30 21:44:06 2015"
-     last: lastmod="Mon Nov 30 21:44:06 2015"
-     funcname: App_writeKoLogs
-     funcexample: |
-                   
-     funcdesc: |
-           write a string message to the komodo log
+    funcparams: 
+         - ['keyname', 'string',  'the built-in keyname of the desired koDirs directory path']
+    funcreturns: 
+         ['string ;; directory path']
+    tags: application, get
+    dreftymacid: chance_vividly_hostage
+    funcdependencies: "__blank__"
+    funcdetails: |
+       * keyname is expected to be one of the following built-in values:
+       *    binDBGPDir
+       *    binDir
+       *    commonDataDir
+       *    docDir
+       *    factoryCommonDataDir
+       *    hostUserDataDir
+       *    installDir
+       *    mozBinDir
+       *    perlDBGPDir
+       *    pythonDBGPDir
+       *    pythonExe
+       *    roamingUserDataDir
+       *    sdkDir
+       *    supportDir
+       *    userCacheDir
+       *    userDataDir
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       var vout  =   '';
+       try{
+         vout = Components.
+           classes['@activestate.com/koDirs;1'].
+           getService(Components.interfaces.koIDirs)[keyname];
+       }catch(exx){}
+       return(vout);
+       
+ 
+  - date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcname: App_writeKoLogs
+    funcexample: |
+                  
+    funcdesc: |
+          write a string message to the komodo log
 
-     funcparams: 
-          - ['message', '(string)', 'string message to write to the komodo log']
-     funcreturns: 
-          [['__blank__']]
-     tags: application, write
-     dreftymacid: unseat_weakens_disunite
-     funcdependencies: "__blank__"
-     funcdetails: |
-        funcdetails
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        //TODO: NO_WORKY fix this, it does not seem to work correctly
-        var consoleService = Components.
-              classes['@mozilla.org/consoleservice;1'].
-              getService(Components.interfaces.nsIConsoleService);
-        consoleService.logStringMessage(message);
-        
-  
-   - date: created="Mon Nov 30 21:44:06 2015"
-     last: lastmod="Mon Nov 30 21:44:06 2015"
-     funcname: App_writeKoStatus
-     funcexample: |
-                   
-     funcdesc: |
-           write a string message to the status bar
+    funcparams: 
+         - ['message', '(string)', 'string message to write to the komodo log']
+    funcreturns: 
+         [['__blank__']]
+    tags: application, write
+    dreftymacid: unseat_weakens_disunite
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       //TODO: NO_WORKY fix this, it does not seem to work correctly
+       var consoleService = Components.
+             classes['@mozilla.org/consoleservice;1'].
+             getService(Components.interfaces.nsIConsoleService);
+       consoleService.logStringMessage(message);
+       
+ 
+  - date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcname: App_writeKoStatus
+    funcexample: |
+                  
+    funcdesc: |
+          write a string message to the status bar
 
-     funcparams: 
-          - ['message', '(string)', 'string message to write to the komodo status bar']
-     funcreturns: 
-          [['__blank__', '(__blank__)', '__blank__']]
-     tags: application, write
-     dreftymacid: retreat_brews_wrecker
-     funcdependencies: "__blank__"
-     funcdetails: |
-        funcdetails
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        StatusBar_AddMessage(message, "debugger", 5000, true);     
-        
-  
-   - date: created="Mon Nov 30 21:44:06 2015"
-     last: lastmod="Mon Nov 30 21:44:06 2015"
-     funcname: App_lsBufPaths
-     funcexample: |
-                   
-     funcdesc: |
-           return js array of paths of all open CurrentBuffers
-
-     funcparams: [] 
-     funcreturns: 
-          ['string ;; directory path']
-     tags: application, get
-     dreftymacid: bench_burning_impure
-     funcdependencies: "__blank__"
-     funcdetails: |
-        funcdetails
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        // init
-        var filePaths = [];
-        var editorViews = ko.views.manager.getAllViews();
-        //;;
-        
-        // process
-        for (let editorView of editorViews)
-        {
-          filePaths.push(editorView.koDoc.file.path);
-        }
-        //;;
-        
-        // return
-        vout  = filePaths;        
-        return vout;
-        //;;
-        
-  
+    funcparams: 
+         - ['message', '(string)', 'string message to write to the komodo status bar']
+    funcreturns: 
+         [['__blank__', '(__blank__)', '__blank__']]
+    tags: application, write
+    dreftymacid: retreat_brews_wrecker
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       StatusBar_AddMessage(message, "debugger", 5000, true);     
+       
+ 
+  - date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcname: App_lsBufPaths
+    funcexample: |
+                  
+    funcdesc: |
+          return js array of paths of all open CurrentBuffers
+    funcparams: [] 
+    funcreturns: 
+         ['string ;; directory path']
+    tags: application, get
+    dreftymacid: bench_burning_impure
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails        
+    seealso: |
+       *
+    wwfuncbody: |
+       // init
+       var filePaths = [];
+       var editorViews = ko.views.manager.getAllViews();
+       //;;
+       
+       // process
+       for (let editorView of editorViews)
+       {
+         filePaths.push(editorView.koDoc.file.path);
+       }
+       //;;
+       
+       // return
+       vout  = filePaths;        
+       return vout;
+       //;;
+       
+ 
 
 
 
