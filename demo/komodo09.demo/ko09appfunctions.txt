@@ -90,18 +90,15 @@ ko09AppFunctions:
       var vout;
       var regis = Components.classes['@activestate.com/koPrefService;1'].getService(Components.interfaces.koIPrefService).prefs;
       pref_name = 'koTmpReg0'+arg1.toString();
+      pref_valu = arg2.toString();
       //;;
                 
       // getRegister
-      if (regis.hasStringPref(pref_name)) {
-        vout = regis.getStringPref(pref_name);
-      } else {
-        vout = '';
-      }
+      regis.setStringPref(pref_name, pref_valu);
       //;;
       
       // return
-      return vout;
+      // return vout;
       //;;      
 
   - date: created="Mon Nov 30 21:44:06 2015"

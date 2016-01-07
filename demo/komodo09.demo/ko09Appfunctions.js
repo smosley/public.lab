@@ -23,6 +23,26 @@ cls_ko09AppFunctions = function(){
   }
   //endfunction
   
+  this.App_setRegister = function(arg1,arg2){
+    
+        // init
+        var vout;
+        var regis = Components.classes['@activestate.com/koPrefService;1'].getService(Components.interfaces.koIPrefService).prefs;
+        pref_name = 'koTmpReg0'+arg1.toString();
+        pref_valu = arg2.toString();
+        //;;
+                  
+        // getRegister
+        regis.setStringPref(pref_name, pref_valu);
+        //;;
+        
+        // return
+        // return vout;
+        //;;      
+        
+  }
+  //endfunction
+  
   this.App_getPlatform = function(){
     
         // init
