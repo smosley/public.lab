@@ -11,7 +11,6 @@
 ### <end-file_info>
 
 head:
-  
   - caption:  recordtemplate
     rectype:  rrmini03
     datebeg:  Wed Jan 06 16:00:57 2016 
@@ -42,9 +41,10 @@ head:
            * href="__link__"
         wwfuncbody: |
             __functioncode__
-
+##;;
 
 main:
+  
   - caption:  generate komodotool file
     rectype:  rrmini03
     datebeg:  Mon Jan 11 16:12:37 2016 
@@ -52,7 +52,12 @@ main:
     tags:     tags
     desc:     desc
     seealso:  seealso
-    dreftymacid: __dreftymacid__
+    dreftymacid: bounce_crunch_rams
     wwbody: |
         * sample file       ;;  href="smartpath://mytrybits/k/trykomodo/txt09/demo_includescript.komodotool"
         * sample generator  ;;  href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/zzgen.komodotooljs.txt"
+        * sample include    ;;  href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/demo.topic.includefile.js" find="gayety_celtic_alway"
+        
+        
+        
+##;;
