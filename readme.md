@@ -6,6 +6,8 @@ This is the general-purpose publically-accessible github lab space for dreftymac
 
 * ddyaml refresh  ;;  href="./.ignore/yygen_coderefresh.txt"
 
+## Labs
+
 ### Lab: confluence wiki
 
 * https://github.com/dreftymac/dreftymac.public.lab/blob/master/demo/confluence.wiki/readme.md
