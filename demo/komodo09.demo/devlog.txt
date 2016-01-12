@@ -11,6 +11,7 @@
 ### <end-file_info>
 
 head:
+  
   - caption:  recordtemplate
     rectype:  rrmini03
     datebeg:  Wed Jan 06 16:00:57 2016 
