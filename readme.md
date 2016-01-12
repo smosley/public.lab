@@ -2,6 +2,10 @@
 
 This is the general-purpose publically-accessible github lab space for dreftymac.org
 
+## Tools -- autorefresh repository from IDE
+
+* ddyaml refresh  ;;  href="./.ignore/yygen_coderefresh.txt"
+
 ### Lab: confluence wiki
 
 * https://github.com/dreftymac/dreftymac.public.lab/blob/master/demo/confluence.wiki/readme.md
