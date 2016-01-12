@@ -18,7 +18,6 @@
 // init script
 komodo.assertMacroVersion(3);
 eval(komodo.findPart('macro', "allKo09JsClass", 'container').value); // gayety_celtic_alway
-    
 
 // init objects
 oBuffer   =   new cls_ko09BufFunctions();
