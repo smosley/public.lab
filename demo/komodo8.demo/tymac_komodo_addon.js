@@ -1663,9 +1663,9 @@ tymac_komodo_addon_library = function() {
             *   Get quick input based on a list of choices.
             *
             * Parameters:
-            *   title - (string) dialog title
-            *   prompt - (string) dialog prompt
-            *   items  - (var) input items for populating the list
+            *   title   - (string) dialog title
+            *   prompt  - (string) dialog prompt
+            *   items   - (var) input items for populating the list
             *   selectionCondition  - (string) string option for describing how many items may be selected
             *
             *   (start code)
@@ -1729,3 +1729,4 @@ tymac_komodo_addon_library = function() {
 
 
 // begin_: end
+f

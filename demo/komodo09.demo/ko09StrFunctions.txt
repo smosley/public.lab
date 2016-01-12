@@ -12,174 +12,177 @@
 ###         ko09 javascript functions
 ### <end-file_info>
 
-### ------------------------------------------------------------------------ 
+### ------------------------------------------------------------------------
 ko09StrFunctions:
-  
-   - date: created="Mon Nov 30 21:44:06 2015"
-     last: lastmod="Mon Nov 30 21:44:06 2015"
-     funcname: Str_toUcfirst
-     funcexample: |
-                   
-     funcdesc: |
-           return string transformation: uppercase first letter of first word
+  - funcname: Str_toUcfirst
+    date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcexample: |
+      __blank__
+    funcdesc: |
+          return string transformation: uppercase first letter of first word
+    funcparams:
+         - ['raw', '(string)', 'raw input string']
+    funcreturns:
+         ['string ;; uppercase first letter']
+    tags: string, transform
+    dreftymacid: meatier_losing_segment
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails
+    seealso: |
+       *
+    wwfuncbody: |
+       if(!raw){raw = this.Buf_getSelection(true);}
+       vout    =   raw;
+       vout    =   vout.toLowerCase();
+       vout    =   (vout + '').charAt(0).toUpperCase() + vout.substr(1);
+       return vout;
 
-     funcparams: 
-          - ['raw', '(string)', 'raw input string']
-     funcreturns: 
-          ['string ;; uppercase first letter']
-     tags: application, system, os, platform
-     dreftymacid: meatier_losing_segment
-     funcdependencies: "__blank__"
-     funcdetails: |
-        funcdetails
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        if(!raw){raw = this.TextArea_getSelection(true);}
-        vout    =   raw;
-        vout    =   vout.toLowerCase();
-        vout    =   (vout + '').charAt(0).toUpperCase() + vout.substr(1);
-        return vout;
-        
-  
-   - date: created="Mon Nov 30 21:44:06 2015"
-     last: lastmod="Mon Nov 30 21:44:06 2015"
-     funcname: Str_toLowerCase
-     funcexample: |
-                   
-     funcdesc: |
-           return string transformation: toLowerCase
 
-     funcparams: 
-          - ['raw', '(string)', 'raw input string']
-     funcreturns: 
-          ['string ;; uppercase first letter']
-     tags: application, system, os, platform
-     dreftymacid: brownest_haziest_zobrist
-     funcdependencies: "__blank__"
-     funcdetails: |
-        funcdetails
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        if(!raw){raw = this.TextArea_getSelection(true);}
-        vout    =   raw;
-        vout    =   vout.toLowerCase();
-        return vout;
-        
-  
-   - date: created="Mon Nov 30 21:44:06 2015"
-     last: lastmod="Mon Nov 30 21:44:06 2015"
-     funcname: Str_toUpperCase
-     funcexample: |
-                   
-     funcdesc: |
-           return string transformation: toUpperCase
+  - funcname: Str_toLowerCase
+    date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcexample: |
+        __blank__
+    funcdesc: |
+          return string transformation: toLowerCase
+    funcparams:
+         - ['raw', '(string)', 'raw input string']
+    funcreturns:
+         ['string ;; uppercase first letter']
+    tags: string, transform
+    dreftymacid: brownest_haziest_zobrist
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails
+    seealso: |
+       *
+    wwfuncbody: |
+       if(!raw){raw = this.Buf_getSelection(true);}
+       vout    =   raw;
+       vout    =   vout.toLowerCase();
+       return vout;
 
-     funcparams: 
-          - ['raw', '(string)', 'raw input string']
-     funcreturns: 
-          ['string ;; uppercase first letter']
-     tags: application, system, os, platform
-     dreftymacid: undying_forgave_brow
-     funcdependencies: "__blank__"
-     funcdetails: |
-        funcdetails
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        if(!raw){raw = this.TextArea_getSelection(true);}
-        vout    =   raw;
-        vout    =   vout.toUpperCase();
-        return vout;              
-        
-  
-   - date: created="Mon Nov 30 21:44:06 2015"
-     last: lastmod="Mon Nov 30 21:44:06 2015"
-     funcname: Str_wordsUpperCase
-     funcexample: |
-                   
-     funcdesc: |
-           return string transformation: Uppercase upcase first letter of words in string
+  - funcname: Str_toUpperCase
+    date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcexample: |
+      __blank__
+    funcdesc: |
+          return string transformation: toUpperCase
+    funcparams:
+         - ['raw', '(string)', 'raw input string']
+    funcreturns:
+         ['string ;; uppercase first letter']
+    tags: string, transform
+    dreftymacid: undying_forgave_brow
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails
+    seealso: |
+       *
+    wwfuncbody: |
+       if(!raw){raw = this.Buf_getSelection(true);}
+       vout    =   raw;
+       vout    =   vout.toUpperCase();
+       return vout;
 
-     funcparams: 
-          - ['raw', '(string)', 'raw input string']
-     funcreturns: 
-          ['string ;; uppercase first letter']
-     tags: application, system, os, platform
-     dreftymacid: shrimp_vascular_unjam
-     funcdependencies: "__blank__"
-     funcdetails: |
-        funcdetails
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        if(!raw){raw = this.TextArea_getSelection(true);}
-        vout    =   raw;
-        vout    =   (vout+'').replace(/^(.)|\s(.)/g, function( $1 ){return $1.toUpperCase( );} );
-        return vout;
-        
-  
-   - date: created="Mon Nov 30 21:44:06 2015"
-     last: lastmod="Mon Nov 30 21:44:06 2015"
-     funcname: Str_spacesToUnderscore
-     funcexample: |
-                   
-     funcdesc: |
-           return string transformation: convert spaces to underscore
 
-     funcparams: 
-          - ['raw', '(string)', 'raw input string']
-     funcreturns: 
-          ['string ;; string transformation']
-     tags: application, system, os, platform
-     dreftymacid: violins_initial_unlucky
-     funcdependencies: "__blank__"
-     funcdetails: |
-        funcdetails
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        if(!raw){raw = this.TextArea_getSelection(true);}
-        vout    =   raw;
-        vout    =   vout.toString().split(/[\s\t]+/).join('_');
-        return vout;
-        
-  
-   - date: created="Mon Nov 30 21:44:06 2015"
-     last: lastmod="Mon Nov 30 21:44:06 2015"
-     funcname: Str_underscoreToSpaces
-     funcexample: |
-                   
-     funcdesc: |
-           return string transformation: convert underscore to spaces
+  - funcname: Str_wordsUpperCase
+    date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcexample: |
+        __blank__
+    funcdesc: |
+          return string transformation: Uppercase upcase first letter of words in string
+    funcparams:
+         - ['raw', '(string)', 'raw input string']
+    funcreturns:
+         ['string ;; uppercase first letter']
+    tags: string, transform
+    dreftymacid: shrimp_vascular_unjam
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails
+    seealso: |
+       *
+    wwfuncbody: |
+       if(!raw){raw = this.Buf_getSelection(true);}
+       vout    =   raw;
+       vout    =   (vout+'').replace(/^(.)|\s(.)/g, function( $1 ){return $1.toUpperCase( );} );
+       return vout;
+       
+  - funcname: Str_spaceSqueeze
+    date: created="2016-01-09T10:55:27"
+    last: lastmod="2016-01-09T10:55:27"
+    funcexample: |
+          __blank__
+    funcdesc: |
+          return string transformation: reduce all whitespace to single spaces
+    funcparams:
+         - ['raw', '(string)', 'raw input string']
+    funcreturns:
+         ['string ;; string transformation']
+    tags: space, whitespace, squeeze
+    dreftymacid: violins_initial_unlucky
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails
+    seealso: |
+       *
+    wwfuncbody: |
+       if(!raw){raw = this.Buf_getSelection(true);}
+       vout    =   raw;
+       vout    =   vout.toString().split(/[\s\t]+/).join('_');
+       return vout;
 
-     funcparams: 
-          - ['raw', '(string)', 'raw input string']
-     funcreturns: 
-          ['string ;; string transformation']
-     tags: application, system, os, platform
-     dreftymacid: satiric_gladys_bodily
-     funcdependencies: "__blank__"
-     funcdetails: |
-        funcdetails
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        if(!raw){raw = this.TextArea_getSelection(true);}
-        vout    =   raw;
-        vout    =   vout.split(/[_]+/).join(' ');
-        return vout;             
-        
+  - funcname: Str_spacesToUnderscore
+    date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcexample: |
+          __blank__
+    funcdesc: |
+          return string transformation: convert spaces to underscore
+    funcparams:
+         - ['raw', '(string)', 'raw input string']
+    funcreturns:
+         ['string ;; string transformation']
+    tags: string, transform
+    dreftymacid: violins_initial_unlucky
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails
+    seealso: |
+       *
+    wwfuncbody: |
+       if(!raw){raw = this.Buf_getSelection(true);}
+       vout    =   raw;
+       vout    =   vout.toString().split(/[\s\t]+/).join('_');
+       return vout;
+
+
+  - funcname: Str_underscoreToSpaces
+    date: created="Mon Nov 30 21:44:06 2015"
+    last: lastmod="Mon Nov 30 21:44:06 2015"
+    funcexample: |
+        __blank__
+    funcdesc: |
+          return string transformation: convert underscore to spaces
+    funcparams:
+         - ['raw', '(string)', 'raw input string']
+    funcreturns:
+         ['string ;; string transformation']
+    tags: string, transform
+    dreftymacid: satiric_gladys_bodily
+    funcdependencies: "__blank__"
+    funcdetails: |
+       funcdetails
+    seealso: |
+       *
+    wwfuncbody: |
+       if(!raw){raw = this.Buf_getSelection(true);}
+       vout    =   raw;
+       vout    =   vout.split(/[_]+/).join(' ');
+       return vout;
+

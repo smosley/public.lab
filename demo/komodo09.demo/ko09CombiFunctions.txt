@@ -1,0 +1,983 @@
+
+### ------------------------------------------------------------------------
+### begin_: ko09BufFunctions
+ko09BufFunctions: 
+  
+   - funcname: Buf_setSelection
+     date: created="2016-01-08T16:29:21"
+     last: lastmod="2016-01-08T16:29:24"
+     funcexample: |
+        otest = new __classname__();
+        console.log( otest.Buf_setSelection('hello world') );
+                   
+     funcdesc: |
+        set the value of the currently selected text in the current buffer
+        
+     funcparams: 
+          [['vtext', 'string', 'string to use in setting the selection']]
+     funcreturns: 
+          None
+     tags: selection, setter,
+     dreftymacid: wore_manager_retrieve
+     funcdependencies: "__blank__"
+     funcdetails: |
+        __funcdetails__           
+        
+     seealso: |
+        * href="__link__"
+        
+     wwfuncbody: |
+        this.Buf_focus();
+        komodo.view.selection = vtext;
+        
+  
+   - funcname: Buf_focus
+     date: created="Mon Nov 30 18:57:01 2015"
+     last: lastmod="Mon Nov 30 18:57:01 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        set focus on a buffer, making it the CurrentBuffer
+        
+     funcparams: 
+          []
+     funcreturns: 
+          ['string,  the fullpath of the CurrentBuffer']
+     tags: CurrentBuffer, getter, string, YES_WORKY
+     dreftymacid: alert_pilots_ego
+     funcdependencies: "__blank__"
+     funcdetails: |
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        //
+        komodo.assertMacroVersion(3);
+        if(komodo.view && komodo.view.scintilla){ komodo.view.scintilla.focus(); }
+        
+  
+   - funcname: Buf_getFilePath
+     date: created="Mon Nov 30 18:57:01 2015"
+     last: lastmod="Mon Nov 30 18:57:01 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        get the filepath of the CurrentBuffer
+        
+     funcparams: 
+          []
+     funcreturns: 
+          ['string,  the fullpath of the CurrentBuffer']
+     tags: CurrentBuffer, getter, string, YES_WORKY
+     dreftymacid: alert_pilots_ego
+     funcdependencies: "__blank__"
+     funcdetails: |
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        // return
+        return komodo.interpolate('%F');
+        
+  
+   - funcname: Buf_getFileParentDir
+     date: created="Mon Nov 30 18:57:01 2015"
+     last: lastmod="Mon Nov 30 18:57:01 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        get CurrentBuffer parent dir
+        
+     funcparams: 
+          []
+     funcreturns: 
+          ['string,  the parent directory of the CurrentBuffer']
+     tags: CurrentBuffer, getter, string, YES_WORKY
+     dreftymacid: flu_robe_reclaim
+     funcdependencies: "__blank__"
+     funcdetails: |
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        // return
+        return komodo.interpolate('%D');
+        
+  
+   - funcname: Buf_getLineColumn
+     date: created="Mon Nov 30 19:00:48 2015"
+     last: lastmod="Mon Nov 30 19:00:48 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        get current cursor column of the CurrentBuffer
+        
+     funcparams: 
+          []
+     funcreturns: 
+          ['string,  current cursor column of the CurrentBuffer']
+     tags: CurrentBuffer, getter, string, YES_WORKY
+     dreftymacid: glowing_gotcha_mineral
+     funcdependencies: "__blank__"
+     funcdetails: |
+        Returns the one-based index instead of zero-based index
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        // return
+        return (komodo.editor.getColumn(komodo.editor.currentPos)+1);    
+        
+  
+   - funcname: Buf_getLineNumber
+     date: created="Mon Nov 30 19:04:13 2015"
+     last: lastmod="Mon Nov 30 19:04:13 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        get current cursor line number of the CurrentBuffer
+        
+     funcparams: 
+          []
+     funcreturns: 
+          ['string,  current cursor line number of the CurrentBuffer']
+     tags: CurrentBuffer, getter, string, YES_WORKY
+     dreftymacid: axe_celia_flown
+     funcdependencies: "__blank__"
+     funcdetails: |
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        // return
+        return komodo.interpolate('%L');
+        
+  
+   - funcname: Buf_getLineText
+     date: created="Mon Nov 30 19:06:16 2015"
+     last: lastmod="Mon Nov 30 19:06:16 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        get the full text on the current cursor line of the CurrentBuffer
+        
+     funcparams: 
+          []
+     funcreturns: 
+          ['string,  the full text on current cursor line of the CurrentBuffer']
+     tags: CurrentBuffer, getter, string, YES_WORKY
+     dreftymacid: arian_austria_nasal
+     funcdependencies: "__blank__"
+     funcdetails: |
+        ## Dependencies
+        * this.Buf_focus()
+        
+        ## Development notes
+        There may be a different approach for selecting the current line
+        found this from [[google://"text of the current line" komodo]]
+        http://www.weirdlooking.com/blog/92/abbr.kpf
+        komodo.doCommand('cmd_end');
+        var view      =   ko.views.manager.currentView;
+        var line      =   view.scimoz.lineFromPosition(view.scimoz.currentPos);
+        var lineStart =   view.scimoz.positionFromLine(line);
+        alert(line);
+        alert(lineStart);
+        var lineText  =   view.scimoz.getTextRange(lineStart, view.scimoz.currentPos);
+        return lineText;
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        // Buf_focus();
+        this.Buf_focus();
+        //;;
+        
+        // init
+        var vout        =   '';
+        var savepos     =   komodo.editor.currentPos;
+        try{
+            komodo.doCommand('cmd_end');
+            komodo.doCommand('cmd_selectHome'); // do it twice in order to capture leading whitespace
+            komodo.doCommand('cmd_selectHome');
+            new_selection = komodo.interpolate('%s');
+            vout = (new_selection);
+            komodo.editor.gotoPos(savepos);
+        }catch(exx){}
+        //;;
+        
+        // return
+        return vout; 
+        
+  
+   - funcname: Buf_getSelection
+     date: created="Mon Nov 30 19:14:26 2015"
+     last: lastmod="Mon Nov 30 19:14:26 2015"
+     funcexample: |
+        otest   =   new cls_ko09BufFunctions();
+        vout    =   otest.Buf_getSelection();
+        console.log( vout );       
+                   
+     funcdesc: |
+        get currently seleted text (if any). force one if bforce is true
+        
+     funcparams: 
+          [['bforce', 'boolean', 'True or False ... force a selection if True']]
+     funcreturns: 
+          ['string,  currently selected text, if there is any']
+     tags: CurrentBuffer, getter, string, YES_WORKY
+     dreftymacid: alms_wimpiest_audrey
+     funcdependencies: "__blank__"
+     funcdetails: |
+        __funcdetails__
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        // 
+        this.Buf_focus();            
+        var selection = '';
+        //;;
+        
+        //
+        try{
+            selection = ko.views.manager.currentView.selection;
+        }catch(exx){};
+        //;;
+        
+        //
+        try{
+            if(selection=='' && bforce){
+                komodo.doCommand('cmd_selectWordLeft');
+                selection   =   ko.views.manager.currentView.selection;
+            };
+        }catch(exx){};
+        //;;
+        
+        //
+        return selection;
+        //;;
+         
+        
+  
+   - funcname: Buf_getSubLanguage
+     date: created="Mon Nov 30 19:16:45 2015"
+     last: lastmod="Mon Nov 30 19:16:45 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        get the current syntax language at the current cursor position 
+        
+     funcparams: 
+          []
+     funcreturns: 
+          ['string,  the current syntax sub-language at the current cursor position']
+     tags: CurrentBuffer, getter, string, NO_WORKY
+     dreftymacid: planing_bengal_niche
+     funcdependencies: "__blank__"
+     funcdetails: |
+        __funcdetails__
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        // return
+        return ko.views.manager.currentView.document.subLanguage;
+        
+  
+   - funcname: Buf_getLanguage
+     date: created="Mon Nov 30 19:17:52 2015"
+     last: lastmod="Mon Nov 30 19:17:52 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        * NO_WORKY as of 2016-01-11T14:30:24
+        * TypeError: ko.views.manager.currentView.document is undefined
+        * get the current syntax language for the entire buffer
+        
+     funcparams: 
+          []
+     funcreturns: 
+          ['string,  the current syntax language for the entire CurrentBuffer']
+     tags: CurrentBuffer, getter, string, NO_WORKY
+     dreftymacid: tribe_awe_unpin
+     funcdependencies: "__blank__"
+     funcdetails: |
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        // return
+        return ko.views.manager.currentView.document.language;
+        
+  
+
+### ------------------------------------------------------------------------
+### begin_: ko09StrFunctions
+ko09StrFunctions: 
+  
+   - funcname: Str_toUcfirst
+     date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcexample: |
+        __blank__
+                   
+     funcdesc: |
+        return string transformation: uppercase first letter of first word
+        
+     funcparams: 
+          [['raw', '(string)', 'raw input string']]
+     funcreturns: 
+          ['string ;; uppercase first letter']
+     tags: string, transform
+     dreftymacid: meatier_losing_segment
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        if(!raw){raw = this.Buf_getSelection(true);}
+        vout    =   raw;
+        vout    =   vout.toLowerCase();
+        vout    =   (vout + '').charAt(0).toUpperCase() + vout.substr(1);
+        return vout;
+        
+  
+   - funcname: Str_toLowerCase
+     date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcexample: |
+        __blank__
+                   
+     funcdesc: |
+        return string transformation: toLowerCase
+        
+     funcparams: 
+          [['raw', '(string)', 'raw input string']]
+     funcreturns: 
+          ['string ;; uppercase first letter']
+     tags: string, transform
+     dreftymacid: brownest_haziest_zobrist
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        if(!raw){raw = this.Buf_getSelection(true);}
+        vout    =   raw;
+        vout    =   vout.toLowerCase();
+        return vout;
+        
+  
+   - funcname: Str_toUpperCase
+     date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcexample: |
+        __blank__
+                   
+     funcdesc: |
+        return string transformation: toUpperCase
+        
+     funcparams: 
+          [['raw', '(string)', 'raw input string']]
+     funcreturns: 
+          ['string ;; uppercase first letter']
+     tags: string, transform
+     dreftymacid: undying_forgave_brow
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        if(!raw){raw = this.Buf_getSelection(true);}
+        vout    =   raw;
+        vout    =   vout.toUpperCase();
+        return vout;
+        
+  
+   - funcname: Str_wordsUpperCase
+     date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcexample: |
+        __blank__
+                   
+     funcdesc: |
+        return string transformation: Uppercase upcase first letter of words in string
+        
+     funcparams: 
+          [['raw', '(string)', 'raw input string']]
+     funcreturns: 
+          ['string ;; uppercase first letter']
+     tags: string, transform
+     dreftymacid: shrimp_vascular_unjam
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        if(!raw){raw = this.Buf_getSelection(true);}
+        vout    =   raw;
+        vout    =   (vout+'').replace(/^(.)|\s(.)/g, function( $1 ){return $1.toUpperCase( );} );
+        return vout;
+        
+  
+   - funcname: Str_spaceSqueeze
+     date: created="2016-01-09T10:55:27"
+     last: lastmod="2016-01-09T10:55:27"
+     funcexample: |
+        __blank__
+                   
+     funcdesc: |
+        return string transformation: reduce all whitespace to single spaces
+        
+     funcparams: 
+          [['raw', '(string)', 'raw input string']]
+     funcreturns: 
+          ['string ;; string transformation']
+     tags: space, whitespace, squeeze
+     dreftymacid: violins_initial_unlucky
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        if(!raw){raw = this.Buf_getSelection(true);}
+        vout    =   raw;
+        vout    =   vout.toString().split(/[\s\t]+/).join('_');
+        return vout;
+        
+  
+   - funcname: Str_spacesToUnderscore
+     date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcexample: |
+        __blank__
+                   
+     funcdesc: |
+        return string transformation: convert spaces to underscore
+        
+     funcparams: 
+          [['raw', '(string)', 'raw input string']]
+     funcreturns: 
+          ['string ;; string transformation']
+     tags: string, transform
+     dreftymacid: violins_initial_unlucky
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        if(!raw){raw = this.Buf_getSelection(true);}
+        vout    =   raw;
+        vout    =   vout.toString().split(/[\s\t]+/).join('_');
+        return vout;
+        
+  
+   - funcname: Str_underscoreToSpaces
+     date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcexample: |
+        __blank__
+                   
+     funcdesc: |
+        return string transformation: convert underscore to spaces
+        
+     funcparams: 
+          [['raw', '(string)', 'raw input string']]
+     funcreturns: 
+          ['string ;; string transformation']
+     tags: string, transform
+     dreftymacid: satiric_gladys_bodily
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        if(!raw){raw = this.Buf_getSelection(true);}
+        vout    =   raw;
+        vout    =   vout.split(/[_]+/).join(' ');
+        return vout;
+        
+  
+
+### ------------------------------------------------------------------------
+### begin_: ko09AppFunctions
+ko09AppFunctions: 
+  
+   - funcname: App_getRegister
+     date: created="2016-01-06T16:16:40"
+     last: lastmod="2016-01-06T16:16:43"
+     funcexample: |
+        otest = new cls_ko09Appfunctions();
+        console.log( otest.App_getRegister(1) );
+                   
+     funcdesc: |
+        return the value of a komodo register
+        this uses a komodo component to simulate vim-style registers
+        
+        Components.classes['@activestate.com/koPrefService;1']
+              .getService(Components.interfaces.koIPrefService)
+              .prefs
+              ;
+        
+     funcparams: 
+          [['arg1', 'string', 'single-digit 0-9 representing the register we want to use']]
+     funcreturns: 
+          [['string', 'output value of the register or empty string if none']]
+     tags: register, prefs, clipboard,
+     dreftymacid: orangy_mare_heartier
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails           
+        
+     seealso: |
+        * href="__link__"
+        
+     wwfuncbody: |
+        // init
+        var vout;
+        var regis = Components.classes['@activestate.com/koPrefService;1'].getService(Components.interfaces.koIPrefService).prefs;
+        pref_name = 'koTmpReg0'+arg1.toString();
+        //;;
+                  
+        // getRegister
+        if (regis.hasStringPref(pref_name)) {
+          vout = regis.getStringPref(pref_name);
+        } else {
+          vout = '';
+        }
+        //;;
+        
+        // return
+        return vout;
+        //;;
+        
+  
+   - funcname: App_setRegister
+     date: created="2016-01-06T16:16"
+     last: lastmod="2016-01-06T16:16"
+     funcexample: |
+        otest = new cls_ko09Appfunctions();
+        otest.App_setRegister(1,'helloworld');
+                   
+     funcdesc: |
+        set the value of a komodo register
+        this uses a komodo component to simulate vim-style registers
+        
+        Components.classes['@activestate.com/koPrefService;1']
+              .getService(Components.interfaces.koIPrefService)
+              .prefs
+              ;
+        
+     funcparams: 
+          [['arg1', 'string', 'single-digit 0-9 representing the register we want to use'], ['arg2', 'string', 'set the register to the value of this string']]
+     funcreturns: 
+          [['none', 'no return value']]
+     tags: register, prefs, clipboard,
+     dreftymacid: valance_indict_untangle
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails           
+        
+     seealso: |
+        * href="__link__"
+        
+     wwfuncbody: |
+        // init
+        var vout;
+        var regis = Components.classes['@activestate.com/koPrefService;1'].getService(Components.interfaces.koIPrefService).prefs;
+        pref_name = 'koTmpReg0'+arg1.toString();
+        pref_valu = arg2.toString();
+        //;;
+                  
+        // getRegister
+        regis.setStringPref(pref_name, pref_valu);
+        //;;
+        
+        // return
+        // return vout;
+        //;;      
+        
+  
+   - funcname: App_getPlatform
+     date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcexample: |
+        otest =   new cls_ko09Appfunctions();
+        console.log( otest.App_getPlatform() );
+                   
+     funcdesc: |
+        return the system platform this app is running under
+        
+     funcparams: 
+          []
+     funcreturns: 
+          [['string', 'system platform']]
+     tags: application, system, os, platform
+     dreftymacid: risky_icicle_bus
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        // init
+        var vout  =   '';
+        //;;
+        
+        // main
+        vout      =   Components.
+          classes["@mozilla.org/xre/app-info;1"].
+          getService(Components.interfaces.nsIXULRuntime).
+          OS.
+          toString()
+          ;
+        //;;
+        
+        // return
+        return(vout);
+        //;;
+        
+  
+   - funcname: App_getKoDirsDirectory
+     date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        Return a koDirs directory path based on the supplied keyname.
+        
+     funcparams: 
+          [['keyname', 'string', 'the built-in keyname of the desired koDirs directory path']]
+     funcreturns: 
+          ['string ;; directory path']
+     tags: application, get
+     dreftymacid: chance_vividly_hostage
+     funcdependencies: "__blank__"
+     funcdetails: |
+        * keyname is expected to be one of the following built-in values:
+        *    binDBGPDir
+        *    binDir
+        *    commonDataDir
+        *    docDir
+        *    factoryCommonDataDir
+        *    hostUserDataDir
+        *    installDir
+        *    mozBinDir
+        *    perlDBGPDir
+        *    pythonDBGPDir
+        *    pythonExe
+        *    roamingUserDataDir
+        *    sdkDir
+        *    supportDir
+        *    userCacheDir
+        *    userDataDir
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        var vout  =   '';
+        try{
+          vout = Components.
+            classes['@activestate.com/koDirs;1'].
+            getService(Components.interfaces.koIDirs)[keyname];
+        }catch(exx){}
+        return(vout);
+        
+  
+   - funcname: App_writeKoLogs
+     date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        write a string message to the komodo log
+        
+     funcparams: 
+          [['message', '(string)', 'string message to write to the komodo log']]
+     funcreturns: 
+          [['__blank__']]
+     tags: application, write
+     dreftymacid: unseat_weakens_disunite
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        //TODO: NO_WORKY fix this, it does not seem to work correctly
+        var consoleService = Components.
+              classes['@mozilla.org/consoleservice;1'].
+              getService(Components.interfaces.nsIConsoleService);
+        consoleService.logStringMessage(message);
+        
+  
+   - funcname: App_writeKoStatus
+     date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        write a string message to the status bar
+        
+     funcparams: 
+          [['message', '(string)', 'string message to write to the komodo status bar']]
+     funcreturns: 
+          [['__blank__', '(__blank__)', '__blank__']]
+     tags: application, write
+     dreftymacid: retreat_brews_wrecker
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        StatusBar_AddMessage(message, "debugger", 5000, true);     
+        
+  
+   - funcname: App_lsBufPaths
+     date: created="Mon Nov 30 21:44:06 2015"
+     last: lastmod="Mon Nov 30 21:44:06 2015"
+     funcexample: |
+                   
+     funcdesc: |
+        return js array of paths of all open CurrentBuffers
+        
+     funcparams: 
+          []
+     funcreturns: 
+          ['string ;; directory path']
+     tags: application, get
+     dreftymacid: bench_burning_impure
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails        
+        
+     seealso: |
+        *
+        
+     wwfuncbody: |
+        // init
+        var filePaths = [];
+        var editorViews = ko.views.manager.getAllViews();
+        //;;
+        
+        // process
+        for (let editorView of editorViews)
+        {
+          filePaths.push(editorView.koDoc.file.path);
+        }
+        //;;
+        
+        // return
+        vout  = filePaths;        
+        return vout;
+        //;;
+        
+  
+
+### ------------------------------------------------------------------------
+### begin_: ko09GuiFunctions
+ko09GuiFunctions: 
+  
+   - funcname: Gui_get
+     date: created="2015-12-10T07:40:15"
+     last: lastmod="Thu Dec 10 07:40:18 2015"
+     funcexample: |
+        otest = new cls_ko09GuiFunctions();                   
+                   
+     funcdesc: |
+        quickly choose an item from a list. Short name. One argument. No fluff.
+        
+     funcparams: 
+          [['items', 'array', 'list of items']]
+     funcreturns: 
+          ['string', 'user input as a string']
+     tags: gui,
+     dreftymacid: clever_swang_vicenza
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails        
+        
+     seealso: |
+        *        
+        
+     wwfuncbody: |
+        var vtest;
+        var vtitle = 'Choose one';
+        vtest   =   this.guiQuickList(vtitle,vtitle,items,'one');
+        return vtest;
+        
+  
+   - funcname: Gui_quickList
+     date: created="2015-12-10T07:40:15"
+     last: lastmod="Thu Dec 10 07:40:18 2015"
+     funcexample: |
+        otest = new cls_ko09GuiFunctions();
+        var vitems = '';
+        var vtest;
+        
+        //simple example
+        vitems  =   'alpha bravo charlie delta'.split(/\s+/);
+        vtest   =   otest.Gui_quickList('title', 'prompt', vitems, 'one-or-more');
+        alert(JSON.stringify(vtest));
+        
+        //example using simpletable aoh
+        vitems = [{'text':'alpha','id':1},{'text':'bravo','id':2},{'text':'charlie','id':3}];
+        vtest = otest.Gui_quickList('title', 'prompt', vitems, 'one-or-more');
+        alert(JSON.stringify(vtest));
+                   
+                   
+     funcdesc: |
+        Get quick input based on a list of choices.
+        
+     funcparams: 
+          [['title', 'string', 'dialog title'], ['prompt', 'string', 'dialog prompt'], ['items', 'var', 'input items for populating the list'], ['selectionCondition', 'string', 'string option for describing how many items may be selected'], ['mruName', 'string', '(optional) history MRU name for this dialog']]
+     funcreturns: 
+          ['string', 'user input as a string']
+     tags: gui,
+     dreftymacid: daringly_wings_inherits
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails        
+        
+     seealso: |
+        *        
+        
+     wwfuncbody: |
+        var selopt  =   selectionCondition || 'one-or-more';
+        var vtest   =   ko.dialogs.selectFromList(title, prompt, items, selectionCondition);
+        return vtest;
+        
+  
+   - funcname: Gui_inputBox
+     date: created="2015-12-10T07:40:15"
+     last: lastmod="Thu Dec 10 07:40:18 2015"
+     funcexample: |
+        otest =   new cls_ko09GuiFunctions();
+        vout  =   otest.Gui_inputBox( 'Pick a color','Whats your favorite color?','Choose one or enter by hand:','orange','mru_fave_color' );
+        console.log( vout );
+                   
+                   
+     funcdesc: |
+        Get input from a text inputbox.
+        
+     funcparams: 
+          [['title', 'string', 'dialog title'], ['prompt', 'string', 'dialog prompt'], ['vlabel', 'string', '(optional) caption for the text inputbox'], ['vdefault', 'string', '(optional) default value'], ['mruName', 'string', '(optional) history MRU name for this dialog']]
+     funcreturns: 
+          ['string', 'user input as a string']
+     tags: gui,
+     dreftymacid: wizards_andrew_residue
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails        
+        
+     seealso: |
+        *        
+        
+     wwfuncbody: |
+        var vout = ko.dialogs.prompt(prompt, vlabel, vdefault, title, mruName);
+        return vout;
+        
+  
+   - funcname: Gui_statusLog
+     date: created="2015-12-10T07:40:15"
+     last: lastmod="Thu Dec 10 07:40:18 2015"
+     funcexample: |
+        otest =   new cls_ko09GuiFunctions();
+        vout  =   'hello world!';
+        otest.Gui_statusLog( vout );
+                 
+                   
+     funcdesc: |
+        log a message to the GUI status bar
+        
+     funcparams: 
+          [['vtext', '(string)', 'text to output'], ['itime', '(integer)', 'number of milliseconds to display']]
+     funcreturns: 
+          ['None ;; None']
+     tags: gui, NO_WORKY
+     dreftymacid: mazda_zapotec_timeworn
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails        
+        
+     seealso: |
+        *        
+        
+     wwfuncbody: |
+        ko.statusBar.addMessage(vtext, "alert", itime, true);
+        
+  
+   - funcname: Gui_yesNoCancel
+     date: created="2015-12-10T07:40:15"
+     last: lastmod="Thu Dec 10 07:40:18 2015"
+     funcexample: |
+        otest = new cls_ko09GuiFunctions();
+        //
+        vtitle = 'Would you like to say hello?'
+        vresult = otest.Gui_yesNoCancel(vtitle);
+        //
+        if(false){alert('do nothing');}
+        else if(vresult=='Yes'){alert('Hello There!');  }
+        else if(vresult=='No'){alert('Feeling anti-social?'); }
+        else if(vresult=='Cancel'){alert('Never mind.');  }     
+                   
+     funcdesc: |
+        present a yes-no-cancel dialog
+        
+     funcparams: 
+          [['stitle', '(string)', 'dialog title text']]
+     funcreturns: 
+          ['dialogresult ;; None']
+     tags: gui, YES_WORKY
+     dreftymacid: fate_repel_lead
+     funcdependencies: "__blank__"
+     funcdetails: |
+        funcdetails        
+        
+     seealso: |
+        *        
+        
+     wwfuncbody: |
+        var vout = ko.dialogs.yesNoCancel(stitle);
+        return(vout);  
+        
+  
+

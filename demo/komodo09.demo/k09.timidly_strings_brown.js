@@ -2,7 +2,7 @@
 // main:
 //   - date: created="Mon Nov 30 19:12:02 2015"
 //     last: lastmod="Mon Nov 30 19:12:02 2015"
-//     tags: koCurrentBufferString, komodo, K09,  
+//     tags: koCurrentBufferString, komodo, K09
 //     author: created="dreftymac"
 //     dreftymacid: "timidly_strings_brown"
 //     seealso: |

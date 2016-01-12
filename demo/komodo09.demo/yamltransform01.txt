@@ -35,7 +35,9 @@ __yaml__:
       - "ko09GuiFunctions.txt"
       - "ko09AppFunctions.txt"
     offtemplate:  |
-    template: |    
+    template: |
+      {#- ------------------------------------------------------------------------ -#}
+      {{ ''|jjfiledelete("./ko09Classes.js") }}
       {#- ------------------------------------------------------------------------ -#}
       {% for row in workbook.yamltransform01 -%}
       {#- ------------------------------------------------------------------------ -#}
@@ -51,18 +53,21 @@ __yaml__:
         /// <beg-class_info>
         /// main:
         ///   - name: cls_{{ row.caption }}
-        ///     tags: komodo, userscript, class,  
+        ///     tags: komodo, userscript, class,
+        ///     seealso:
+        ///       - href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/devlog.txt"
         ///     desc: |
         ///         {{ row.caption }}
         /// <end-class_info>{{-"\n"-}}{{-"\n"-}}     
-        {%- for subrow in workbook[row.caption] -%}
+        {%- for subrow in workbook[row.caption] |sort(reverse=false,attribute='funcname') -%}
         {{""}}
         this.{{ subrow.funcname }} = function( {%- for item in subrow.funcparams -%}{{ item[0] }}{%- if not loop.last %},{% endif -%}{%- endfor -%} ){
-          {{"\n"}}{{ subrow.wwfuncbody |jjindent(8) }}
+          /**
+            {{-"\n"-}}{{subrow.funcdesc |jjindent(6) }} */
+          {{"\n"}}{{ subrow.wwfuncbody |jjindent(4) }}
         }
         //endfunction
         {% endfor %}
-        
       }
       //endclass
       {{-"\n"-}}{{-"\n"-}} 
@@ -77,4 +82,40 @@ __yaml__:
       {#- ------------------------------------------------------------------------ -#}          
       {% endfor %}
       {#- ------------------------------------------------------------------------ -#} 
-      
+
+  - &uusderh_etam
+    caption:      identity transform
+    rowkeep: 0
+    uuid:         uusderh_etam
+    desc:         __desc__
+    dreftymacid:  ydniw_meg_ogra
+    usedataroot:  'workbook'
+    datainclude:
+      - "ko09BufFunctions.txt"
+      - "ko09StrFunctions.txt"
+      - "ko09AppFunctions.txt"
+      - "ko09GuiFunctions.txt"
+    template: |
+      {% for row in workbook.yamltransform01 -%}
+        {{-"\n"-}} ### ------------------------------------------------------------------------
+        {{-"\n"-}} ### begin_: {{ row.caption }}
+        {{-"\n"-}} {{ row.caption }}: 
+        {% for sheet in workbook[row.caption] -%}
+        {{""}}
+         - funcname: {{ sheet.funcname |replace('CurrentBuffer','Buf') }}
+           date: {{ sheet.date }}
+           last: {{ sheet.last }}
+           funcexample: | {{-"\n"-}}{{ (sheet.funcexample |jjindent(8)) or ("//" |jjindent(8)) }}           
+           funcdesc: | {{-"\n"-}}{{ sheet.funcdesc |jjindent(8) }}
+           funcparams: 
+                {{ sheet.funcparams }}
+           funcreturns: 
+                {{ sheet.funcreturns }}
+           tags: {{ sheet.tags }}
+           dreftymacid: {{ sheet.dreftymacid }}
+           funcdependencies: "__blank__"
+           funcdetails: |   {{-"\n"-}}{{ sheet.funcdetails |jjindent(8) }}
+           seealso: |       {{-"\n"-}}{{ sheet.seealso |jjindent(8) }}
+           wwfuncbody: |    {{-"\n"-}}{{ sheet.wwfuncbody |jjindent(8) }}
+        {% endfor %}
+      {% endfor %}

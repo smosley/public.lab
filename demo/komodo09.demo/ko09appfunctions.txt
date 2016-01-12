@@ -14,7 +14,6 @@
 
 ### ------------------------------------------------------------------------ 
 ko09AppFunctions:
-
   - funcname: App_getRegister
     date: created="2016-01-06T16:16:40"
     last: lastmod="2016-01-06T16:16:43"
@@ -101,9 +100,9 @@ ko09AppFunctions:
       // return vout;
       //;;      
 
-  - date: created="Mon Nov 30 21:44:06 2015"
+  - funcname: App_getPlatform
+    date: created="Mon Nov 30 21:44:06 2015"
     last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname: App_getPlatform
     funcexample: |
        otest =   new cls_ko09Appfunctions();
        console.log( otest.App_getPlatform() );
@@ -139,9 +138,10 @@ ko09AppFunctions:
        return(vout);
        //;;
  
-  - date: created="Mon Nov 30 21:44:06 2015"
+  - funcname: App_getKoDirsDirectory
+    date: created="Mon Nov 30 21:44:06 2015"
     last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname: App_getKoDirsDirectory
+    
     funcexample: |
                   
     funcdesc: |
@@ -186,9 +186,10 @@ ko09AppFunctions:
        return(vout);
        
  
-  - date: created="Mon Nov 30 21:44:06 2015"
+  - funcname: App_writeKoLogs
+    date: created="Mon Nov 30 21:44:06 2015"
     last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname: App_writeKoLogs
+    
     funcexample: |
                   
     funcdesc: |
@@ -215,9 +216,10 @@ ko09AppFunctions:
        consoleService.logStringMessage(message);
        
  
-  - date: created="Mon Nov 30 21:44:06 2015"
+  - funcname: App_writeKoStatus
+    date: created="Mon Nov 30 21:44:06 2015"
     last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname: App_writeKoStatus
+    
     funcexample: |
                   
     funcdesc: |
@@ -240,9 +242,10 @@ ko09AppFunctions:
        StatusBar_AddMessage(message, "debugger", 5000, true);     
        
  
-  - date: created="Mon Nov 30 21:44:06 2015"
+  - funcname: App_lsBufPaths
+    date: created="Mon Nov 30 21:44:06 2015"
     last: lastmod="Mon Nov 30 21:44:06 2015"
-    funcname: App_lsBufPaths
+    
     funcexample: |
                   
     funcdesc: |

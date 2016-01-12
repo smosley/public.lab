@@ -1,0 +1,50 @@
+## href="smartpath://mymedia/2014/git/github/dynamic.yaml/app/demo/demo.topic.fileio.txt"
+## href="smartpath://mytrybits/y/tryyaml/dynamicyaml/devlog.txt"
+## href="smartpath://mymedia/2014/git/github/dynamic.yaml/app/demo/readme.md"
+## href="smartpath://mymedia/2014/git/github/dynamic.yaml/py/ddyamlrunner.py"
+## href="smartpath://mymedia/2014/git/github/dynamic.yaml/py/ddyaml/jinjafilterdynamicyaml.py"
+__yaml__:
+
+  - &uudunker_tenant_wagerer
+    caption:      generate a komodotool js file to save as a *.komodotool file in the ko09 toolbar area
+    rowkeep: 1
+    uuid:         uudunker_tenant_wagerer
+    desc:         |
+      * generate a komodotool file
+      * save it to the correct directory in windows explorer
+      * refresh the tool bar by doing rightclick, reload
+    dreftymacid:  bert_hurt_cecil
+    template:         |
+      {#- ------------------------------------------------------------------------ -#}
+      {%- set ttinproot   = "c:/sm/docs/mymedia/2014/git/github/public.lab/demo/komodo09.demo" -%}
+      {%- set ttinpname   = 'ko09Classes'  -%}
+      {%- set ttinppath   = "%s/%s.js"%(ttinproot,ttinpname)  -%}
+      {#- ------------------------------------------------------------------------ -#}  
+      {%- set ttoutroot   = 'c:/sm/docs/appdata/k/komodoide09/tools/tymac2016-1/cmd_script'  -%}
+      {%- set ttoutbase   = 'allKo09JsClass'  -%}
+      {%- set ttoutpath   = "%s/%s.komodotool"%(ttoutroot,ttoutbase)  -%}
+      {%- set ttoutmode   = 'replace'  -%}
+      {%- set ttusebom    = False      -%}
+      {#- ------------------------------------------------------------------------ -#}
+      {%- set ttscriptbody = '' |jjfile_toarray(ttinppath) |jjdata_formatas("jsonpretty") -%}
+      {#- ------------------------------------------------------------------------ -#}
+      {%- set ttfilebody -%}
+      {{-"\n"-}}
+      {
+        "keyboard_shortcut": "",
+        "trigger_enabled":  false,
+        "name":             "{{ ttoutbase }}",
+        "language":         "JavaScript",
+        "version":          "1.0.12",
+        "rank":             100,
+        "async":            false,
+        "type":             "macro",
+        "trigger":          "trigger_postopen",
+        "value": {{ ttscriptbody }},
+        "noop": "x"
+      }
+      {%- endset -%}
+      {#- ------------------------------------------------------------------------ -#}
+      {%filter string() |jjtofile(ttoutpath,ttoutmode,ttusebom) |jjdedent() %}
+        {{ ttfilebody }}
+      {%endfilter%}

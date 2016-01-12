@@ -14,273 +14,310 @@
 
 ### ------------------------------------------------------------------------
 ko09BufFunctions:
+  - funcname: Buf_setSelection
+    date: created="2016-01-08T16:29:21"
+    last: lastmod="2016-01-08T16:29:24"
+    tags: selection, setter, 
+    dreftymacid: wore_manager_retrieve
+    funcexample: |
+        otest = new __classname__();
+        console.log( otest.Buf_setSelection('hello world') );
+    funcdesc: |
+        set the value of the currently selected text in the current buffer
+    funcparams:
+        - ['vtext', 'string', 'string to use in setting the selection']
+    funcreturns: 
+        #- ['string', 'output value of the register or empty string if none']
+    funcdependencies: "__blank__"
+    funcdetails: |
+       __funcdetails__           
+    seealso: |
+       * href="__link__"
+    wwfuncbody: |
+        this.Buf_focus();
+        komodo.view.selection = vtext;
 
-   - date: created="Mon Nov 30 18:57:01 2015"
-     last: lastmod="Mon Nov 30 18:57:01 2015"
-     funcname: Buf_focus
-     funcdesc: |
-           set focus on a buffer, making it the CurrentBuffer
+  - funcname: Buf_focus
+    date: created="Mon Nov 30 18:57:01 2015"
+    last: lastmod="Mon Nov 30 18:57:01 2015"
+   
+    funcdesc: |
+          set focus on a buffer, making it the CurrentBuffer
 
-     funcparams: []          
-     funcreturns: 
-          ['string,  the fullpath of the CurrentBuffer']
-     tags: CurrentBuffer, getter, string, YES_WORKY
-     dreftymacid: alert_pilots_ego
-     funcdependencies: "__blank__"
-     funcdetails: |
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        //
-        komodo.assertMacroVersion(3);
-        if(komodo.view && komodo.view.scintilla){ komodo.view.scintilla.focus(); }
-        
-  
-   - date: created="Mon Nov 30 18:57:01 2015"
-     last: lastmod="Mon Nov 30 18:57:01 2015"
-     funcname: Buf_getFilePath
-     funcdesc: |
-           get the filepath of the CurrentBuffer
+    funcparams: []          
+    funcreturns: 
+         ['string,  the fullpath of the CurrentBuffer']
+    tags: CurrentBuffer, getter, string, YES_WORKY
+    dreftymacid: alert_pilots_ego
+    funcdependencies: "__blank__"
+    funcdetails: |
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       //
+       komodo.assertMacroVersion(3);
+       if(komodo.view && komodo.view.scintilla){ komodo.view.scintilla.focus(); }
+       
+ 
+  - funcname: Buf_getFilePath
+    date: created="Mon Nov 30 18:57:01 2015"
+    last: lastmod="Mon Nov 30 18:57:01 2015"
 
-     funcparams: []
+    funcdesc: |
+          get the filepath of the CurrentBuffer
 
-          
-     funcreturns: 
-          ['string,  the fullpath of the CurrentBuffer']
-     tags: CurrentBuffer, getter, string, YES_WORKY
-     dreftymacid: alert_pilots_ego
-     funcdependencies: "__blank__"
-     funcdetails: |
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        // return
-        return komodo.interpolate('%F');
-        
-  
-   - date: created="Mon Nov 30 18:57:01 2015"
-     last: lastmod="Mon Nov 30 18:57:01 2015"
-     funcname: Buf_getFileParentDir
-     funcdesc: |
-           get CurrentBuffer parent dir
+    funcparams: []
 
-     funcparams: []
+         
+    funcreturns: 
+         ['string,  the fullpath of the CurrentBuffer']
+    tags: CurrentBuffer, getter, string, YES_WORKY
+    dreftymacid: alert_pilots_ego
+    funcdependencies: "__blank__"
+    funcdetails: |
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       // return
+       return komodo.interpolate('%F');
+       
+ 
+  - funcname: Buf_getFileParentDir  
+    date: created="Mon Nov 30 18:57:01 2015"
+    last: lastmod="Mon Nov 30 18:57:01 2015"  
+    funcdesc: |
+          get CurrentBuffer parent dir
 
-          
-     funcreturns: 
-          ['string,  the parent directory of the CurrentBuffer']
-     tags: CurrentBuffer, getter, string, YES_WORKY
-     dreftymacid: flu_robe_reclaim
-     funcdependencies: "__blank__"
-     funcdetails: |
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        // return
-        return komodo.interpolate('%D');
-        
-  
-   - date: created="Mon Nov 30 19:00:48 2015"
-     last: lastmod="Mon Nov 30 19:00:48 2015"
-     funcname: Buf_getLineColumn
-     funcdesc: |
-           get current cursor column of the CurrentBuffer
+    funcparams: []
 
-     funcparams: []
+         
+    funcreturns: 
+         ['string,  the parent directory of the CurrentBuffer']
+    tags: CurrentBuffer, getter, string, YES_WORKY
+    dreftymacid: flu_robe_reclaim
+    funcdependencies: "__blank__"
+    funcdetails: |
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       // return
+       return komodo.interpolate('%D');
+       
+ 
+  - funcname: Buf_getLineColumn  
+    date: created="Mon Nov 30 19:00:48 2015"
+    last: lastmod="Mon Nov 30 19:00:48 2015"
 
-          
-     funcreturns: 
-          ['string,  current cursor column of the CurrentBuffer']
-     tags: CurrentBuffer, getter, string, YES_WORKY
-     dreftymacid: glowing_gotcha_mineral
-     funcdependencies: "__blank__"
-     funcdetails: |
-        Returns the one-based index instead of zero-based index
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        // return
-        return (komodo.editor.getColumn(komodo.editor.currentPos)+1);    
-        
-  
-   - date: created="Mon Nov 30 19:04:13 2015"
-     last: lastmod="Mon Nov 30 19:04:13 2015"
-     funcname: Buf_getLineNumber
-     funcdesc: |
-           get current cursor line number of the CurrentBuffer
+    funcdesc: |
+          get current cursor column of the CurrentBuffer
 
-     funcparams: []
+    funcparams: []
 
-          
-     funcreturns: 
-          ['string,  current cursor line number of the CurrentBuffer']
-     tags: CurrentBuffer, getter, string, YES_WORKY
-     dreftymacid: axe_celia_flown
-     funcdependencies: "__blank__"
-     funcdetails: |
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        // return
-        return komodo.interpolate('%L');
-        
-  
-   - date: created="Mon Nov 30 19:06:16 2015"
-     last: lastmod="Mon Nov 30 19:06:16 2015"
-     funcname: Buf_getLineText
-     funcdesc: |
-           get the full text on the current cursor line of the CurrentBuffer
+         
+    funcreturns: 
+         ['string,  current cursor column of the CurrentBuffer']
+    tags: CurrentBuffer, getter, string, YES_WORKY
+    dreftymacid: glowing_gotcha_mineral
+    funcdependencies: "__blank__"
+    funcdetails: |
+       Returns the one-based index instead of zero-based index
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       // return
+       return (komodo.editor.getColumn(komodo.editor.currentPos)+1);    
+       
+ 
+  - funcname: Buf_getLineNumber  
+    date: created="Mon Nov 30 19:04:13 2015"
+    last: lastmod="Mon Nov 30 19:04:13 2015"
+    
+    funcdesc: |
+          get current cursor line number of the CurrentBuffer
 
-     funcparams: []
+    funcparams: []
 
-          
-     funcreturns: 
-          ['string,  the full text on current cursor line of the CurrentBuffer']
-     tags: CurrentBuffer, getter, string, YES_WORKY
-     dreftymacid: arian_austria_nasal
-     funcdependencies: "__blank__"
-     funcdetails: |
-        ## Dependencies
-        * this.Buf_focus()
-        
-        ## Development notes
-        There may be a different approach for selecting the current line
-        found this from [[google://"text of the current line" komodo]]
-        http://www.weirdlooking.com/blog/92/abbr.kpf
-        komodo.doCommand('cmd_end');
-        var view      =   ko.views.manager.currentView;
-        var line      =   view.scimoz.lineFromPosition(view.scimoz.currentPos);
-        var lineStart =   view.scimoz.positionFromLine(line);
-        alert(line);
-        alert(lineStart);
-        var lineText  =   view.scimoz.getTextRange(lineStart, view.scimoz.currentPos);
-        return lineText;
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        // Buf_focus();
-        if(komodo.view && komodo.view.scintilla){ komodo.view.scintilla.focus(); }
-        //;;
-        
-        // init
-        var vout        =   '';
-        var savepos     =   komodo.editor.currentPos;
-        try{
-            komodo.doCommand('cmd_end');
-            komodo.doCommand('cmd_selectHome'); // do it twice in order to capture leading whitespace
-            komodo.doCommand('cmd_selectHome');
-            new_selection = komodo.interpolate('%s');
-            vout = (new_selection);
-            komodo.editor.gotoPos(savepos);
-        }catch(exx){}
-        //;;
-        
-        // return
-        return vout; 
-        
-  
-   - date: created="Mon Nov 30 19:14:26 2015"
-     last: lastmod="Mon Nov 30 19:14:26 2015"
-     funcname: Buf_getSelection
-     funcdesc: |
-           get currently seleted text (if any). force one if bforce is true
+         
+    funcreturns: 
+         ['string,  current cursor line number of the CurrentBuffer']
+    tags: CurrentBuffer, getter, string, YES_WORKY
+    dreftymacid: axe_celia_flown
+    funcdependencies: "__blank__"
+    funcdetails: |
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       // return
+       return komodo.interpolate('%L');
+       
+ 
+  - funcname: Buf_getLineText  
+    date: created="Mon Nov 30 19:06:16 2015"
+    last: lastmod="Mon Nov 30 19:06:16 2015"
+    
+    funcdesc: |
+          get the full text on the current cursor line of the CurrentBuffer
 
-     funcparams: 
-          - ['bforce', boolean , 'True or False ... force a selection if True']
-     funcreturns: 
-          ['string,  currently selected text, if there is any']
-     tags: CurrentBuffer, getter, string, YES_WORKY
-     dreftymacid: alms_wimpiest_audrey
-     funcdependencies: "__blank__"
-     funcdetails: |
-        __funcdetails__
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        // Buf_focus();
-        if(komodo.view && komodo.view.scintilla){ komodo.view.scintilla.focus(); }
-        //;;
-        
-        // init
-        var selection = '';
-        try{
+    funcparams: []
+
+         
+    funcreturns: 
+         ['string,  the full text on current cursor line of the CurrentBuffer']
+    tags: CurrentBuffer, getter, string, YES_WORKY
+    dreftymacid: arian_austria_nasal
+    funcdependencies: "__blank__"
+    funcdetails: |
+       ## Dependencies
+       * this.Buf_focus()
+       
+       ## Development notes
+       There may be a different approach for selecting the current line
+       found this from [[google://"text of the current line" komodo]]
+       http://www.weirdlooking.com/blog/92/abbr.kpf
+       komodo.doCommand('cmd_end');
+       var view      =   ko.views.manager.currentView;
+       var line      =   view.scimoz.lineFromPosition(view.scimoz.currentPos);
+       var lineStart =   view.scimoz.positionFromLine(line);
+       alert(line);
+       alert(lineStart);
+       var lineText  =   view.scimoz.getTextRange(lineStart, view.scimoz.currentPos);
+       return lineText;
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       // Buf_focus();
+       this.Buf_focus();
+       //;;
+       
+       // init
+       var vout        =   '';
+       var savepos     =   komodo.editor.currentPos;
+       try{
+           komodo.doCommand('cmd_end');
+           komodo.doCommand('cmd_selectHome'); // do it twice in order to capture leading whitespace
+           komodo.doCommand('cmd_selectHome');
+           new_selection = komodo.interpolate('%s');
+           vout = (new_selection);
+           komodo.editor.gotoPos(savepos);
+       }catch(exx){}
+       //;;
+       
+       // return
+       return vout; 
+       
+ 
+  - funcname: Buf_getSelection  
+    date: created="Mon Nov 30 19:14:26 2015"
+    last: lastmod="Mon Nov 30 19:14:26 2015"
+
+    funcdesc: |
+          get currently seleted text (if any). force one if bforce is true
+    funcparams: 
+         - ['bforce', boolean , 'True or False ... force a selection if True']
+    funcreturns: 
+         ['string,  currently selected text, if there is any']
+    tags: CurrentBuffer, getter, string, YES_WORKY
+    dreftymacid: alms_wimpiest_audrey
+    funcdependencies: "__blank__"
+    funcdetails: |
+       __funcdetails__
+    funcexample: |
+        otest   =   new cls_ko09BufFunctions();
+        vout    =   otest.Buf_getSelection();
+        console.log( vout );       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+      // 
+      this.Buf_focus();            
+      var selection = '';
+      //;;
+      
+      //
+      try{
           selection = ko.views.manager.currentView.selection;
-        }catch(exx){}
-        try{
+      }catch(exx){};
+      //;;
+      
+      //
+      try{
           if(selection=='' && bforce){
               komodo.doCommand('cmd_selectWordLeft');
-              selection = ko.views.manager.currentView.selection;
+              selection   =   ko.views.manager.currentView.selection;
           };
-        }catch(exx){};
-        //;;
-        
-        //return
-        return selection;
-        
-  
-   - date: created="Mon Nov 30 19:16:45 2015"
-     last: lastmod="Mon Nov 30 19:16:45 2015"
-     funcname: Buf_getSubLanguage
-     funcdesc: |
-           get the current syntax language at the current cursor position 
+      }catch(exx){};
+      //;;
+      
+      //
+      return selection;
+      //;;
+       
+ 
+  - funcname: Buf_getSubLanguage  
+    date: created="Mon Nov 30 19:16:45 2015"
+    last: lastmod="Mon Nov 30 19:16:45 2015"
 
-     funcparams: []
+    funcdesc: |
+          get the current syntax language at the current cursor position 
 
-          
-     funcreturns: 
-          ['string,  the current syntax sub-language at the current cursor position']
-     tags: CurrentBuffer, getter, string, NO_WORKY
-     dreftymacid: planing_bengal_niche
-     funcdependencies: "__blank__"
-     funcdetails: |
-        __funcdetails__
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        // return
-        return ko.views.manager.currentView.document.subLanguage;
-        
-  
-   - date: created="Mon Nov 30 19:17:52 2015"
-     last: lastmod="Mon Nov 30 19:17:52 2015"
-     funcname: Buf_getLanguage
-     funcdesc: |
-           get the current syntax language for the entire buffer
+    funcparams: []
 
-     funcparams: []
+         
+    funcreturns: 
+         ['string,  the current syntax sub-language at the current cursor position']
+    tags: CurrentBuffer, getter, string, NO_WORKY
+    dreftymacid: planing_bengal_niche
+    funcdependencies: "__blank__"
+    funcdetails: |
+       __funcdetails__
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       // return
+       return ko.views.manager.currentView.document.subLanguage;
+       
+ 
+  - funcname: Buf_getLanguage    
+    date: created="Mon Nov 30 19:17:52 2015"
+    last: lastmod="Mon Nov 30 19:17:52 2015"
+    funcdesc: |
+          * NO_WORKY as of 2016-01-11T14:30:24
+          * TypeError: ko.views.manager.currentView.document is undefined
+          * get the current syntax language for the entire buffer
 
-          
-     funcreturns: 
-          ['string,  the current syntax language for the entire CurrentBuffer']
-     tags: CurrentBuffer, getter, string, NO_WORKY
-     dreftymacid: tribe_awe_unpin
-     funcdependencies: "__blank__"
-     funcdetails: |
-        
-     seealso: |
-        *
-        
-     wwfuncbody: |
-        // return
-        return ko.views.manager.currentView.document.language;
-        
-  
+    funcparams: []
+
+         
+    funcreturns: 
+         ['string,  the current syntax language for the entire CurrentBuffer']
+    tags: CurrentBuffer, getter, string, NO_WORKY
+    dreftymacid: tribe_awe_unpin
+    funcdependencies: "__blank__"
+    funcdetails: |
+       
+    seealso: |
+       *
+       
+    wwfuncbody: |
+       // return
+       return ko.views.manager.currentView.document.language;
+       
+ 
 
 
 
