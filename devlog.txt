@@ -8,6 +8,7 @@
 ###     seealso: |
 ###         * href="smartpath://git/github/public.lab"
 ###         * href="smartpath://git/github/public.lab/devlog.txt"
+###         * cd c:/sm/docs/mymedia/2014/git/github/public.lab
 ###     desc: |
 ###         dreftymac public lab
 ### <end-file_info>
