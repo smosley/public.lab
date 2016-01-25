@@ -1,0 +1,4 @@
+tranlate_table:
+  - english: you lack self control
+    french:  vous manquez de maîtrise de soi
+    
