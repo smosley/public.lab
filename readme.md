@@ -2,6 +2,12 @@
 
 This is the general-purpose publically-accessible github lab space for dreftymac.org
 
+## Links
+
+* github trending and cool repositories
+    * https://github.com/trending
+    * https://github.com/caesar0301/awesome-public-datasets
+
 ## Tools -- autorefresh repository from IDE
 
 * ddyaml refresh  ;;  href="./.ignore/yygen_coderefresh.txt"
