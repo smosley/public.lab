@@ -7,6 +7,8 @@ This is the general-purpose publically-accessible github lab space for dreftymac
 * github trending and cool repositories
     * https://github.com/trending
     * https://github.com/caesar0301/awesome-public-datasets
+    * https://github.com/cantino/huginn
+    * https://github.com/martinkirsche/wired-logic
 
 ## Tools -- autorefresh repository from IDE
 
