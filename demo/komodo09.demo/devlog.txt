@@ -11,7 +11,19 @@
 ### <end-file_info>
 
 head:
-  
+  - caption:  links
+    rectype:  rrmini03
+    wwbody: |
+      href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/ko09CombiFunctions.txt"
+      
+      href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/ko09BufFunctions.txt"
+      href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/ko09GuiFunctions.txt"
+      href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/ko09StrFunctions.txt"
+      href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/ko09AppFunctions.txt"        
+
+##;;
+
+main:
   - caption:  recordtemplate
     rectype:  rrmini03
     datebeg:  Wed Jan 06 16:00:57 2016 
@@ -41,10 +53,7 @@ head:
         seealso: |
            * href="__link__"
         wwfuncbody: |
-            __functioncode__
-##;;
-
-main:
+            __functioncode__  
   
   - caption:  generate komodotool file
     rectype:  rrmini03
@@ -55,10 +64,7 @@ main:
     seealso:  seealso
     dreftymacid: bounce_crunch_rams
     wwbody: |
-        * sample file       ;;  href="smartpath://mytrybits/k/trykomodo/txt09/demo_includescript.komodotool"
-        * sample generator  ;;  href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/zzgen.komodotooljs.txt"
-        * sample include    ;;  href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/demo.topic.includefile.js" find="gayety_celtic_alway"
-        
-        
-        
+        * sample file      ;; href="smartpath://mytrybits/k/trykomodo/txt09/demo_includescript.komodotool"
+        * sample generator ;; href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/zzgen.komodotooljs.txt"
+        * sample include   ;; href="smartpath://mymedia/2014/git/github/public.lab/demo/komodo09.demo/demo.topic.includefile.js" find="gayety_celtic_alway"
 ##;;

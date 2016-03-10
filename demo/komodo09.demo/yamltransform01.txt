@@ -24,7 +24,7 @@ __yaml__:
 
   - &uumate_herds
     caption:      code generation transform
-    rowkeep: 1
+    processthis: 1
     uuid:         uumate_herds
     desc:         output function definitions to js code files
     dreftymacid:  argo_gem_windy
@@ -37,6 +37,7 @@ __yaml__:
     offtemplate:  |
     template: |
       {#- ------------------------------------------------------------------------ -#}
+      {%- set ttallclassbase = ''  -%}
       {{ ''|jjfiledelete("./ko09Classes.js") }}
       {#- ------------------------------------------------------------------------ -#}
       {% for row in workbook.yamltransform01 -%}
@@ -85,7 +86,7 @@ __yaml__:
 
   - &uusderh_etam
     caption:      identity transform
-    rowkeep: 0
+    processthis: 0
     uuid:         uusderh_etam
     desc:         __desc__
     dreftymacid:  ydniw_meg_ogra
