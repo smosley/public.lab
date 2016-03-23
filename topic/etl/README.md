@@ -1,6 +1,10 @@
 # ETL_awesomeness
 ETL awesomeness
 
+## Web -- extract all links from a webpage
+
+* href="regain://"
+
 ## See also
 
 * [petl-gh](https://github.com/search?q=petl)
