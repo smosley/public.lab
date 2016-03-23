@@ -3,7 +3,7 @@ ETL awesomeness
 
 ## Web -- extract all links from a webpage
 
-* href="regain://"
+* href="regain://tiring_formula_garcia"
 
 ## See also
 
