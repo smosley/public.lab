@@ -12,7 +12,8 @@
 ### <end-file_info>
 
 vimgolf:
-  - caption: delete the first line after every occurence of alpha
+  - caption:     delete the first line after every occurence of alpha
+    dreftymacid: burn_vendible_trunk
     file_BEFORE: | 
       alpha:
         one
