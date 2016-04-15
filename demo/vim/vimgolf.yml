@@ -1,0 +1,48 @@
+### <beg-file_info>
+### main:
+###   - date: created="Fri Apr 15 13:55:49 2016"
+###     last: lastmod="Fri Apr 15 13:55:49 2016"
+###     tags: vim, vimgolf, example
+###     dreftymacid:    "bit_bluntly_learn"
+###     filetype:       "yaml"
+###     seealso: |
+###         *
+###     desc: |
+###         vimgolf examples
+### <end-file_info>
+
+vimgolf:
+  - caption: delete the first line after every occurence of alpha
+    file_BEFORE: | 
+      alpha:
+        one
+        two
+      
+      alpha:
+        three
+        four
+        
+      alpha:
+        five
+        six
+        
+      alpha:
+        seven
+        eight
+    
+    file_RESULT_AFTER: | 
+      alpha:
+        two
+      
+      alpha:
+        four
+        
+      alpha:
+        six
+        
+      alpha:
+        eight
+        
+    vim_COMMAND: |
+      ggjV/eight<ENTER>:g/alpha/+1d
+      
