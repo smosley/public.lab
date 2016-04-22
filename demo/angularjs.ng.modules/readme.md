@@ -1,3 +1,5 @@
+lays_coins_rocks
+---
 ## Angularjs and jQuery solution from Luis Perez
 
 The jquery code here is a fix for an angularjs issue.
