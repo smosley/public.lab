@@ -1,7 +1,6 @@
 ---
 dreftymacid: lays_coins_rocks
 topic: Angularjs and jQuery solution from Luis Perez, lays_coins_rocks formula
-date: 2014-10-28
 ---
 ## Angularjs and jQuery solution from Luis Perez
 
