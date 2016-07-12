@@ -13,9 +13,11 @@ This documentation covers TymacSimpleData conventions
    
 ## Tymac MyClip Snippet namespaces
 
-* `rr` -- namespace prefix for Simple Data Record snippet types (SDR)
-* `ww` -- namespace prefix for Simple Word snippet types (SW)
-* `??rr` -- namespace prefix for Domain-Specific Data Record snippet types (DSDR)
+* `rr` -- namespace prefix for SimpleDictionary snippet types (SDR)
+* `ww` -- namespace prefix for SimpleWord snippet types (SW)
+
+### Prefixed namespaces for domain-specific snippet types
+* `??rr` -- language-specific namespace prefix 
     * example: `pyrr` (python SDR)
     * example: `py3rr` (python3 SDR)
     * example: `plrr` (perl SDR)
