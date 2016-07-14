@@ -15,6 +15,7 @@ This documentation covers TymacSimpleData conventions
 
 * `rr` -- namespace prefix for SimpleDictionary snippet types (SDR)
 * `ww` -- namespace prefix for SimpleWord snippet types (SW)
+* `jj` -- template keyword for Jinja or Twig
 
 ### Prefixed namespaces for domain-specific snippet types
 * `??rr` -- language-specific namespace prefix 
