@@ -1,6 +1,8 @@
 ## dreftymac gitignore
 **.ignore/
 **.private/
+**dotignore/
+**dotprivate/
 **.DS_Store
 
 # Windows image file caches
@@ -31,7 +33,8 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
