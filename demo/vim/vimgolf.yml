@@ -6,15 +6,92 @@
 ###     dreftymacid:    "bit_bluntly_learn"
 ###     filetype:       "yaml"
 ###     seealso: |
-###         *
+###         * href="smartpath://mymedia/2014/git/github/myclip/myclip.snippets/vim.yaml"
 ###     desc: |
 ###         vimgolf examples
 ### <end-file_info>
 
+recnew: | 
+  - &uuvgNNNx
+    caption:      __caption__
+    dreftymacid:  __dreftymacid__
+    file_xBEFORE: | 
+    file_zAFTER:  | 
+    vim_COMMAND:  | 
+
 vimgolf:
-  - caption:     delete the first line after every occurence of alpha
+
+  - &uuvg005x     ## numbering example
+    caption:      numbering example
+    dreftymacid:  glinting_mario_ash
+    file_xBEFORE: |
+      1001
+    file_zAFTER:  | 
+      vim1001
+      vim1005
+      vim1011
+      vim1015
+      vim1021
+      vim1025
+      vim1031
+      vim1035
+      vim1041
+      vim1045
+    vim_COMMAND:  |
+      ivim<Esc>Yp4<C-A>qqykjp10<C-A>j.q3@qZZ
+
+  - &uuvg004x     ## example expand $HOME
+    caption:      example expand $HOME
+    dreftymacid:  aerosol_clergy_particle
+    file_xBEFORE: |
+      ~/test/
+    file_zAFTER:  | 
+      /home/ramesh/test/
+    vim_COMMAND:  |
+      :%s!\~!\= expand($HOME)!g
+
+  - &uuvg003x     ## ctrl-r register insert
+    caption:      ctrl-r register insert
+    dreftymacid:  egatsaw_snael_gnitats
+    file_xBEFORE: |
+      milliseconds_per_day:
+      three_powerof_three: 
+    file_zAFTER:  | 
+      milliseconds_per_day: 86400000
+      three_tothe_powerof_three: 27.0
+      
+    vim_COMMAND:  |
+      <esc>gg0$a<ctrl>r=1000*60*60*24
+      <esc>gg0$a<ctrl>r=pow(3,3)
+
+  - &uuvg002x     ## submatch example
+    caption:      submatch example simple
+    dreftymacid:  stating_leans_clocking
+    file_xBEFORE: |
+      item10
+      item15
+      item20
+      item25
+      item30
+      pre001xx
+      pre002xx
+      pre003xx
+    file_zAFTER:  | 
+      item11
+      item16
+      item21
+      item26
+      item31
+      pre2xx
+      pre3xx
+      pre5xx
+    vim_COMMAND:  |
+      :%s/\d\+/\=submatch(0)+1/
+  
+  - &uuvg001x   ## delete nth line after occurence of keyword
+    caption:     delete the first line after every occurence of alpha
     dreftymacid: burn_vendible_trunk
-    file_BEFORE: | 
+    file_xBEFORE: | 
       alpha:
         one
         two
@@ -31,7 +108,7 @@ vimgolf:
         seven
         eight
     
-    file_RESULT_AFTER: | 
+    file_zAFTER: | 
       alpha:
         two
       
