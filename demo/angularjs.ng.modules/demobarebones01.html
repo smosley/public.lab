@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">            
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"    ></script>
+        <script src="aHR0cDovL3M2OTY4Mi5ncmlkc2VydmVyLmNvbS9fd2VibGliL2pzL2FuZ3VsYXJqcy9hbmd1bGFyLm5nLW1vZHVsZXMuanM=" ></script>
+        <script src="aHR0cDovL3M2OTY4Mi5ncmlkc2VydmVyLmNvbS9fd2VibGliL2pzL2FuZ3VsYXJqcy9hbmd1bGFyLWZpbHRlci5taW4uanM=" ></script>
+        <link   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css"  />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"     ></script>
+        <script>
+          var moduleA = angular.module("MyModuleA", []);
+          moduleA.controller("MyControllerA", function($scope) {
+              $scope.name = "Alice A";
+          });
+
+          var moduleB = angular.module("MyModuleB", []);
+          moduleB.controller("MyControllerB", function($scope) {
+              $scope.name = "Bobby B";
+          });
+        </script>
+    </head>
+    <body>
+        
+        <div ng-modules="MyModuleA">
+            <h2>Module A</h2>
+            <div ng-controller="MyControllerA">
+                {{name}}
+            </div>
+        </div>        
+
+        <div ng-module="MyModuleB">
+            <h2>Just Module B</h2>
+            <div ng-controller="MyControllerB">
+                {{name}}
+            </div>
+        </div>
+        
+        <div ng-modules="MyModuleA, MyModuleB">
+            <h2>Module A, B</h2>
+            <div ng-controller="MyControllerA">
+                {{name}}
+            </div>
+            <div ng-controller="MyControllerB">
+                {{name}}
+            </div>
+        </div>  
+        
+    </body>
+</html>

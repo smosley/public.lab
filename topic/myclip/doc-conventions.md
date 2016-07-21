@@ -1,0 +1,1 @@
+## See instead TymacSimpleData conventions
