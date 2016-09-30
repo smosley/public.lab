@@ -11,7 +11,7 @@ Joseph Stephen Obfusco cautions Trevor with a rule:
 ```
 THE JSO RULE OF FOUR PROJECTS:
 
-The employees at CognitiveDynamics are strongly discouraged from tinkering with 
+The employees at CognitiveDynamics are strongly discouraged from tinkering with
 robot-automatons at work, because this tinkering time takes away from productivity
 time doing actual work.
 
@@ -19,7 +19,7 @@ As a rule, CognitiveDynamics employees do not tinker on robot-automatons unless 
 automatons will be used to output at least four major projects in a year.
 ```
 
-At the time, Trevor does not quite understand this. He thinks this sounds quite arbitrary. 
+At the time, Trevor does not quite understand this. He thinks this sounds quite arbitrary.
 "For example, what is so magic about the number four?" He thinks to himself.
 
 Nevertheless, being new and a generally amicable guy who wants to avoid a reputation as a
@@ -33,10 +33,24 @@ the underlying rationale for the rule, as a test to see if Trevor actually "gets
 Trevor can parrot back the rule quite easily, but he cannot give a rationale for the rule.
 
 Moreover, Trevor has a nagging sense that the rule cannot withstand critical scrutiny:
-  
+
 * In the old days, robot-automatons required a lot of tinkering and disparate skills, but these days, they are off-the-shelf commodities that require nothing more than battery replacement and routine cleaning.
 * In the old days, robot-automatons had to be programmed in order to do tasks, but these days, they also work by "record" and "playback" feature.
 * The record and playback feature means Trevor only has to do a task once (with the robot in 'watch and record' mode) and then the robot can repeat the task indefinitely in 'playback mode' as many times as needed, so long as the battery does not run out.
 * Although the robot can *also* do some specialized tasks through programming, Trevor only uses the programming mode when off duty and learning more about the internals of the robot.
 * When Trevor uses the robot at work, he simply uses the "record" and "playback" feature.
+
+## Question
+
+How can Trevor make sense of the JSO Rule of Four Projects?
+
+## Answer
+
+Solution:
+
+JSO is fundamentally opposed to robot-automatons, because it ruins the economic viability of humans and hurts the job market.
+
+JSO does not want to state it outright, so JSO has in place a rule that no single employee is allowed to produce four major projects in a year.
+
+Thus, the rule of four is simply a proxy for banning robot-automatons.
 
