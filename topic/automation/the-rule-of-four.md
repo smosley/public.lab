@@ -50,7 +50,7 @@ Solution:
 
 JSO is fundamentally opposed to robot-automatons, because it ruins the economic viability of humans and hurts the job market.
 
-JSO does not want to state it outright, so JSO has in place a rule that no single employee is allowed to produce four major projects in a year.
+JSO does not want to state it outright, so JSO has in place an unwritten and unspoken rule, that no single employee is allowed to produce four major projects in a year.
 
 Thus, the rule of four is simply a proxy for banning robot-automatons.
 
